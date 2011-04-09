@@ -1,0 +1,2 @@
+#!/bin/bash
+tmux -u -f /home/ton/.tmux-ecotouch.conf attach-session -t default
