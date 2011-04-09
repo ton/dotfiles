@@ -1,0 +1,75 @@
+! General X defaults.
+*.visualBell:false
+*.bellSuppressTime:0
+*.jumpScroll:true
+*.multiScroll:true
+*.scrollTtyOutput:false
+*.scrollKey:true
+*.loginShell:true
+*.italic:true
+*.colorITMode:true
+*.boldMode:true
+*.colorBDMode:true
+*.underLine:true
+*.colorULMode:true
+*.cursorColor:#ffffff
+
+! Xft configuration, enabling font anti-aliasing and hinting.
+Xft.antialias:true
+Xft.autohint:true
+Xft.dpi:96.000000
+Xft.hinting:true
+Xft.hintstyle:hintfull
+Xft.rgba:rgb
+
+! Tango color scheme.
+*background:#000000
+*foreground:#FFFFFF
+
+! black
+*color0:#2e3436
+*color8:#555753
+! red
+*color1:#CC0000
+*color9:#EF2929
+! green
+*color2:#4E9A06
+*color10:#8AE234
+! yellow
+*color3:#C4A000
+*color11:#FCE94F
+! blue
+*color4:#3465A4
+*color12:#729FCF
+! magenta
+*color5:#75507B
+*color13:#AD7FA8
+! cyan
+*color6:#06989A
+*color14:#34E2E2
+! white
+*color7:#D3D7CF
+*color15:#EEEEEC
+
+! URxvt configuration.
+URxvt*saveLines:12000
+URxvt*foreground:White
+URxvt*background:Black
+URxvt*cursorBlink:true
+URxvt*font:xft:Envy Code R:size=11:minspace=true
+URxvt*boldFont:xft:Envy Code R:bold:size=11:minspace=true
+URxvt*italicFont:xft:Envy Code R:italic:size=11:minspace=true
+URxvt*scrollBar:false
+URxvt*scrollstyle:rxvt
+URxvt*letterSpace:-1
+
+! Key mappings, note that <C-a> is the tmux prefix. Map windows key + Vim movement command to a similar tmux command to be able to easily navigate
+! through window panes. 
+URxvt.keysym.Mod4-j:\033j
+URxvt.keysym.Mod4-k:\033k
+URxvt.keysym.Mod4-h:\033h
+URxvt.keysym.Mod4-l:\033l
+URxvt.keysym.Mod4-J:\033J
+URxvt.keysym.Mod4-K:\033K
+URxvt.keysym.Mod4-H:\033H
+URxvt.keysym.Mod4-L:\033L
