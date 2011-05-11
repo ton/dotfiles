@@ -63,13 +63,12 @@ URxvt*scrollBar:false
 URxvt*scrollstyle:rxvt
 URxvt*letterSpace:-1
 
-! Key mappings, note that <C-a> is the tmux prefix. Map windows key + Vim movement command to a similar tmux command to be able to easily navigate
-! through window panes. 
-URxvt.keysym.Mod4-j:\033j
-URxvt.keysym.Mod4-k:\033k
-URxvt.keysym.Mod4-h:\033h
-URxvt.keysym.Mod4-l:\033l
-URxvt.keysym.Mod4-J:\033J
-URxvt.keysym.Mod4-K:\033K
-URxvt.keysym.Mod4-H:\033H
-URxvt.keysym.Mod4-L:\033L
+! Map windows key + Vim movement command to a similar tmux command to be able to easily navigate through window panes. 
+URxvt.keysym.Mod4-j:\033j
+URxvt.keysym.Mod4-k:\033k
+URxvt.keysym.Mod4-h:\033h
+URxvt.keysym.Mod4-l:\033l
+URxvt.keysym.Mod4-J:\033J
+URxvt.keysym.Mod4-K:\033K
+URxvt.keysym.Mod4-H:\033H
+URxvt.keysym.Mod4-L:\033L
