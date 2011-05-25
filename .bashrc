@@ -83,7 +83,7 @@ export QTDIR=/usr/local/Trolltech/Qt/
 stty -ixon -ixoff
 
 # Set path.
-export PATH=$PATH:/home/ton/bin
+export PATH=/home/ton/bin:/usr/local/Trolltech/Qt/bin/:/usr/local/bin:$PATH
 
 # Enable recursive wildcards.
 shopt -s globstar
