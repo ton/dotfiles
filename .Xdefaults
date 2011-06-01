@@ -61,6 +61,7 @@ URxvt*boldFont:xft:Envy Code R:bold:size=11:minspace=true
 URxvt*italicFont:xft:Envy Code R:italic:size=11:minspace=true
 URxvt*scrollBar:false
 URxvt*scrollstyle:rxvt
+URxvt*scrollTtyKeypress:true
 URxvt*letterSpace:-1
 
 ! Map windows key + Vim movement command to a similar tmux command to be able to easily navigate through window panes. 
