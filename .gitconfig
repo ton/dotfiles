@@ -1,0 +1,9 @@
+[color]
+	diff = auto
+[user]
+	name = Ton van den Heuvel
+	email = tonvandenheuvel@gmail.com
+[core]
+	editor = vim
+[alias]
+    lg = log --graph --decorate --all
