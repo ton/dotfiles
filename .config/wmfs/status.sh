@@ -5,9 +5,8 @@
 _volume()
 {
 	# volume
-	# <amixer> is required
-	if [ "`amixer get Master | grep '\[off\]$'`" = "" ]; then
-		volume=`amixer get Master | sed -n 's|.*\[\([0-9]*\)\%.*|\1%|pg'`
+	if [ "`~/.config/wmfs/audio.sh --status | grep '\[off\]$'`" = "" ]; then
+		volume=`~/.config/wmfs/audio.sh --status | sed -n 's|.*\[\([0-9]*\)\%.*|\1%|pg'`
 	else
 		volume="[off]"
 	fi

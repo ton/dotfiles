@@ -249,12 +249,12 @@
         [key] mod = {"Super"} key = "r" func = "spawn" cmd = "dmenu_run -fn 'xft:Droid:size=10' -nb '#414141' -nf '#d4d4d4' -sb '#40ba40' -b" [/key]
 
         # Multimedia keys.
-        [key] key = "XF86AudioPlay" func = "spawn" cmd = "banshee --toggle-playing" [/key]
-        [key] key = "XF86AudioPrev" func = "spawn" cmd = "banshee --previous" [/key]
-        [key] key = "XF86AudioNext" func = "spawn" cmd = "banshee --next" [/key]
-        [key] key = "XF86AudioMute" func = "spawn" cmd = "amixer set Master toggle" [/key]
-        [key] key = "XF86AudioLowerVolume" func = "spawn" cmd = "amixer set Master 1-" [/key]
-        [key] key = "XF86AudioRaiseVolume" func = "spawn" cmd = "amixer set Master 1+ unmute" [/key]
+        [key] key = "XF86AudioPlay" func = "spawn" cmd = "~/.config/wmfs/audio.sh --play" [/key]
+        [key] key = "XF86AudioPrev" func = "spawn" cmd = "~/.config/wmfs/audio.sh --previous" [/key]
+        [key] key = "XF86AudioNext" func = "spawn" cmd = "~/.config/wmfs/audio.sh --next" [/key]
+        [key] key = "XF86AudioMute" func = "spawn" cmd = "~/.config/wmfs/audio.sh --mute-toggle" [/key]
+        [key] key = "XF86AudioLowerVolume" func = "spawn" cmd = "~/.config/wmfs/audio.sh --volume-down" [/key]
+        [key] key = "XF86AudioRaiseVolume" func = "spawn" cmd = "~/.config/wmfs/audio.sh --volume-up" [/key]
 
         # Set the tag x.
         [key] mod = {"Super"} key = "1" func = "tag" cmd = "1" [/key]
