@@ -193,6 +193,17 @@
                ignore_tags   = false      # ignore tag (free mode)
        [/rule]
 
+       [rule]
+               instance      = "pidgin"
+               class         = "Pidgin"
+               screen        = 0
+               tag           = 8
+               free          = false
+               max           = true
+               follow_client = false
+               ignore_tags   = false
+       [/rule]
+
        # Scratchpad terminals should be opened at the top center by default.
        [rule] instance = "scratchpad"  name  = "scratchpad"   free = "true"  [/rule]
 [/rules]
