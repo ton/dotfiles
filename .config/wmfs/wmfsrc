@@ -4,7 +4,7 @@
         font                  = "Droid-10"
         raisefocus            = true
         raiseswitch           = false
-        focus_follow_mouse    = true
+        focus_follow_mouse    = false
         focus_follow_movement = false
         opacity               = 255
 
