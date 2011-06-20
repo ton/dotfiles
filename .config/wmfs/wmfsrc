@@ -5,7 +5,7 @@
         raisefocus            = true
         raiseswitch           = false
         focus_follow_mouse    = false
-        focus_follow_movement = false
+        focus_follow_movement = true
         opacity               = 255
 
         # focus_pointer_click: click on unfocused client area:
@@ -120,7 +120,7 @@
                 screen           = 0
                 mwfact           = 0.5
                 nmaster          = 1
-                layout           = "tile_grid"
+                layout           = "max"
                 resizehint       = false
                 infobar_position = "top"
                 above_fc         = false
@@ -163,7 +163,7 @@
         resize_corner_normal = "#414141"
         resize_corner_focus  = "#309a30"
         set_new_win_master   = false
-        client_tile_raise    = false
+        client_tile_raise    = true
         new_client_get_mouse = true
 
         # Space between tiled clients
@@ -219,7 +219,7 @@
         [key] mod = {"Super"} key = "e" func = "spawn" cmd = "chromium-browser" [/key]
 
         # Kill the selected client.
-        [key] mod = {"Alt"} key = "q" func = "client_kill" [/key]
+        [key] mod = {"Alt"} key = "F4" func = "client_kill" [/key]
 
         # Quit wmfs.
         [key] mod = {"Control", "Alt", "Shift"} key = "q" func = "quit" [/key]
@@ -238,7 +238,7 @@
         [key] mod = {"Alt"} key = "m" func = "toggle_max" [/key]
 
         # Toggle free the selected client.
-        [key] mod = {"Alt"} key = "f" func = "toggle_free" [/key]
+        [key] mod = {"Super"} key = "f" func = "toggle_free" [/key]
 
         # Toggle the resizehint of the current tag/screen
         [key] mod = {"Shift", "Control"} key = "r" func = "toggle_resizehint" [/key]
@@ -260,7 +260,7 @@
         [key] mod = {"Super"} key = "r" func = "spawn" cmd = "dmenu_run -fn 'xft:Droid:size=10' -nb '#414141' -nf '#d4d4d4' -sb '#40ba40' -b" [/key]
 
         # Multimedia keys.
-        [key] key = "XF86AudioPlay" func = "spawn" cmd = "~/.config/wmfs/audio.sh --play" [/key]
+        [key] key = "XF86AudioPlay" func = "spawn" cmd = "~/.config/wmfs/audio.sh --play-pause" [/key]
         [key] key = "XF86AudioPrev" func = "spawn" cmd = "~/.config/wmfs/audio.sh --previous" [/key]
         [key] key = "XF86AudioNext" func = "spawn" cmd = "~/.config/wmfs/audio.sh --next" [/key]
         [key] key = "XF86AudioMute" func = "spawn" cmd = "~/.config/wmfs/audio.sh --mute-toggle" [/key]
