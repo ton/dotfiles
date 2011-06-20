@@ -13,5 +13,11 @@ then
     /usr/bin/nm-applet &
 fi
 
+# Start notification daemon.
+if [ -f /usr/lib/notify-osd/notify-osd ]
+then
+    /usr/lib/notify-osd/notify-osd &
+fi
+
 # exec subtle
 exec wmfs
