@@ -1,0 +1,14 @@
+[ui]
+username = Ton van den Heuvel <ton.van.den.heuvel@brion.com>
+editor = vim
+
+[extensions]
+color =
+pager =
+
+[color]
+mode = ansi
+
+[pager]
+attend = diff, log
+pager = /usr/bin/less -R
