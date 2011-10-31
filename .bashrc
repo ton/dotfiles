@@ -87,3 +87,11 @@ export PATH=/home/ton/bin:/usr/local/Trolltech/Qt/bin/:/usr/local/bin:$PATH
 
 # Enable recursive wildcards.
 shopt -s globstar
+
+# Configure ccache.
+export CCACHE_DIR=/home/ton/.ccache
+export CC="ccache gcc"
+export CXX="ccache g++"
+
+# Configure subversion.
+export SVN_EDITOR=vim
