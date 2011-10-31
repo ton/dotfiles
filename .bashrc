@@ -95,3 +95,9 @@ export CXX="ccache g++"
 
 # Configure subversion.
 export SVN_EDITOR=vim
+
+# Add machine specific configuration.
+if [ -e $HOME/.bash_local ]
+then
+    source $HOME/.bash_local
+fi
