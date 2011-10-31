@@ -4,7 +4,12 @@ editor = vim
 
 [extensions]
 color =
+graphlog =
 pager =
+purge =
+rebase =
+record =
+mq =
 
 [color]
 mode = ansi
