@@ -82,14 +82,15 @@ export QTDIR=/usr/local/Trolltech/Qt/
 # Disable flow control characters C-s and C-q so they can be used as shortcuts in Vim.
 stty -ixon -ixoff
 
-# Set path.
-export PATH=/home/ton/bin:/usr/local/Trolltech/Qt/bin/:/usr/local/bin:$PATH
+# Set path and library path.
+export PATH=$HOME/bin:$HOME/local/bin:/usr/local/Trolltech/Qt/bin/:/usr/local/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/local/lib:$LD_LIBRARY_PATH
 
 # Enable recursive wildcards.
 shopt -s globstar
 
 # Configure ccache.
-export CCACHE_DIR=/home/ton/.ccache
+export CCACHE_DIR=$HOME/.ccache
 export CC="ccache gcc"
 export CXX="ccache g++"
 
