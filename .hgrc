@@ -17,3 +17,7 @@ mode = ansi
 [pager]
 attend = diff, log, glog, lg
 pager = /usr/bin/less -R
+
+[alias]
+revert = revert --no-backup
+stat = !hg status $($HG root) $HG_ARGS
