@@ -53,8 +53,9 @@ Xft.rgba:rgb
 
 ! URxvt configuration.
 URxvt*saveLines:12000
+URxvt*depth: 32
 URxvt*foreground:White
-URxvt*background:Black
+URxvt*background: rgba:1110/1110/1110/dddd
 URxvt*cursorBlink:true
 URxvt*font:xft:Envy Code R:size=11:minspace=true
 URxvt*boldFont:xft:Envy Code R:bold:size=11:minspace=true
