@@ -1,2 +1,0 @@
-#!/bin/bash
-tmux -u -f /home/ton/.tmux-development.conf attach-session -t default
