@@ -79,9 +79,6 @@ fi
 # Set environment variables.
 export QTDIR=/usr/local/Trolltech/Qt/
 
-# Disable flow control characters C-s and C-q so they can be used as shortcuts in Vim.
-stty -ixon -ixoff
-
 # Set path and library path.
 export PATH=$HOME/bin:$HOME/local/bin:/usr/local/Trolltech/Qt/bin/:/usr/local/bin:$PATH
 export LD_LIBRARY_PATH=$HOME/local/lib:$LD_LIBRARY_PATH
@@ -101,4 +98,11 @@ export SVN_EDITOR=vim
 if [ -e $HOME/.bash_local ]
 then
     source $HOME/.bash_local
+fi
+
+# Disable flow control characters C-s and C-q so they can be used as shortcuts in Vim in case we are running in an
+# interactive shell.
+if [[ $- == *i* ]]
+then
+    stty -ixon -ixoff
 fi
