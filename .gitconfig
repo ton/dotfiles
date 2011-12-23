@@ -7,3 +7,5 @@
     editor = vim
 [alias]
     lg = log --graph --decorate --all
+[status]
+    relativePaths = false
