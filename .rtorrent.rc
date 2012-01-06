@@ -1,0 +1,25 @@
+# Watch a directory for new torrents, restart torrents that have been
+# copied back and stop those that have been deleted.
+
+schedule = watch_directory,10,10,load_start=~/downloads/torrents/*.torrent
+schedule = tied_directory,10,10,start_tied=
+schedule = untied_directory,10,10,close_untied=
+
+# When the torrent finishes, it executes "mv <base_path> ~/downloads/" and then sets the destination directory to "~/downloads/".
+
+system.method.set_key = event.rownload.finished,move_complete,"execute=mv,-u,$d.get_base_path=,~/downloads/;d.set_directory=~/downloads/"
+
+# Create symlinks in the watch directory with a suffix indicating the
+# download state.
+
+on_start    = link1,"create_link=tied,,.started"
+on_stop     = link1,"delete_link=tied,,.started"
+on_finished = link1,"create_link=tied,,.finished"
+on_erase    = link1,"delete_link=tied,,.finished"
+
+# Create symlinks in the same directory as the download.
+
+on_start    = link2,"create_link=base_path,,.started"
+on_stop     = link2,"delete_link=base_path,,.started"
+on_finished = link2,"create_link=base_path,,.finished"
+on_erase    = link2,"delete_link=base_path,,.finished"
