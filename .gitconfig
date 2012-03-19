@@ -7,5 +7,9 @@
     editor = vim
 [alias]
     lg = log --graph --decorate --all
+[push]
+    # In case 'git push' is used without arguments, only push the current branch to the remote branch 'git pull' would
+    # pull from.
+    default = tracking
 [status]
     relativePaths = false
