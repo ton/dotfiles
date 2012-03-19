@@ -55,9 +55,9 @@ URxvt*depth: 32
 URxvt*foreground:White
 URxvt*background: rgba:1110/1110/1110/dddd
 URxvt*cursorBlink:true
-URxvt*font:xft:Envy Code R:size=11
-URxvt*boldFont:xft:Envy Code R:bold:size=11
-URxvt*italicFont:xft:Envy Code R:italic:size=11
+URxvt*font:xft:Monospace:size=12
+URxvt*boldFont:xft:Monospace:bold:size=12
+URxvt*italicFont:xft:Monospace:italic:size=12
 URxvt*scrollBar:false
 URxvt*scrollstyle:rxvt
 URxvt*scrollTtyKeypress:true
