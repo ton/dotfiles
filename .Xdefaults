@@ -71,3 +71,4 @@ URxvt.keysym.Mod4-J:\033J
 URxvt.keysym.Mod4-K:\033K
 URxvt.keysym.Mod4-H:\033H
 URxvt.keysym.Mod4-L:\033L
+URxvt.keysym.C-BackSpace:\033\177
