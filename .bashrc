@@ -102,3 +102,6 @@ if [[ $- == *i* ]]
 then
     stty -ixon -ixoff
 fi
+
+# Enable vi mode for command-line editing.
+set -o vi
