@@ -76,7 +76,7 @@ fi
 export QTDIR=/usr/local/Trolltech/Qt/
 
 # Set path and library path.
-export PATH=$HOME/bin:$HOME/local/bin:/usr/local/Trolltech/Qt/bin/:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/local/bin:/usr/local/Trolltech/Qt/bin/:/usr/local/bin:/usr/lib/ccache/bin/:$PATH
 export LD_LIBRARY_PATH=$HOME/local/lib:$LD_LIBRARY_PATH
 
 # Enable recursive wildcards.
