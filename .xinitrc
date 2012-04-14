@@ -14,3 +14,18 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 # Disable PC speaker.
 xset -b
+
+# Start Redshift.
+if [ -f /usr/bin/redshift ]
+then
+    /usr/bin/redshift -l 51.431371:5.464261 -t 5500:3700 &
+fi
+
+# Start Dropbox in case it is installed.
+if [ -f $HOME/.dropbox-dist/dropboxd ]
+then
+    $HOME/.dropbox-dist/dropboxd &
+fi
+
+# Start XFCE4 session.
+exec ck-launch-session startxfce4
