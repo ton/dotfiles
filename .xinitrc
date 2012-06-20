@@ -27,5 +27,8 @@ then
     $HOME/.dropbox-dist/dropboxd &
 fi
 
+# Start autocutsel allowing seemless copy/pasting between Vim and the terminal.
+autocutsel -selection PRIMARY -fork &
+
 # Start XFCE4 session.
 exec ck-launch-session startxfce4
