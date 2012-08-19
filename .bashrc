@@ -90,6 +90,9 @@ export CXX="ccache g++"
 # Configure subversion.
 export SVN_EDITOR=vim
 
+# Don't keep a history file for less.
+export lESSHISTFILE=/dev/null
+
 # Add machine specific configuration.
 if [ -e $HOME/.bash_local ]
 then
