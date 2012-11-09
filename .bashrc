@@ -60,6 +60,9 @@ export SVN_EDITOR=vim
 # Don't keep a history file for less.
 export LESSHISTFILE=/dev/null
 
+# Let QtGtkStyle know about the current GTK2 theme.
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+
 # Add machine specific configuration.
 if [ -e $HOME/.bash_local ]
 then
