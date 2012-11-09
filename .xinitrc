@@ -31,4 +31,4 @@ fi
 autocutsel -selection PRIMARY -fork &
 
 # Start XFCE4 session.
-exec ck-launch-session startxfce4
+exec startxfce4
