@@ -20,7 +20,7 @@ shopt -s checkwinsize
 GIT_PROMPT_SCRIPT=/usr/share/git/completion/git-prompt.sh
 if [ -f $GIT_PROMPT_SCRIPT ]; then
     source $GIT_PROMPT_SCRIPT
-    PS1='\u@\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 "\033[01;00m|\033[01;30m%s\033[01;00m" )\$ '
+    PS1='\u@\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 "\[\033[01;00m\]|\[\033[01;30m\]%s\[\033[01;00m\]" )\$ '
 else
     PS1='\u@\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 fi
