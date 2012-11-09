@@ -10,7 +10,8 @@
 [alias]
     lg = log --graph --decorate --all
     unstage = reset HEAD
-    out = @{u}..
+    stat = status -sb
+    out = log @{u}..
 [push]
     default = simple
 [status]
