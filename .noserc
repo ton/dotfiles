@@ -1,3 +1,5 @@
 [nosetests]
-with-nicer-output=1
 nologcapture=1
+with-nicer-output=1
+with-test-set=1
+test-sets=unit_tests
