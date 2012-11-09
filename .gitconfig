@@ -1,5 +1,6 @@
 [color]
     diff = auto
+    status = auto
 [user]
     name = Ton van den Heuvel
     email = tonvandenheuvel@gmail.com
@@ -15,3 +16,6 @@
     default = tracking
 [status]
     relativePaths = false
+[color "status"]
+    untracked = cyan
+    changed = yellow
