@@ -11,9 +11,7 @@
     lg = log --graph --decorate --all
     unstage = reset HEAD
 [push]
-    # In case 'git push' is used without arguments, only push the current branch to the remote branch 'git pull' would
-    # pull from.
-    default = tracking
+    default = simple
 [status]
     relativePaths = false
 [color "status"]
