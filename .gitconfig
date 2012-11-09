@@ -5,6 +5,7 @@
     email = tonvandenheuvel@gmail.com
 [core]
     editor = vim
+    excludesfile = ~/.gitignore
 [alias]
     lg = log --graph --decorate --all
     unstage = reset HEAD
