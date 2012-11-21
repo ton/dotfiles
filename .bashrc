@@ -19,7 +19,7 @@ shopt -s checkwinsize
 
 __git_branch ()
 {
-    local branch=`git branch 2> /dev/null | awk '{print $2}'`
+    local branch=`git branch 2> /dev/null | grep ^* | awk '{print $2}'`
     if [ -n "$branch" ]; then
         printf "${1}" "$branch"
     fi
