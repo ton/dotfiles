@@ -18,7 +18,7 @@ xset -b
 # Start Redshift.
 if [ -f /usr/bin/redshift ]
 then
-    /usr/bin/redshift -l 51.431371:5.464261 -t 5500:3700 &
+    /usr/bin/redshift -l 51.431371:5.464261 -t 5500:4200 &
 fi
 
 # Start Dropbox in case it is installed.
