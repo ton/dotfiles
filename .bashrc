@@ -70,3 +70,10 @@ fi
 
 # Enable vi mode for command-line editing.
 set -o vi
+
+# Start a console Vim as a Vim server by default.
+vim ()
+{
+    vim_executable=$(which vim)
+    $vim_executable --servername vim "$@"
+}
