@@ -19,9 +19,15 @@ shopt -s checkwinsize
 
 __git_branch ()
 {
-    local branch=`git branch 2> /dev/null | grep ^* | awk '{print $2}'`
-    if [ -n "$branch" ]; then
-        printf "${1}" "$branch"
+    # In case we are not in a possible remotely mounted location, print the git
+    # branch name.
+    if [[ ! `mount | grep " $(pwd) "` ]]
+    then
+        local branch=`git branch 2> /dev/null | grep ^* | awk '{print $2}'`
+        if [[ -n $branch ]]
+        then
+            printf "${1}" "$branch"
+        fi
     fi
 }
 PS1='\u@\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_branch "\[\033[01;00m\]|\[\033[01;30m\]%s\[\033[01;00m\]" )\$ '
