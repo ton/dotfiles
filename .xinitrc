@@ -30,5 +30,8 @@ fi
 # Start autocutsel allowing seemless copy/pasting between Vim and the terminal.
 autocutsel -selection PRIMARY -fork &
 
+# Set keyboard shortcuts.
+xbindkeys
+
 # Start XFCE4 session.
 exec startxfce4
