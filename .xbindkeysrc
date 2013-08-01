@@ -1,0 +1,7 @@
+"urxvtc"
+    m:0x40 + c:54
+    Mod4 + c
+
+"xfrun4 -c"
+    m:0x40 + c:27
+    Mod4 + r
