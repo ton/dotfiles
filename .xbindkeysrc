@@ -5,3 +5,27 @@
 "xfrun4 -c"
     m:0x40 + c:27
     Mod4 + r
+
+"wmctrl -s 0"
+    m:0x40 + c:10
+    Mod4 + 1
+
+"wmctrl -s 1"
+    m:0x40 + c:11
+    Mod4 + 2
+
+"wmctrl -s 2"
+    m:0x40 + c:12
+    Mod4 + 3
+
+"wmctrl -s 3"
+    m:0x40 + c:13
+    Mod4 + 4
+
+"wmctrl -s 4"
+    m:0x40 + c:14
+    Mod4 + 5
+
+"wmctrl -s 5"
+    m:0x40 + c:15
+    Mod4 + 6
