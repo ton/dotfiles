@@ -61,3 +61,6 @@ bindkey -M viins '\e/' vi-search-fix
 
 # Make sure that backspace works past the point where we entered insert mode.
 bindkey "^?" backward-delete-char
+
+# In case a machine local configuration must be set, do so here.
+test -f $HOME/.zshrc.local && source $HOME/.zshrc.local
