@@ -1,0 +1,10 @@
+; Move notifications to the right screen
+(if
+    (is (application_name) "xfce4-notifyd")
+    (begin
+        (skip_pager)
+        (geometry "-30+30")
+        (focus)
+        (above)
+    )
+)
