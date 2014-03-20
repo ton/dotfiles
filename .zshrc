@@ -11,9 +11,9 @@ setopt ExtendedGlob
 
 # Append to the history file, don't overwrite it, and share history between
 # terminals.
-export HISTSIZE=1000
+export HISTSIZE=50000
 export HISTFILE=$HOME/.history
-export SAVEHIST=1000
+export SAVEHIST=50000
 setopt IncAppendHistory HistIgnoreAllDups
 
 # Enable advanced command line completion.
