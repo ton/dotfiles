@@ -38,6 +38,7 @@ alias vi="vim"
 alias urxvt="urxvt -tr -sh 15"
 alias ctags_cpp="ctags --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -R *"
 alias vim="vim --servername VIM $*"
+alias dia="dia --integrated $*"
 
 # Disable flow control characters C-s and C-q so they can be used as shortcuts
 # in Vim in case we are running in an interactive shell.
