@@ -15,7 +15,7 @@
 [push]
     default = simple
 [status]
-    relativePaths = false
+    relativePaths = true
 [color "status"]
     untracked = cyan
     changed = yellow
