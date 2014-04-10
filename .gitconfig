@@ -19,3 +19,4 @@
 [color "status"]
     untracked = cyan
     changed = yellow
+    removed = red
