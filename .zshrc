@@ -1,11 +1,6 @@
 # If not running interactively, don't do anything.
 [ -z "$PS1" ] && return
 
-# Set the correct path (ideally, this should be done from .zshenv, but is
-# problematic, see: https://bugs.archlinux.org/task/35966.
-typeset -U path
-path=($HOME/bin $path /usr/local/Trolltech/Qt/bin /usr/lib/ccache/bin)
-
 # Enable recursive wildcards.
 setopt ExtendedGlob
 
