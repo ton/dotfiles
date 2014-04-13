@@ -7,7 +7,7 @@ fpath=($HOME/.zsh/functions $fpath)
 # Set the library search path.
 ld_library_path=($HOME/local/lib $ld_library_path)
 
-export PATH=$HOME/bin:$PATH:/usr/local/Trolltech/Qt/bin:/usr/lib/ccache/bin
+export PATH=$HOME/local/bin:$PATH:/usr/local/Trolltech/Qt/bin:/usr/lib/ccache/bin
 
 # Set environment variables.
 export QTDIR=/usr/local/Trolltech/Qt/
