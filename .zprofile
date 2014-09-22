@@ -21,6 +21,7 @@ alias ctags_cpp="ctags --c++-kinds=+p --fields=+iaS --extra=+q --language-force=
 alias vim="vim --servername VIM $*"
 alias dia="dia --integrated $*"
 alias parallel="parallel --env PYTHONPATH --no-notice"
+alias please="sudo $(fc -ln -1)"
 
 # Set environment variables.
 export QTDIR=/usr/local/Trolltech/Qt/
