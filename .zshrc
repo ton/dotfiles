@@ -24,17 +24,6 @@ setopt PromptSubst
 # Set prompt.
 export PROMPT='%n@%F{154}%B%m%F{255}:%F{12}%~%b%F{255}$(git-branch "|%%B%%F{245}%s%%F{255}%%b")$ '
 
-# Alias definitions.
-alias grep="grep --color=auto -I"
-alias fgrep="fgrep -I -s"
-alias less="less -R"
-alias ls="ls --color=auto"
-alias vi="vim"
-alias urxvt="urxvt -tr -sh 15"
-alias ctags_cpp="ctags --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -R *"
-alias vim="vim --servername VIM $*"
-alias dia="dia --integrated $*"
-alias parallel="parallel --env PYTHONPATH --no-notice"
 
 # Disable flow control characters C-s and C-q so they can be used as shortcuts
 # in Vim in case we are running in an interactive shell.
