@@ -12,6 +12,8 @@
     unstage = reset HEAD
     st = status
     out = log @{u}..
+    ds = diff --staged
+    co = checkout
 [push]
     default = simple
 [status]
@@ -20,3 +22,5 @@
     untracked = cyan
     changed = yellow
     removed = red
+[merge]
+    renamelimit = 10000
