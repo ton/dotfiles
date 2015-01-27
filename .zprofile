@@ -32,9 +32,9 @@ export CC="ccache gcc"
 export CXX="ccache g++"
 
 # Setup the default editor.
-if [ -x /usr/local/bin/vim ];
+if [ -x ${HOME}/local/bin/vim ];
 then
-    export EDITOR=/usr/local/bin/vim
+    export EDITOR=${HOME}/local/bin/vim
 else
     export EDITOR=/usr/bin/vim
 fi
