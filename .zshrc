@@ -24,7 +24,6 @@ setopt PromptSubst
 # Set prompt.
 export PROMPT='%n@%F{154}%B%m%F{255}:%F{12}%~%b%F{255}$(git-branch "|%%B%%F{245}%s%%F{255}%%b")$ '
 
-
 # Disable flow control characters C-s and C-q so they can be used as shortcuts
 # in Vim in case we are running in an interactive shell.
 if [[ $- == *i* ]]
