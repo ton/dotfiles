@@ -23,8 +23,7 @@ alias please="sudo !!"
 # Set environment variables.
 export QTDIR=/usr/local/Trolltech/Qt/
 
-# Configure ccache.
-export CCACHE_DIR=$HOME/.ccache
+# Configure ccache to be used for gcc/g++.
 export CC="ccache gcc"
 export CXX="ccache g++"
 
