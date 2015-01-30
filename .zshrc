@@ -4,6 +4,9 @@
 # Enable recursive wildcards.
 setopt ExtendedGlob
 
+# Disable PC speaker.
+unsetopt beep
+
 # Append to the history file, don't overwrite it, and share history between
 # terminals.
 export HISTSIZE=50000
