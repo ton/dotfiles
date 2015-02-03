@@ -3,11 +3,6 @@
 # Remap caps lock to an additional control.
 /usr/bin/setxkbmap -option "ctrl:nocaps"
 
-# Start urxvt shell daemon.
-if ! `pidof -x urxvtd > /dev/null`
-then
-    urxvtd &
-fi
 
 # Start devilspie to automatically move notifications to the second screen (in
 # case one is available).
