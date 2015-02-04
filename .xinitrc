@@ -3,6 +3,8 @@
 # Remap caps lock to an additional control.
 /usr/bin/setxkbmap -option "ctrl:nocaps"
 
+# Use ralt for composing special characters.
+/usr/bin/setxkbmap -option "compose:ralt"
 
 # Start devilspie to automatically move notifications to the second screen (in
 # case one is available).
