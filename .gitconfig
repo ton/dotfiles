@@ -9,6 +9,7 @@
     excludesfile = ~/.gitignore
 [alias]
     lg = log --graph --decorate --all
+    lol = log --graph --decorate --all --pretty=oneline --abbrev-commit
     unstage = reset HEAD
     st = status
     out = log @{u}..
