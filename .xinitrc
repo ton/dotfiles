@@ -3,6 +3,8 @@
 # Remap caps lock to an additional control.
 /usr/bin/setxkbmap -option "ctrl:nocaps"
 
+# Use ralt for composing special characters.
+/usr/bin/setxkbmap -option "compose:ralt"
 
 # Set the correct GTK theme name (mainly for Qt based applications).
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
