@@ -52,6 +52,9 @@ bindkey "^?" backward-delete-char
 # Make sure environment variables only contain unique entries.
 typeset -U path
 
+# Evaluate ls colors.
+eval $(dircolors ~/.dircolors)
+
 # Unfortunately, we need to set PATH in .zshrc under Arch.
 path=($HOME/local/bin $path)
 
