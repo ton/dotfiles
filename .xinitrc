@@ -34,8 +34,11 @@ fi
 # Start autocutsel allowing seemless copy/pasting between Vim and the terminal.
 autocutsel -selection PRIMARY -fork &
 
-# Set keyboard shortcuts.
-xbindkeys
+# Start compton for compositor effects.
+compton -b
 
-# Start XFCE4 session.
-exec startxfce4
+# Set the most recently configured wallpaper.
+sh ~/.fehbg &
+
+# Start i3 session.
+exec i3
