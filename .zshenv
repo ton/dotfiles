@@ -41,5 +41,8 @@ export LESSHISTFILE=/dev/null
 # Let QtGtkStyle know about the current GTK2 theme.
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
+# Use termite as the default terminal.
+export TERMINAL=termite
+
 # In case a machine local configuration must be set, do so here.
 test -f $HOME/.zshenv.local && source $HOME/.zshenv.local
