@@ -33,5 +33,8 @@ compton --config ~/.config/compton.conf &
 # Set the most recently configured wallpaper.
 sh ~/.fehbg &
 
+# Generate a host specific i3 configuration.
+$HOME/.i3/host_specific_i3_config.sh > $HOME/.i3/config
+
 # Start i3 session.
 exec i3

@@ -1,0 +1,5 @@
+# Show a simple bar.
+bar {
+    status_command i3blocks
+    font pango:Droid Sans,Font Awesome 12
+}
