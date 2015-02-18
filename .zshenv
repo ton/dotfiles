@@ -41,6 +41,9 @@ export LESSHISTFILE=/dev/null
 # Let QtGtkStyle know about the current GTK2 theme.
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
+# Make sure locally installed terminfo files are found.
+export TERMINFO="$HOME/local/share/terminfo"
+
 # Use termite as the default terminal.
 export TERMINAL=termite
 
