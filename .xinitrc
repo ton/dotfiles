@@ -6,13 +6,6 @@
 # Use ralt for composing special characters.
 /usr/bin/setxkbmap -option "compose:ralt"
 
-# Start devilspie to automatically move notifications to the second screen (in
-# case one is available).
-if [ -f /usr/bin/devilspie ]
-then
-    devilspie &
-fi
-
 # Set the correct GTK theme name (mainly for Qt based applications).
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
