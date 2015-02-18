@@ -1,0 +1,16 @@
+# Show bar only on the right monitor.
+bar {
+    status_command i3blocks
+    font pango:Droid Sans,Font Awesome 12
+    output DP-2
+    tray_output DP-2
+}
+
+# Make sure to output all workspace on a single monitor. Vim is used by default
+# on a separate monitor.
+workspace 1 output DP-2
+workspace 2 output DP-2
+workspace 3 output DP-2
+workspace 4 output DP-2
+workspace 5 output DP-2
+workspace 6 output DP-2
