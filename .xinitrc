@@ -28,7 +28,7 @@ fi
 autocutsel -selection PRIMARY -fork &
 
 # Start compton for compositor effects.
-compton --config ~/.config/compton.conf &
+compton --config ~/.config/compton.`hostname`.conf &
 
 # Set the most recently configured wallpaper.
 sh ~/.fehbg &
