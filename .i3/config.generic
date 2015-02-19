@@ -121,5 +121,5 @@ bindsym $mod+s scratchpad show
 bindsym $mod+Shift+s move scratchpad
 
 # Container splitting shortcuts.
-bindsym $mod+Shift+minus split v; exec i3-sensible-terminal
-bindsym $mod+Shift+bar split h; exec i3-sensible-terminal
+bindsym $mod+minus exec i3-split-window.py vertical i3-sensible-terminal
+bindsym $mod+bar exec i3-split-window.py horizontal i3-sensible-terminal
