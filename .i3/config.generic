@@ -98,8 +98,8 @@ bindsym Mod1+5 exec i3-switch-tab.py 4
 bindsym Mod1+6 exec i3-switch-tab.py 5
 
 # Session shortcuts.
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+c exec $HOME/.i3/host_specific_i3_config.sh > $HOME/.i3/config; reload
+bindsym $mod+Shift+r exec $HOME/.i3/host_specific_i3_config.sh > $HOME/.i3/config; restart
 bindsym $mod+Escape exit
 
 # Resize shortcuts.
