@@ -90,6 +90,14 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+# Switch to a specific tab in case we are in a tabbed container.
+bindsym Mod1+1 exec i3-switch-tab.py 0
+bindsym Mod1+2 exec i3-switch-tab.py 1
+bindsym Mod1+3 exec i3-switch-tab.py 2
+bindsym Mod1+4 exec i3-switch-tab.py 3
+bindsym Mod1+5 exec i3-switch-tab.py 4
+bindsym Mod1+6 exec i3-switch-tab.py 5
+
 # Session shortcuts.
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
