@@ -1,7 +1,7 @@
 # Show bar only on the right monitor.
 bar {
     status_command i3blocks
-    font pango:Droid Sans,Font Awesome 12
+    font pango:Cantarell,Font Awesome 12
     position top
 
     output DP-2
