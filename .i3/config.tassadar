@@ -2,4 +2,14 @@
 bar {
     status_command i3blocks
     font pango:Droid Sans,Font Awesome 12
+
+    colors {
+        background $black
+        statusline $white
+
+        focused_workspace  $black $black $lgreen
+        active_workspace   $black $black $lgreen
+        inactive_workspace $black $black $dgreen
+        urgent_workspace   $black $black $red
+    }
 }

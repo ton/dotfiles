@@ -4,6 +4,16 @@ bar {
     font pango:Droid Sans,Font Awesome 12
     output DP-2
     tray_output DP-2
+
+    colors {
+        background $black
+        statusline $white
+
+        focused_workspace  $black $black $lgreen
+        active_workspace   $black $black $lgreen
+        inactive_workspace $black $black $dgreen
+        urgent_workspace   $black $black $red
+    }
 }
 
 # Make sure to output all workspace on a single monitor. Vim is used by default
