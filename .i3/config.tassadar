@@ -4,6 +4,8 @@ bar {
     font pango:Cantarell,Font Awesome 12
     position top
 
+    strip_workspace_numbers yes
+
     colors {
         background $black
         statusline $white
