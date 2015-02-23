@@ -1,4 +1,11 @@
 ##
+# Behavioural settings
+##
+
+# Disable focus follows mouse.
+focus_follows_mouse no
+
+##
 # Cosmetic settings
 ##
 
