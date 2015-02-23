@@ -1,4 +1,15 @@
 ##
+# Global variables
+##
+
+# Set color values.
+set $lgreen #d7f463
+set $dgreen #6e7457
+set $black  #222222
+set $white  #eeeeee
+set $red    #ee2222
+
+##
 # Behavioural settings
 ##
 
@@ -20,6 +31,10 @@ for_window [class="^.*"] border pixel 2
 
 # Small gaps between windows look nice.
 gaps inner 5
+
+# Colors for window decorations.
+client.focused   #ffffff $lgreen #ffffff $lgreen
+client.unfocused #333333 $dgreen #888888 $dgreen
 
 ##
 # Keyboard bindings
