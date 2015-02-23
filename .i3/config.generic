@@ -38,7 +38,7 @@ floating_modifier $mod
 for_window [class="^.*"] border pixel 2
 
 # Small gaps between windows look nice.
-gaps inner 5
+gaps inner 8
 
 # Colors for window decorations.
 client.focused   #ffffff $lgreen #ffffff $lgreen
