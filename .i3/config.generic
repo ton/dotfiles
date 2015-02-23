@@ -29,6 +29,9 @@ exec_always --no-startup-id i3-disable-standby-fs.py VIM
 # Behavioural settings
 ##
 
+# Automatically move windows with the scratchpad role to the scratchpad.
+for_window [window_role = "scratchpad"] move scratchpad
+
 # Disable focus follows mouse.
 focus_follows_mouse no
 
