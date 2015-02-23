@@ -5,9 +5,9 @@
 # Set color values.
 set $lgreen #d7f463
 set $dgreen #6e7457
-set $black  #222222
-set $white  #eeeeee
-set $red    #ee2222
+set $black #222222
+set $white #eeeeee
+set $red #ee2222
 
 # Set workspace names.
 set $ws1 1:Ⅰ 
