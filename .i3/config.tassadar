@@ -2,6 +2,7 @@
 bar {
     status_command i3blocks
     font pango:Droid Sans,Font Awesome 12
+    position top
 
     colors {
         background $black

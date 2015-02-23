@@ -2,6 +2,8 @@
 bar {
     status_command i3blocks
     font pango:Droid Sans,Font Awesome 12
+    position top
+
     output DP-2
     tray_output DP-2
 
