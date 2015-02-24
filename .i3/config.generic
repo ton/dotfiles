@@ -52,8 +52,9 @@ for_window [class="^.*"] border pixel 2
 gaps inner 8
 
 # Colors for window decorations.
-client.focused   #ffffff $lgreen #ffffff $lgreen
-client.unfocused #333333 $dgreen #888888 $dgreen
+client.focused $lgreen $lgreen $black $lgreen
+client.focused_inactive $lgreen $dgreen $black $dgreen
+client.unfocused $dgreen $black $dgreen $black
 
 ##
 # Keyboard bindings
