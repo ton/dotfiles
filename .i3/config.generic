@@ -30,7 +30,7 @@ exec_always --no-startup-id i3-disable-standby-fs.py VIM
 ##
 
 # Automatically move windows with the scratchpad role to the scratchpad.
-for_window [window_role = "scratchpad"] move scratchpad
+for_window [window_role = "scratchpad"] move scratchpad, scratchpad show
 
 # Move Evince to the fourt workspace by default.
 assign [class = "Evince"] $ws4
