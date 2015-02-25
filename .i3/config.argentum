@@ -28,3 +28,7 @@ workspace $ws3 output DP-2
 workspace $ws4 output DP-2
 workspace $ws5 output DP-2
 workspace $ws6 output DP-2
+
+# Move Java applications to the third workspace by default.
+assign [class = "SWT"] $ws3
+for_window [class = "SWT"] focus
