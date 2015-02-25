@@ -33,8 +33,8 @@ exec_always --no-startup-id i3-disable-standby-fs.py VIM
 for_window [window_role = "scratchpad"] move scratchpad, scratchpad show
 
 # Move Evince to the fourt workspace by default.
-assign [class = "Evince"] $ws4
-for_window [class = "Evince"] focus
+assign [class = "Zathura"] $ws4
+for_window [class = "Zathura"] focus
 
 # Disable focus follows mouse.
 focus_follows_mouse no
