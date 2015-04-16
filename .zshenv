@@ -28,11 +28,19 @@ export CC="ccache gcc"
 export CXX="ccache g++"
 
 # Setup the default editor.
-if [ -x ${HOME}/local/bin/vim ];
+if [ -x ${HOME}/local/bin/vim ]
 then
     export EDITOR=${HOME}/local/bin/vim
 else
-    export EDITOR=/usr/bin/vim
+    if [ -x /usr/local/bin/vim ]
+    then
+        export EDITOR=/usr/local/bin/vim
+    else
+        if [ -x /usr/bin/vim ]
+        then
+            export EDITOR=/usr/bin/vim
+        fi
+    fi
 fi
 
 # Don't keep a history file for less.
