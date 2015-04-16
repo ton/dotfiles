@@ -1,0 +1,15 @@
+# In case a sandbox is set, output sandbox information.
+if [[ ! -z $SANDBOX_NAME ]]
+then
+    local current_branch=`git-branch.sh`
+    if [[ ! -z "$current_branch" && `pwd` != $SANDBOX_ROOT && $SANDBOX_BRANCH != $current_branch ]]
+    then
+        local branch_color="196"
+    else
+        local branch_color="245"
+    fi
+
+    printf "%%B[%%F{12}%s%%F{255} %%b\uf020 %%B%%F{%s}%s%%F{255} %%b\uf02f %%B%%F{208}%s%%F{255}]" "$SANDBOX_NAME" "$branch_color" "$SANDBOX_BRANCH" "$SANDBOX_BUILD_TYPE"
+else
+    printf "%%B[]%%b"
+fi
