@@ -16,3 +16,11 @@ bar {
         urgent_workspace   $black $black $red
     }
 }
+
+# Move Interview to the fourth workspace by default.
+assign [class = "Interview"] $ws5
+for_window [class = "Interview"] focus, layout stacking
+assign [class = "Fsuite"] $ws5
+for_window [class = "Fsuite"] focus, layout stacking
+
+for_window [class="Ecotouch-terminal"] floating enable
