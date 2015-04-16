@@ -21,7 +21,7 @@ autoload -U compinit && compinit
 autoload -U zcalc
 
 # Load function to show the active git branch in the prompt.
-autoload -U git-branch && git-branch
+autoload -U git-branch
 setopt PromptSubst
 
 # Set prompt.
