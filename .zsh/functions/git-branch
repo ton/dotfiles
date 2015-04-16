@@ -2,7 +2,7 @@
 # branch name.
 if [[ "`mount | grep " $(pwd) "`" == "" ]]
 then
-    local branch="`git branch 2> /dev/null | grep '^*' | cut -d\  -f2-`"
+    local branch="`git-branch.sh`"
     if [[ -n $branch ]]
     then
         printf "${1}" "$branch"
