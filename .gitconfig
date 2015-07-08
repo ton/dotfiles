@@ -11,7 +11,7 @@
     lg = log --graph --decorate --all
     lol = log --graph --decorate --all --pretty=oneline --abbrev-commit
     unstage = reset HEAD
-    st = status
+    st = status --column
     out = log @{u}..
     ds = diff --staged
     co = checkout
