@@ -25,3 +25,5 @@
     removed = red
 [merge]
     renamelimit = 10000
+[advice]
+    statusHints = false
