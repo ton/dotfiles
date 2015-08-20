@@ -17,10 +17,11 @@ bar {
     }
 }
 
-# Move Interview to the fourth workspace by default.
+# Define application specific workspaces.
 assign [class = "Interview"] $ws5
 for_window [class = "Interview"] focus, layout stacking
 assign [class = "Fsuite"] $ws5
 for_window [class = "Fsuite"] focus, layout stacking
 
+# Define application specific window properties.
 for_window [class="Ecotouch-terminal"] floating enable
