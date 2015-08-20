@@ -10,12 +10,12 @@ set $white #eeeeee
 set $red #ee2222
 
 # Set workspace names.
-set $ws1 1:Ⅰ 
-set $ws2 2:Ⅱ 
-set $ws3 3:Ⅲ 
-set $ws4 4:Ⅳ 
-set $ws5 5:Ⅴ 
-set $ws6 6:Ⅵ 
+set $ws1 1:Ⅰ
+set $ws2 2:Ⅱ
+set $ws3 3:Ⅲ
+set $ws4 4:Ⅳ
+set $ws5 5:Ⅴ
+set $ws6 6:Ⅵ
 
 ##
 # Auto start configuration
