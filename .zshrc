@@ -4,6 +4,9 @@
 # Enable recursive wildcards.
 setopt ExtendedGlob
 
+# Diable rm star confirmation.
+setopt no_rm_star_silent
+
 # Disable PC speaker.
 unsetopt beep
 
