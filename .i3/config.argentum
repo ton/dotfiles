@@ -22,7 +22,7 @@ bar {
 
 # Define the workspace displayed on the left monitor.
 set $ws0 global
-bindsym $mod+1 workspace $ws1; workspace $ws0
+bindsym $mod+1 workspace $ws1
 
 # Make sure to output all workspace on a single monitor. Vim is used by default
 # on a separate monitor.
