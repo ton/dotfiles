@@ -1,15 +1,41 @@
+local sandbox=""
+
 # In case a sandbox is set, output sandbox information.
-if [[ ! -z $SANDBOX_NAME ]]
+if [ ! -z $SANDBOX_NAME ]
 then
-    local current_branch=`git-branch.sh`
-    if [[ ! -z "$current_branch" && `pwd` != $SANDBOX_ROOT && $SANDBOX_BRANCH != $current_branch ]]
+    # Use a different color for the sandbox name depending on whether we are in
+    # a virtualenv or a C++ sandbox.
+    if [[ -n "$SANDBOX_VIRTUALENV" ]]
     then
-        local branch_color="196"
+        sandbox_name_color="208"
     else
-        local branch_color="245"
+        sandbox_name_color="12"
     fi
 
-    printf "%%B[%%F{12}%s%%F{255} %%b\uf020 %%B%%F{%s}%s%%F{255} %%b\uf02f %%B%%F{208}%s%%F{255}]" "$SANDBOX_NAME" "$branch_color" "$SANDBOX_BRANCH" "$SANDBOX_BUILD_TYPE"
-else
-    printf "%%B[]%%b"
+    local sandbox_prompt=$(printf "%%F{%s}%s" "$sandbox_name_color" "$SANDBOX_NAME")
+
+    if [[ ! -z "$SANDBOX_BRANCH" ]]
+    then
+        local current_branch=`git-branch.sh`
+        if [[ ! -z "$current_branch" && `pwd` != $SANDBOX_ROOT && $SANDBOX_BRANCH != $current_branch ]]
+        then
+            local branch_color="196"
+        else
+            local branch_color="245"
+        fi
+
+        sandbox_prompt=$(printf "%s%%F{255} %%b\uf020 %%B%%F{%s}%s" "$sandbox_prompt" "$branch_color" "$SANDBOX_BRANCH")
+    fi
+
+    if [[ ! -z "$SANDBOX_BUILD_TYPE" ]]
+    then
+        sandbox_prompt=$(printf "%s %%b\uf02f %%B%%F{208}%s" "$sandbox_prompt" "$SANDBOX_BUILD_TYPE")
+    fi
+
+    if [[ -n "$SANDBOX_VIRTUALENV" ]]
+    then
+        printf "%%B(%s%%F{255})" "$sandbox_prompt"
+    else
+        printf "%%B[%s%%F{255}]" "$sandbox_prompt"
+    fi
 fi
