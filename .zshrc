@@ -25,7 +25,7 @@ autoload -U zcalc
 
 # Load function to show the active git branch in the prompt.
 autoload -U git-branch
-autoload -U sandbox-info && sandbox-info
+autoload -U sandbox-info
 setopt PromptSubst
 
 # Set prompt.
