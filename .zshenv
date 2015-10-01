@@ -55,5 +55,8 @@ export TERMINFO="$HOME/local/share/terminfo"
 # Use termite as the default terminal.
 export TERMINAL=termite
 
+# Disable virtualenv prompt by default (we handle it ourselves).
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
 # In case a machine local configuration must be set, do so here.
 test -f $HOME/.zshenv.local && source $HOME/.zshenv.local
