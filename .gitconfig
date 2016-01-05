@@ -27,3 +27,5 @@
 	renamelimit = 10000
 [advice]
 	statusHints = false
+[rebase]
+	autostash = true
