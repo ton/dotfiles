@@ -1,29 +1,29 @@
 [color]
-    diff = auto
-    status = auto
+	diff = auto
+	status = auto
 [user]
-    name = Ton van den Heuvel
-    email = tonvandenheuvel@gmail.com
+	name = Ton van den Heuvel
+	email = tonvandenheuvel@gmail.com
 [core]
-    editor = vim
-    excludesfile = ~/.gitignore
+	editor = vim
+	excludesfile = ~/.gitignore
 [alias]
-    lg = log --graph --decorate --all
-    lol = log --graph --decorate --all --pretty=oneline --abbrev-commit
-    unstage = reset HEAD
-    st = status --column
-    out = log @{u}..
-    ds = diff --staged
-    co = checkout
+	lg = log --graph --decorate --all
+	lol = log --graph --decorate --all --pretty=oneline --abbrev-commit
+	unstage = reset HEAD
+	st = status --column
+	out = log @{u}..
+	ds = diff --staged
+	co = checkout
 [push]
-    default = simple
+	default = simple
 [status]
-    relativePaths = true
+	relativePaths = true
 [color "status"]
-    untracked = cyan
-    changed = yellow
-    removed = red
+	untracked = cyan
+	changed = yellow
+	removed = red
 [merge]
-    renamelimit = 10000
+	renamelimit = 10000
 [advice]
-    statusHints = false
+	statusHints = false
