@@ -54,6 +54,9 @@ bindkey -M viins '\e/' vi-search-fix
 # Make sure that backspace works past the point where we entered insert mode.
 bindkey "^?" backward-delete-char
 
+# Let control+backspace delete the last word.
+bindkey "^H" backward-delete-word
+
 # Make sure environment variables only contain unique entries.
 typeset -U path
 
