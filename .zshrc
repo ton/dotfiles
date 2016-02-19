@@ -5,7 +5,7 @@
 setopt ExtendedGlob
 
 # Diable rm star confirmation.
-setopt no_rm_star_silent
+setopt rmstarsilent
 
 # Disable PC speaker.
 unsetopt beep
