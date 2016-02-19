@@ -42,8 +42,8 @@ fi
 # Enable vi mode for command-line editing.
 bindkey -v
 
-# Remap slash to map to incremental history search.
-bindkey -M vicmd '/' history-incremental-search-backward
+# Remap control-r to map to backward incremental history search.
+bindkey "^R" history-incremental-search-backward
 
 # Make sure that Esc-/ also maps to incremental history search, and at the same
 # time enters Vi mode.
