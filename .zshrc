@@ -57,6 +57,11 @@ bindkey "^?" backward-delete-char
 # Let control+backspace delete the last word.
 bindkey "^H" backward-delete-word
 
+# Map the home and end keys.
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
+bindkey "${terminfo[kdch1]}" delete-char
+
 # Make sure environment variables only contain unique entries.
 typeset -U path
 
