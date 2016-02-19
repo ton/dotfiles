@@ -74,7 +74,7 @@ set $mod Mod4
 bindsym $mod+c exec i3-sensible-terminal
 
 # Kill focused window.
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # Start dmenu (a program launcher).
 bindsym $mod+r exec --no-startup-id dmenu_run -fn "Source Code Pro-18" -y 500 -w 1000 -x 460
