@@ -73,3 +73,6 @@ path=($HOME/local/bin $path)
 
 # In case a machine local configuration must be set, do so here.
 test -f $HOME/.zshrc.local && source $HOME/.zshrc.local
+
+# Disable shell reserved time word, use time provided by Linux.
+disable -r time
