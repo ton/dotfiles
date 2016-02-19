@@ -1,10 +1,5 @@
-# In case we are not in a possible remotely mounted location, print the git
-# branch name.
-if [[ "`mount | grep " $(pwd) "`" == "" ]]
+local branch="`git-branch.sh`"
+if [[ -n $branch ]]
 then
-    local branch="`git-branch.sh`"
-    if [[ -n $branch ]]
-    then
-        printf "${1}" "$branch"
-    fi
+    printf "${1}" "$branch"
 fi
