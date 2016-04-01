@@ -38,7 +38,18 @@ then
 
     if [ ! -z "$SANDBOX_BUILD_TYPE" ]
     then
-        sandbox_prompt=$(printf "%s %%b\uf02f %%B%%F{208}%s" "$sandbox_prompt" "$SANDBOX_BUILD_TYPE")
+        actual_build_type=$(readlink $HOME/development/fractal/src/build | awk -F '.' '{ print $2 }')
+
+        if [ $actual_build_type != $SANDBOX_BUILD_TYPE ]
+        then
+            # Build type differs from currently configured debug and install directory.
+            build_type_color="196"
+        else
+            build_type_color="208"
+        fi
+
+        # Determine the actual build type.
+        sandbox_prompt=$(printf "%s%%b|%%B%%F{$build_type_color}%s" "$sandbox_prompt"  "$SANDBOX_BUILD_TYPE")
     fi
 
     if [ ${sandbox_virtual_env} = true ]
