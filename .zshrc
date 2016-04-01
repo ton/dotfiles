@@ -54,8 +54,9 @@ bindkey -M viins '\e/' vi-search-fix
 # Make sure that backspace works past the point where we entered insert mode.
 bindkey "^?" backward-delete-char
 
-# Let control+backspace delete the last word.
+# Let control+backspace delete the last word, and set sane word separators.
 bindkey "^H" backward-delete-word
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 # Map the home and end keys.
 bindkey "${terminfo[khome]}" beginning-of-line
