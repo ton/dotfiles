@@ -52,8 +52,8 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 # Make sure locally installed terminfo files are found.
 export TERMINFO="$HOME/local/share/terminfo"
 
-# Use termite as the default terminal.
-export TERMINAL=termite
+# Use st as the default terminal.
+export TERMINAL=st
 
 # Disable virtualenv prompt by default (we handle it ourselves).
 export VIRTUAL_ENV_DISABLE_PROMPT=1
