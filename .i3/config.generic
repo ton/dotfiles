@@ -168,3 +168,19 @@ bindsym $mod+Shift+s move scratchpad
 # Container splitting shortcuts.
 bindsym $mod+minus exec --no-startup-id i3-split-window.py vertical i3-sensible-terminal
 bindsym $mod+bar exec --no-startup-id i3-split-window.py horizontal i3-sensible-terminal
+
+# Mappings for multimedia keys.
+bindsym XF86AudioMute exec --no-startup-id pamixer -t
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
+bindsym XF86AudioMicMute exec --no-startup-id pamixer --source 2 -t
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5 -time 0
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5 -time 0
+bindsym XF86MonPlay exec --no-startup-id cmus-remote -u
+
+# Mapping in case no multimedia keys are available.
+bindsym $mod+m exec --no-startup-id pamixer -t
+bindsym $mod+Shift+m exec --no-startup-id pamixer --source 2 -t
+bindsym $mod+Up exec --no-startup-id pamixer -i 5
+bindsym $mod+Down exec --no-startup-id pamixer -d 5
+bindsym $mod+p exec --no-startup-id cmus-remote -u
