@@ -27,9 +27,6 @@ compton --config ~/.config/compton.`hostname`.conf &
 # Set the most recently configured wallpaper.
 sh ~/.fehbg &
 
-# Disable touchpad after keyboard activity.
-syndaemon -K -i 1 -d
-
 # Generate a host specific i3 configuration.
 $HOME/.i3/host_specific_i3_config.sh > $HOME/.i3/config
 
