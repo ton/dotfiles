@@ -30,6 +30,10 @@ $HOME/.i3/host_specific_i3_config.sh > $HOME/.i3/config
 # Set the most recently configured wallpaper.
 sh ~/.fehbg &
 
+# Lock the screen after five minutes of inactivity, but only in case the
+# currently focused window is not fullscreen.
+xset s 600
+xsidle.sh lock-if-not-fullscreen.sh &
 
 # Start i3 session.
 exec i3
