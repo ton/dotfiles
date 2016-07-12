@@ -32,7 +32,7 @@ setopt PromptSubst
 export PROMPT='%n@%F{154}%B%m%F{255}:%F{12}%~%b%F{255}$(git-branch " \uf020 %%B%%F{245}%s%%F{255}%%b")$ '
 
 # Remove rprompt indent (only needed for ancient terminals).
-export ZLE_RPROMPT_INDENT=0
+export ZLE_RPROMPT_INDENT=-1
 export RPROMPT='$(sandbox-info)'
 
 # Disable flow control characters C-s and C-q so they can be used as shortcuts
