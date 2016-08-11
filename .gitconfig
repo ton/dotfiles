@@ -11,7 +11,7 @@
 	lg = log --graph --decorate --all
 	lol = log --graph --decorate --all --pretty=oneline --abbrev-commit
 	unstage = reset HEAD
-	forget = !git reset HEAD -q $* && git checkout $*
+	forget = !cd ${GIT_PREFIX:-.} && git reset HEAD -q $* && git checkout $*
 	unmerged = diff --name-only --diff-filter=U
 	st = status --column
 	out = log @{u}..
