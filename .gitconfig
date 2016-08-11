@@ -27,6 +27,7 @@
 	removed = red
 [merge]
 	renamelimit = 10000
+	conflictstyle = diff3
 [advice]
 	statusHints = false
 [rebase]
