@@ -35,5 +35,8 @@ sh ~/.fehbg &
 xset s 600
 xsidle.sh lock-if-not-fullscreen.sh &
 
+# Set keyboard repeat rate.
+xset r rate 250 45
+
 # Start i3 session.
 exec i3
