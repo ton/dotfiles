@@ -32,8 +32,8 @@ exec_always --no-startup-id dunst
 # Behavioural settings
 ##
 
-# Automatically move windows with the scratchpad role to the scratchpad.
-for_window [class = "scratchpad"] move scratchpad, scratchpad show
+# Automatically move windows with the build_output role to the scratchpad.
+for_window [class = "build_output"] move scratchpad, scratchpad show
 
 # Move Evince to the fourt workspace by default.
 assign [class = "Zathura"] $ws4
