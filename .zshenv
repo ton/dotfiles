@@ -5,7 +5,8 @@ typeset -U ld_library_path fpath
 fpath=($HOME/.zsh/functions $fpath)
 
 # Set the library search path.
-ld_library_path=($HOME/local/lib $ld_library_path)
+export HOME_LOCAL=$HOME/local
+ld_library_path=($HOME_LOCAL/lib $ld_library_path)
 
 # Alias definitions.
 alias grep="grep --color=auto -I"
@@ -28,13 +29,13 @@ export CC="ccache gcc"
 export CXX="ccache g++"
 
 # Setup the default editor.
-if [ -x ${HOME}/local/bin/vim ]
+if [ -x $HOME_LOCAL/bin/nvim ]
 then
-    export EDITOR=${HOME}/local/bin/vim
+    export EDITOR=$HOME_LOCAL/bin/nvim
 else
-    if [ -x /usr/local/bin/vim ]
+    if [ -x $HOME_LOCAL/bin/vim ]
     then
-        export EDITOR=/usr/local/bin/vim
+        export EDITOR=$HOME_LOCAL/bin/vim
     else
         if [ -x /usr/bin/vim ]
         then
@@ -50,7 +51,7 @@ export LESSHISTFILE=/dev/null
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 # Make sure locally installed terminfo files are found.
-export TERMINFO="$HOME/local/share/terminfo"
+export TERMINFO="$HOME_LOCAL/share/terminfo"
 
 # Use st as the default terminal.
 export TERMINAL=st
