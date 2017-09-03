@@ -39,6 +39,9 @@ for_window [class = "build_output"] move scratchpad, scratchpad show
 assign [class = "Zathura"] $ws4
 for_window [class = "Zathura"] focus
 
+# Floating applications.
+for_window [class="Qalculate-gtk"] floating enable
+
 # Disable focus follows mouse.
 focus_follows_mouse no
 
