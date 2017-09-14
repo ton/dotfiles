@@ -24,7 +24,7 @@
 [color "status"]
 	untracked = cyan
 	changed = yellow
-	removed = red
+	deleted = red
 [merge]
 	renamelimit = 10000
 	conflictstyle = diff3
