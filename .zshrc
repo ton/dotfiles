@@ -73,7 +73,7 @@ typeset -U path
 eval $(dircolors ~/.dircolors)
 
 # Unfortunately, we need to set PATH in .zshrc under Arch.
-path=($HOME/local/bin $path)
+path=($HOME/.local/bin $HOME/local/bin $HOME/.gem/ruby/2.4.0/bin $path)
 
 # In case a machine local configuration must be set, do so here.
 test -f $HOME/.zshrc.local && source $HOME/.zshrc.local
