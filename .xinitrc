@@ -27,8 +27,8 @@ compton --config ~/.config/compton.`hostname`.conf &
 # Generate a host specific i3 configuration.
 $HOME/.i3/host_specific_i3_config.sh > $HOME/.i3/config
 
-# Set the most recently configured wallpaper.
-sh ~/.fehbg &
+# Disable the laptop display in case an external monitor is connected.
+source $HOME/local/bin/switch-to-monitor.sh
 
 # Lock the screen after five minutes of inactivity, but only in case the
 # currently focused window is not fullscreen.
