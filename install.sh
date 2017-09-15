@@ -19,3 +19,9 @@ ln -sfr .zprofile $HOME/
 
 ln -sfr .tmux.conf $HOME/
 ln -sfr .tmux.make.conf $HOME/
+
+ln -sfr ccache.conf $HOME/
+
+ln -sfr .config/compton.$(hostname).conf $HOME/.config/
+ln -sfr .config/fontconfig $HOME/.config/
+ln -sfr .config/cmus $HOME/.config/
