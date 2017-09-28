@@ -1,2 +1,5 @@
 # Make sure that Alt-. still cycles through command arguments in vi-mode.
 "\e.":yank-last-arg
+
+# No bells.
+set bell-style off
