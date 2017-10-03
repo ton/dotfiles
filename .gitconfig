@@ -5,7 +5,7 @@
 	name = Ton van den Heuvel
 	email = tonvandenheuvel@gmail.com
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = ~/.gitignore
 [alias]
 	lg = log --graph --decorate --all
