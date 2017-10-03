@@ -17,7 +17,7 @@
 ! Xft configuration, enabling font anti-aliasing and hinting.
 Xft.antialias:true
 Xft.autohint:true
-Xft.dpi:96.000000
+Xft.dpi:96
 Xft.hinting:true
 Xft.hintstyle:hintfull
 Xft.rgba:rgb
