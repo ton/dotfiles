@@ -2,6 +2,9 @@
 # since the system wide zsh configuration resets PATH.
 path=($HOME/local/bin $HOME/.local/bin $path)
 
+fortune
+echo
+
 if [[ -z $DISPLAY && $(tty) = /dev/tty1 ]];
 then
     exec startx
