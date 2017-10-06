@@ -2,7 +2,7 @@
 # since the system wide zsh configuration resets PATH.
 path=($HOME/local/bin $HOME/.local/bin $path)
 
-fortune
+fortune -a
 echo
 
 if [[ -z $DISPLAY && $(tty) = /dev/tty1 ]];
