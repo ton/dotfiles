@@ -5,7 +5,7 @@ typeset -U ld_library_path fpath
 fpath=($HOME/.zsh/functions $fpath)
 
 # Set the library search path.
-export HOME_LOCAL=$HOME/local
+export HOME_LOCAL=$HOME/.local
 ld_library_path=($HOME_LOCAL/lib $ld_library_path)
 
 # Alias definitions.
