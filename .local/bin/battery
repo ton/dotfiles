@@ -1,0 +1,44 @@
+#!/usr/bin/python
+
+import os
+import subprocess
+import re
+import sys
+
+battery_number = os.environ.get('BLOCK_INSTANCE', 0)
+
+ac_sys_path = '/sys/class/power_supply/AC/'
+battery_sys_path = '/sys/class/power_supply/BAT%s/' % battery_number
+
+# For some reason, the Thinkpad 450s does not correctly report per battery
+# whether it is on AC or not. So we directly query the AC power source to see
+# whether it is online.
+on_ac = int(open(ac_sys_path + 'online').read()) == 1
+
+# To determine the correct percentage of the requested battery, divide the
+# current battery energy level by the maximum _design_ energy level.
+energy_now = int(open(battery_sys_path + 'energy_now').read())
+energy_full_design = int(open(battery_sys_path + 'energy_full_design').read())
+percentage = int(min(100, (energy_now / float(energy_full_design)) * 100))
+is_charging = on_ac or open(battery_sys_path + 'status').read() == 'Charging'
+output = ""
+
+if is_charging:
+    output = "\uf1e6"
+else:
+    if percentage < 10:
+        output += "\uf244"
+    elif percentage < 35:
+        output += "\uf243"
+    elif percentage < 60:
+        output += "\uf242"
+    elif percentage < 85:
+        output += "\uf241"
+    else:
+        output += "\uf240"
+
+output += "  %s%%" % percentage
+
+print("%s\n" % output)
+
+sys.exit(0);
