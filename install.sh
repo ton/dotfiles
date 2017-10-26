@@ -14,6 +14,7 @@ ln -sfr .xinitrc $HOME/
 
 ln -sfr .zshrc $HOME/
 ln -sfr .zshenv $HOME/
+ln -sfr .zshenv.* $HOME/
 ln -sfr .zsh $HOME/
 ln -sfr .zprofile $HOME/
 

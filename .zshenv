@@ -60,4 +60,4 @@ export TERMINAL=st
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # In case a machine local configuration must be set, do so here.
-test -f $HOME/.zshenv.local && source $HOME/.zshenv.local
+test -f $HOME/.zshenv.$(hostname) && source $HOME/.zshenv.$(hostname)
