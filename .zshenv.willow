@@ -1,10 +1,11 @@
 export CCACHE_MAXSIZE=12G
 
-fractal_root=$HOME/development/fractal
+fractal_root=$HOME/development/fractal/
 
 alias set-build=". $fractal_root/bin/switch-build.sh $*"
 alias init-sandbox=". $fractal_root/bin/init-sandbox.sh $*"
-alias cds="cd $fractal_root/repo/src"
-alias cdr="cd $fractal_root/repo"
+alias cds="cd $fractal_root/repos/fractal/src"
+alias cdl="cd $fractal_root/repos/fractal/largetests"
+alias cdr="cd $fractal_root/repos/fractal/"
 
 export TCLLIBPATH="/usr/lib/tclx8.4"
