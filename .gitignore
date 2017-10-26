@@ -1,3 +1,4 @@
 .project.vim
 tags
 .i3/config
+.netrwhist

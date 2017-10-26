@@ -1,0 +1,30 @@
+#!/bin/sh
+
+print_usage()
+{
+    echo "Usage: wifi <configuration name>|down"
+    exit 1
+}
+
+if [ $# -eq 0 ];
+then
+    print_usage
+fi
+
+wpa_supplicant_config=/etc/wpa_supplicant/$1.conf
+pid_file=/var/run/wpa_supplicant.pid
+
+if [ -f $wpa_supplicant_config ];
+then
+    echo "Connecting to $1 wifi profile..."
+    ip link set wlan0 up
+    wpa_supplicant -B -i wlan0 -c $wpa_supplicant_config -P $pid_file
+    dhcpcd wlan0
+elif [ $1 == "down" ]
+then
+    echo "Bringing wlan0 down..."
+    kill $(cat $pid_file)
+    ip link set wlan0 down
+else
+    print_usage
+fi

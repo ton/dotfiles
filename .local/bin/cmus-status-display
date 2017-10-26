@@ -1,0 +1,64 @@
+#!/usr/bin/env python
+#
+# cmus-status-display
+#
+# Usage:
+#   in cmus command ":set status_display_program=cmus-status-display"
+#
+# This scripts is executed by cmus when status changes:
+#   cmus-status-display key1 val1 key2 val2 ...
+#
+# All keys contain only chars a-z. Values are UTF-8 strings.
+#
+# Keys: status file url artist album discnumber tracknumber title date
+#   - status (stopped, playing, paused) is always given
+#   - file or url is given only if track is 'loaded' in cmus
+#   - other keys/values are given only if they are available
+
+import subprocess
+import sys
+
+STATUS_ICON_PLAYING = '\uf04b'
+STATUS_ICON_PAUSED = '\uf04c'
+I3BLOCKS_SIGNAL = 2
+CMUS_STATUS_PIPE = '/tmp/cmus.txt'
+
+def main():
+    arguments = {}
+    for i in range(1, len(sys.argv[1:]), 2):
+        arguments[sys.argv[i]] = sys.argv[i + 1]
+
+    if arguments:
+        if 'file' in arguments:
+            output = '%s - %s' % (arguments['artist'], arguments['title'])
+        elif 'url' in arguments:
+            if 'title' in arguments:
+                artist_title = arguments['title'].split(' - ')
+                if len(artist_title) == 2:
+                    output = '%s - %s' % (artist_title[0].strip(), artist_title[1].strip())
+                else:
+                    output = '%s' % arguments['title'].strip()
+            else:
+                output = '%s' % arguments['url']
+
+        if 'status' in arguments:
+            status_icon = None
+            if arguments['status'] == 'playing':
+                status_icon = STATUS_ICON_PLAYING
+            elif arguments['status'] == 'paused':
+                status_icon = STATUS_ICON_PAUSED
+            elif arguments['status'] == 'stopped':
+                output = ''
+
+            if status_icon:
+                output = '%s  %s' % (status_icon, output)
+
+        open(CMUS_STATUS_PIPE, 'w+').write(output)
+
+        # Update i3blocks.
+        subprocess.run(['pkill', '-RTMIN+%s' % I3BLOCKS_SIGNAL, 'i3blocks'])
+    else:
+        sys.stdout.write(open(CMUS_STATUS_PIPE, 'r').read())
+
+if __name__ == '__main__':
+    sys.exit(main())

@@ -1,0 +1,28 @@
+# Show a right aligned bar.
+bar {
+    status_command i3blocks
+    font pango:Roboto,Font Awesome 12
+    position top
+
+    strip_workspace_numbers yes
+
+    colors {
+        background $black
+        statusline $white
+
+        focused_workspace  $black $black $lgreen
+        active_workspace   $black $black $lgreen
+        inactive_workspace $black $black $dgreen
+        urgent_workspace   $black $black $red
+    }
+}
+
+# Define application specific workspaces and layout modes.
+assign [class = "Interview"] $ws5
+for_window [class = "Interview"] focus, layout stacking
+assign [class = "Fsuite"] $ws5
+for_window [class = "Fsuite"] focus, layout stacking
+assign [class = "Skype"] $ws6
+for_window [window_role = "ConversationsWindow"] resize grow left 50 px
+assign [class = "vncviewr"] $ws4
+for_window [class = "vncviewer"] floating enable
