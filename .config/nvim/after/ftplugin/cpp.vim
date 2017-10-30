@@ -5,6 +5,7 @@ endif
 let b:cpp_override = 1
 
 " Set text width for C++ code to be able to easily format comments.
+setlocal shiftwidth=2
 setlocal textwidth=80
 setlocal formatoptions+=croqnj
 setlocal spell spelllang=en_us
