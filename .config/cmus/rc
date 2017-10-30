@@ -1,1 +1,1 @@
-set status_display_program=~/local/bin/cmus-status-display
+set status_display_program=~/.local/bin/cmus-status-display
