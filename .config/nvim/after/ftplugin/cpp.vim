@@ -20,7 +20,8 @@ map <buffer> <leader>q :call ClangFormat()<cr>
 imap <buffer> <leader>q <c-o>:call ClangFormat<cr>
 
 " Let miniyank automatically format the pasted code using clang-format.
-noremap <buffer> <expr> p miniyank#startput("p`[v`]:call ClangFormat()<cr>",1)
+noremap <buffer> <expr> p miniyank#startput("p`[v`]=",1)
+noremap <buffer> <expr> P miniyank#startput("P`[v`]=",1)
 
 " Only do this when this is the first time these settings are loaded for the
 " current Vim instance.
