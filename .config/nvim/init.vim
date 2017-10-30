@@ -276,10 +276,8 @@ map <F4> :A<CR>
 let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,sfr:../itf'
 let g:alternateNoDefaultAlternate = 1
 
-" Configure the miniyank plugin. Use poor man's auto formatting of the pasted
-" text; unfortunately, vim-pasta does not work with miniyank.
-" noremap <expr> p miniyank#startput("p`[v`]=",1)
-noremap <expr> p miniyank#startput("p",1)
+" Configure the miniyank plugin.
+map <expr> p miniyank#startput("p",1)
 map <C-p> <Plug>(miniyank-cycle)
 
 " Do not use default EasyMotion mappings.
@@ -304,19 +302,6 @@ let g:EasyMotion_startofline = 0
 
 " Set path for private snippets used by UltiSnips.
 let g:UltiSnipsSnippetsDir = '~/.config/nvim/UltiSnips'
-
-" Mapping for formatting C++ code using clang-format.
-
-" Format entire file using clang.
-function ClangFormatFile()
-    let l:lines="all"
-    py3f /usr/share/clang/clang-format.py
-endfunction
-
-map <leader>a :call ClangFormatFile()<cr>
-imap <leader>a :call ClangFormatFile()<cr>
-map <leader>q :py3f /usr/share/clang/clang-format.py<cr>
-imap <leader>q <c-o>:py3f /usr/share/clang/clang-format.py<cr>
 
 "-------------------------------------------------------------------------------
 " Configure (keyword) completion
@@ -366,15 +351,6 @@ au BufEnter *.vim setlocal shiftwidth=4
 
 " Do not expand tabs for web related source code.
 au BufEnter *.php,*.html,*.css,*.js setlocal noexpandtab
-
-" Set text width for C++ code to be able to easily format comments.
-au FileType cpp setlocal textwidth=80
-au FileType cpp setlocal formatoptions+=croqnj
-au FileType cpp setlocal spell spelllang=en_us
-
-" Add support for Doxygen comment leader.
-au FileType h,hpp,cpp,c setlocal comments^=:///
-au FileType h,hpp,cpp,c setlocal commentstring=//%s
 
 " Set text width for Git commit messages.
 au FileType gitcommit setlocal textwidth=72
