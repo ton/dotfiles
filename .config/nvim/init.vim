@@ -276,6 +276,11 @@ map <F4> :A<CR>
 let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,sfr:../itf'
 let g:alternateNoDefaultAlternate = 1
 
+" Do not let Vim pasta remap default p and P mapping for pasting. We use
+" miniyank for that, and call vim-pasta from miniyank remappings.
+let g:pasta_paste_before_mapping = '<leader>vP'
+let g:pasta_paste_after_mapping = '<leader>vp'
+
 " Configure the miniyank plugin.
 map <expr> p miniyank#startput("p",1)
 map <C-p> <Plug>(miniyank-cycle)
