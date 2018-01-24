@@ -173,15 +173,15 @@ nnoremap Q <nop>
 
 " Parse Make results.
 function! AsyncMakeOnExit(job_id, data, event) dict
-    " It is possible that the user stopped the make, in which case the build
-    " results will not be available.
-    if filereadable(self.build_log)
-      " Hide the make output window.
-      call jobstart(['i3-msg', '[class="build_output"] scratchpad show'])
+  " It is possible that the user stopped the make, in which case the build
+  " results will not be available.
+  if filereadable(self.build_log)
+    " Hide the make output window.
+    call jobstart(['i3-msg', '[class="build_output"] scratchpad show'])
 
-      silent exe "cfile " . self.build_log
-      silent exe "cw"
-    endif
+    silent exe "cfile " . self.build_log
+    silent exe "cw"
+  endif
 endfunction
 
 " Stop the active make job in case the user closes the make output window.
@@ -326,9 +326,9 @@ set include=^\\s*#\\s*include\ \\(<boost/\\)\\@!
 
 " Automatically remove trailing whitespace before write.
 function! StripTrailingWhitespace()
-    normal mZ
-    %s/\s\+$//e
-    normal `Z
+  normal mZ
+  %s/\s\+$//e
+  normal `Z
 endfunction
 
 " Strip trailing white spaces in source code.
