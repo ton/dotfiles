@@ -24,6 +24,9 @@ imap <buffer> <leader>q <c-o>:call ClangFormat<cr>
 noremap <buffer> <expr> p miniyank#startput("p`[v`]=",1)
 noremap <buffer> <expr> P miniyank#startput("P`[v`]=",1)
 
+" Don't indent templates.
+setlocal indentexpr=CppNoTemplateIndent()
+
 " Only do this when this is the first time these settings are loaded for the
 " current Vim instance.
 if exists("g:cpp_override")
@@ -38,4 +41,27 @@ endfunction
 function ClangFormatFile()
     let l:lines="all"
     py3f /usr/share/clang/clang-format.py
+endfunction
+
+function CppNoTemplateIndent()
+    let l:cline_num = line('.')
+    let l:cline = getline(l:cline_num)
+    let l:pline_num = prevnonblank(l:cline_num - 1)
+    let l:pline = getline(l:pline_num)
+    while l:pline =~# '\(^\s*{\s*\|^\s*//\|^\s*/\*\|\*/\s*$\)'
+        let l:pline_num = prevnonblank(l:pline_num - 1)
+        let l:pline = getline(l:pline_num)
+    endwhile
+    let l:retv = cindent('.')
+    let l:pindent = indent(l:pline_num)
+    if l:pline =~# '^\s*template\s*<.*>\s*$'
+        let l:retv = l:pindent
+    elseif l:pline =~# '\s*typename\s*.*,\s*$'
+        let l:retv = l:pindent
+    elseif l:cline =~# '^\s*>\s*$'
+        let l:retv = l:pindent - &shiftwidth
+    elseif l:pline =~# '\s*typename\s*.*>\s*$'
+        let l:retv = l:pindent - &shiftwidth
+    endif
+    return l:retv
 endfunction
