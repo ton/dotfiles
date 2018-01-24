@@ -16,9 +16,7 @@ setlocal commentstring=//%s
 
 " Mappings for formatting C++ code using clang-format.
 map <buffer> <leader>a :call ClangFormatFile()<cr>
-imap <buffer> <leader>a :call ClangFormatFile()<cr>
 map <buffer> <leader>q :call ClangFormat()<cr>
-imap <buffer> <leader>q <c-o>:call ClangFormat<cr>
 
 " Let miniyank automatically format the pasted code using clang-format.
 noremap <buffer> <expr> p miniyank#startput("p`[v`]=",1)
