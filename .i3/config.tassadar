@@ -17,8 +17,6 @@ bar {
     }
 }
 
-bindsym $mod+1 workspace $ws1
-
 # Define application specific workspaces.
 assign [class = "Interview"] $ws5
 for_window [class = "Interview"] focus, layout stacking
