@@ -20,7 +20,6 @@ import sys
 
 STATUS_ICON_PLAYING = '\uf04b'
 STATUS_ICON_PAUSED = '\uf04c'
-I3BLOCKS_SIGNAL = 2
 CMUS_STATUS_PIPE = '/tmp/cmus.txt'
 
 def main():
@@ -55,10 +54,13 @@ def main():
 
         open(CMUS_STATUS_PIPE, 'w+').write(output)
 
-        # Update i3blocks.
-        subprocess.run(['pkill', '-RTMIN+%s' % I3BLOCKS_SIGNAL, 'i3blocks'])
+        # Update polybar.
+        subprocess.run(['polybar-msg', 'hook', 'cmus', '1'])
     else:
-        sys.stdout.write(open(CMUS_STATUS_PIPE, 'r').read())
+        # Note, polybar will not reset the module output in case the output of
+        # the hook is empty.
+        status = open(CMUS_STATUS_PIPE, 'r').read()
+        sys.stdout.write(status if status else ' ')
 
 if __name__ == '__main__':
     sys.exit(main())
