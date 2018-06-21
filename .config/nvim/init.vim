@@ -15,6 +15,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'sickill/vim-pasta'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
