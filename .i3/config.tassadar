@@ -1,21 +1,14 @@
-# Show a simple bar.
-bar {
-    status_command i3blocks
-    font pango:Cantarell,Font Awesome 12
-    position top
+# Start a terminal.
+bindsym $mod+c exec --no-startup-id i3-smart-split.py "alacritty -e tmux"
+bindsym $mod+t exec --no-startup-id i3-smart-split.py "alacritty"
 
-    strip_workspace_numbers yes
+# Mapping in case no multimedia keys are available.
+bindsym $mod+m exec --no-startup-id pamixer -t
+bindsym $mod+Up exec --no-startup-id pamixer -i 5
+bindsym $mod+Down exec --no-startup-id pamixer -d 5
 
-    colors {
-        background $black
-        statusline $white
-
-        focused_workspace  $black $black $lgreen
-        active_workspace   $black $black $lgreen
-        inactive_workspace $black $black $dgreen
-        urgent_workspace   $black $black $red
-    }
-}
+# Start polybar.
+exec_always --no-startup-id polybar tassadar
 
 # Define application specific workspaces.
 assign [class = "Interview"] $ws5
