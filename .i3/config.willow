@@ -1,3 +1,14 @@
+# Start a terminal.
+bindsym $mod+c exec --no-startup-id i3-smart-split.py "i3-sensible-terminal tmux"
+
+# Mapping in case no multimedia keys are available.
+bindsym $mod+m exec --no-startup-id pamixer -t && pkill -RTMIN+4 i3blocks
+bindsym $mod+Up exec --no-startup-id pamixer -i 5 && pkill -RTMIN+4 i3blocks
+bindsym $mod+Down exec --no-startup-id pamixer -d 5 && pkill -RTMIN+4 i3blocks
+
+# Toggle microphone status.
+bindsym $mod+Shift+m exec --no-startup-id pkill -RTMIN+3 i3blocks
+
 # Show a right aligned bar.
 bar {
     status_command i3blocks
