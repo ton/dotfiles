@@ -3,3 +3,9 @@
 
 # No bells.
 set bell-style off
+
+# Use vi editing mode by default.
+set editing-mode vi
+
+# Let Control-Backspace delete the last word.
+"\C-h": backward-kill-word
