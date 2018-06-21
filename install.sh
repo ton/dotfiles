@@ -27,5 +27,6 @@ ln -sfr .config/compton.$(hostname).conf $HOME/.config/
 ln -sfr .config/fontconfig $HOME/.config/
 ln -sfr .config/cmus $HOME/.config/
 ln -sfr .config/nvim $HOME/.config/
+ln -sfr .config/polybar $HOME/.config/
 
 ln -sfr .local/bin/* $HOME/.local/bin/
