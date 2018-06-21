@@ -1,3 +1,6 @@
+# Automatically move windows with the build_output role to the scratchpad.
+for_window [class = "build_output"] move scratchpad, scratchpad show
+
 # Start a terminal.
 bindsym $mod+c exec --no-startup-id i3-smart-split.py "i3-sensible-terminal tmux"
 
