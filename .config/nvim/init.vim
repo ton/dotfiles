@@ -228,6 +228,9 @@ nmap <silent> <C-j> :cn<CR>
 " Remap backspace to switch to the previous buffer.
 map <silent> <BS> :b#<CR>
 
+" Open URL under cursor
+nmap <silent> <leader>o :!xdg-open <C-R>=escape("<cword>", "#&;\|%")<CR><CR>
+
 "-------------------------------------------------------------------------------
 " Configure plugins
 "-------------------------------------------------------------------------------
