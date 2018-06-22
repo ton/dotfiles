@@ -36,6 +36,8 @@ set tabstop=4                        " a tab is four spaces
 set wrap                             " wrap overlong lines
 
 set cino=g0                          " do not indent public/protected/private
+set nojoinspaces                     " do not insert two spaces after a '.',
+                                     " '?', and '!' with the join command
 
 "-------------------------------------------------------------------------------
 " UI settings
