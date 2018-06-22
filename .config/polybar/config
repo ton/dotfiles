@@ -68,7 +68,7 @@ inherit = bar/tassadar
 
 modules-left = i3
 modules-center = xwindow
-modules-right = pulseaudio cmus battery0 battery1 date
+modules-right = mic pulseaudio cmus battery0 battery1 date
 
 [module/xwindow]
 type = internal/xwindow
@@ -133,6 +133,18 @@ hook-0 = $HOME/.local/bin/cmus-status-display
 initial = 1
 
 click-left = cmus-remote -u
+
+[module/mic]
+type = custom/ipc
+
+hook-0 = $HOME/.local/bin/polybar-mic.sh
+hook-1 = $HOME/.local/bin/polybar-mic.sh toggle
+
+initial = 1
+
+click-left = polybar-msg -p %pid% hook mic 2
+
+format-suffix = "  "
 
 [module/xbacklight]
 type = internal/xbacklight
