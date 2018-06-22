@@ -23,10 +23,12 @@ ln -sfr .tmux.make.conf $HOME/
 
 ln -sfr ccache.conf $HOME/
 
+mkdir -p $HOME/.config
 ln -sfr .config/compton.$(hostname).conf $HOME/.config/
 ln -sfr .config/fontconfig $HOME/.config/
 ln -sfr .config/cmus $HOME/.config/
 ln -sfr .config/nvim $HOME/.config/
 ln -sfr .config/polybar $HOME/.config/
 
+mkdir -p $HOME/.local/bin
 ln -sfr .local/bin/* $HOME/.local/bin/
