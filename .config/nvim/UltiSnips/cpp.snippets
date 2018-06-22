@@ -3,7 +3,7 @@ std::cout << "${1:${VISUAL:Message}}\n";
 endsnippet
 
 snippet coe "Snippet for printing the value of an expression to stdout" b
-std::cout << "${1:${VISUAL:expression}}: " << ($1) << "\n";
+std::cout << "${1:${VISUAL:expression}}: " << ($1) << '\n';
 endsnippet
 
 snippet todo "TODO reminder" b
@@ -27,4 +27,8 @@ snippet cm
 // Copyright (C) 2017-present Fractal Technologies. All rights reserved.
 //
 
+endsnippet
+
+snippet ii
+#include <iostream> // Remove!
 endsnippet
