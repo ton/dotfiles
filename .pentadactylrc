@@ -1,8 +1,0 @@
-"hg7127
-
-loadplugins '\.(js|penta)$'
-group user
-set autocomplete=
-set guioptions=bCrsT
-
-" vim: set ft=pentadactyl:
