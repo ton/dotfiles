@@ -176,7 +176,7 @@ format-volume = <ramp-volume> <bar-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
-format-muted = <label-muted> <bar-volume>
+format-muted = <label-muted>
 label-muted = "  ┋────────────────────"
 label-muted-foreground = #666
 
