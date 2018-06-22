@@ -9,25 +9,6 @@ bindsym $mod+Down exec --no-startup-id pamixer -d 5 && pkill -RTMIN+4 i3blocks
 # Toggle microphone status.
 bindsym $mod+Shift+m exec --no-startup-id pkill -RTMIN+3 i3blocks
 
-# Show a right aligned bar.
-bar {
-    status_command i3blocks
-    font pango:Roboto,Font Awesome 12
-    position top
-
-    strip_workspace_numbers yes
-
-    colors {
-        background $black
-        statusline $white
-
-        focused_workspace  $black $black $lgreen
-        active_workspace   $black $black $lgreen
-        inactive_workspace $black $black $dgreen
-        urgent_workspace   $black $black $red
-    }
-}
-
 # Define application specific workspaces and layout modes.
 assign [class = "Interview"] $ws5
 for_window [class = "Interview"] focus, layout stacking
