@@ -7,9 +7,6 @@ bindsym $mod+m exec --no-startup-id pamixer -t
 bindsym $mod+Up exec --no-startup-id pamixer -i 5
 bindsym $mod+Down exec --no-startup-id pamixer -d 5
 
-# Start polybar.
-exec_always --no-startup-id polybar tassadar
-
 # Define application specific workspaces.
 assign [class = "Interview"] $ws5
 for_window [class = "Interview"] focus, layout stacking

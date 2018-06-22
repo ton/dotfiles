@@ -28,6 +28,9 @@ exec_always --no-startup-id i3-disable-standby-fs.py VIM
 # Start a notification daemon.
 exec_always --no-startup-id dunst
 
+# Start polybar.
+exec_always --no-startup-id polybar $(hostname)
+
 ##
 # Behavioural settings
 ##
