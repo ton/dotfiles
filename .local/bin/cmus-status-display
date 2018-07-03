@@ -15,6 +15,7 @@
 #   - file or url is given only if track is 'loaded' in cmus
 #   - other keys/values are given only if they are available
 
+import os
 import subprocess
 import sys
 
@@ -56,11 +57,11 @@ def main():
 
         # Update polybar.
         subprocess.run(['polybar-msg', 'hook', 'cmus', '1'])
-    else:
+    elif os.path.exists(CMUS_STATUS_PIPE):
         # Note, polybar will not reset the module output in case the output of
         # the hook is empty.
         status = open(CMUS_STATUS_PIPE, 'r').read()
-        sys.stdout.write(status if status else ' ')
+        sys.stdout.write(status if status else '\n')
 
 if __name__ == '__main__':
     sys.exit(main())
