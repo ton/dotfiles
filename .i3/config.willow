@@ -7,7 +7,7 @@ bindsym $mod+Up exec --no-startup-id pamixer -i 5
 bindsym $mod+Down exec --no-startup-id pamixer -d 5
 
 # Toggle microphone status.
-bindsym $mod+Shift+m exec --no-startup-id polybar-cmd hook mic 2
+bindsym $mod+Shift+m exec --no-startup-id polybar-msg hook mic 2
 
 # Define application specific workspaces and layout modes.
 assign [class = "Interview"] $ws5
