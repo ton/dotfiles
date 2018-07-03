@@ -2,9 +2,9 @@
 bindsym $mod+c exec --no-startup-id i3-smart-split.py "i3-sensible-terminal tmux"
 
 # Mapping in case no multimedia keys are available.
-bindsym $mod+m exec --no-startup-id pamixer -t && pkill -RTMIN+4 i3blocks
-bindsym $mod+Up exec --no-startup-id pamixer -i 5 && pkill -RTMIN+4 i3blocks
-bindsym $mod+Down exec --no-startup-id pamixer -d 5 && pkill -RTMIN+4 i3blocks
+bindsym $mod+m exec --no-startup-id pamixer -t
+bindsym $mod+Up exec --no-startup-id pamixer -i 5
+bindsym $mod+Down exec --no-startup-id pamixer -d 5
 
 # Toggle microphone status.
 bindsym $mod+Shift+m exec --no-startup-id polybar-cmd hook mic 2
