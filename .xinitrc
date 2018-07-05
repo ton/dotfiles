@@ -18,7 +18,7 @@ then
     /usr/bin/redshift -l 51.431371:5.464261 -t 5500:2800 &
 fi
 
-# Start autocutsel allowing seemless copy/pasting between Vim and the terminal.
+# Start autocutsel allowing seamless copy/pasting between Vim and the terminal.
 autocutsel -selection PRIMARY -fork &
 
 # Start compton for compositor effects.
