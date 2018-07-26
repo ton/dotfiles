@@ -19,7 +19,7 @@ then
 fi
 
 # Start autocutsel allowing seamless copy/pasting between Vim and the terminal.
-autocutsel -selection PRIMARY -fork &
+autocutsel -fork && autocutsel -selection PRIMARY -fork &
 
 # Start compton for compositor effects.
 compton --config ~/.config/compton.`hostname`.conf &
