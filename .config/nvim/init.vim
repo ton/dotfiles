@@ -120,7 +120,7 @@ set autoread                         " automatically reload a file when it has
                                      " been changed
 set backup                           " enable backups
 set undofile                         " enable persistent undo
-set clipboard^=unnamed,unnamedplus   " use the system clipboard by default
+set clipboard=unnamed                " use the system clipboard by default
 set hidden                           " be able to put the current buffer to the
                                      " background without writing to disk and
                                      " remember marks and undo-history when a
