@@ -1,8 +1,6 @@
-" Only do this when not done yet for this buffer.
-if exists("b:cpp_override")
-  finish
-endif
-let b:cpp_override = 1
+" Add support for Doxygen comment leader.
+setlocal comments^=:///
+setlocal commentstring=//%s
 
 " Set text width for C++ code to be able to easily format comments.
 setlocal shiftwidth=2
@@ -10,9 +8,11 @@ setlocal textwidth=80
 setlocal formatoptions+=croqnj
 setlocal spell spelllang=en_us
 
-" Add support for Doxygen comment leader.
-setlocal comments^=:///
-setlocal commentstring=//%s
+" Only do this when not done yet for this buffer.
+if exists("b:cpp_override")
+  finish
+endif
+let b:cpp_override = 1
 
 " Mappings for formatting C++ code using clang-format.
 map <buffer> <leader>a :call ClangFormatFile()<cr>
