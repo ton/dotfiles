@@ -22,7 +22,7 @@ fi
 autocutsel -fork && autocutsel -selection PRIMARY -fork &
 
 # Start compton for compositor effects.
-compton --config ~/.config/compton.`hostname`.conf &
+compton --xrender-sync --xrender-sync-fence --config ~/.config/compton.`hostname`.conf &
 
 # Generate a host specific i3 configuration.
 $HOME/.i3/host_specific_i3_config.sh > $HOME/.i3/config
