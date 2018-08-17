@@ -37,7 +37,7 @@ then
     fi
 
     # Print the build type.
-    build_type=$(readlink $HOME/development/fractal/src/build | awk -F '.' '{ print $2 }')
+    build_type=$(readlink $HOME/development/fractal/repos/fractal/src/build | awk -F '.' '{ print $2 }')
     sandbox_prompt=$(printf "%s%%b|%%B%%F{208}%s" "$sandbox_prompt"  "$build_type")
 
     if [ ${sandbox_virtual_env} = true ]
