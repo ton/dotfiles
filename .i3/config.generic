@@ -125,6 +125,7 @@ bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
+bindsym $mod+grave workspace back_and_forth
 
 # Move focused container to a specific workspace.
 bindsym $mod+Shift+1 move container to workspace $ws1
