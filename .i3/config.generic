@@ -146,7 +146,7 @@ bindsym Mod1+6 exec --no-startup-id i3-switch-tab.py 5
 # Session shortcuts.
 bindsym $mod+Shift+c exec --no-startup-id $HOME/.i3/host_specific_i3_config.sh > $HOME/.i3/config; reload
 bindsym $mod+Shift+r exec --no-startup-id $HOME/.i3/host_specific_i3_config.sh > $HOME/.i3/config; restart
-bindsym $mod+Escape exit
+bindsym $mod+Shift+Escape exit
 
 # Resize shortcuts.
 bindsym $mod+Shift+p mode "resize"
