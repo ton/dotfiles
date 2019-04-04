@@ -257,7 +257,7 @@ endfunction
 let g:rg_args = ''
 
 " Command for manual Rg invocation.
-command! -bang -nargs=* Rg
+command! -bang -nargs=1 Rg
     \ call fzf#vim#grep('rg -n --column '.g:rg_args.' '.shellescape(<f-args>), 0, <bang>0)
 
 " Search for word under cursor using rg.
