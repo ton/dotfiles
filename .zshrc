@@ -29,7 +29,7 @@ autoload -U sandbox-info
 setopt PromptSubst
 
 # Set prompt.
-export PROMPT='%n@%F{154}%B%m%F{255}:%F{12}%~%b%F{255}$(git-branch " \uf020 %%B%%F{245}%s%%F{255}%%b")$ '
+export PROMPT='%(?.%F{2}.%F{1})$(date +%H:%M:%S)%F{243}|%F{255}%n@%F{154}%B%m%F{255}:%F{12}%~%b%F{255}$(git-branch " \uf020 %%B%%F{245}%s%%F{255}%%b")$ '
 
 # Remove rprompt indent (only needed for ancient terminals).
 export ZLE_RPROMPT_INDENT=-1
