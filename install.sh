@@ -18,6 +18,8 @@ ln -sfr .zprofile $HOME/
 ln -sfr .tmux.conf $HOME/
 ln -sfr .tmux.make.conf $HOME/
 
+ln -sfr .xserverrc $HOME/
+
 ln -sfr ccache.conf $HOME/
 
 mkdir -p $HOME/.config
@@ -30,3 +32,5 @@ ln -sfr .config/polybar $HOME/.config/
 
 mkdir -p $HOME/.local/bin
 ln -sfr .local/bin/* $HOME/.local/bin/
+
+sudo ln -sfr xorg.conf.d/00-keyboard.conf /etc/X11/xorg.conf.d/
