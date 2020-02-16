@@ -7,7 +7,6 @@ ln -sfr .gitconfig $HOME/
 ln -sfr .gitignore $HOME/
 
 ln -sfr .i3 $HOME/
-ln -sfr .i3blocks.conf $HOME/
 
 ln -sfr .Xdefaults $HOME/
 ln -sfr .xinitrc $HOME/
