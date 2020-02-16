@@ -1,36 +1,19 @@
 #!/bin/sh
-ln -sfr .dircolors $HOME/
-ln -sfr .inputrc $HOME/
-ln -sfr .gtkrc-2.0 $HOME/
+stow \
+    ccache \
+    cmus \
+    fontconfig \
+    gdb \
+    git \
+    gtk-2.0 \
+    gtk-3.0 \
+    i3 \
+    nvim \
+    polybar \
+    scripts \
+    shell \
+    tmux \
+    xorg \
+    zsh
 
-ln -sfr .gitconfig $HOME/
-ln -sfr .gitignore $HOME/
-
-ln -sfr .Xdefaults $HOME/
-ln -sfr .xinitrc $HOME/
-
-ln -sfr .zshrc $HOME/
-ln -sfr .zshenv $HOME/
-ln -sfr .zshenv.* $HOME/
-ln -sfr .zsh $HOME/
-ln -sfr .zprofile $HOME/
-
-ln -sfr .tmux.conf $HOME/
-ln -sfr .tmux.make.conf $HOME/
-
-ln -sfr .xserverrc $HOME/
-
-ln -sfr ccache.conf $HOME/
-
-mkdir -p $HOME/.config
-ln -sfr .config/compton.$(hostname).conf $HOME/.config/
-ln -sfr .config/i3 $HOME/.config/
-ln -sfr .config/fontconfig $HOME/.config/
-ln -sfr .config/cmus $HOME/.config/
-ln -sfr .config/nvim $HOME/.config/
-ln -sfr .config/polybar $HOME/.config/
-
-mkdir -p $HOME/.local/bin
-ln -sfr .local/bin/* $HOME/.local/bin/
-
-sudo ln -sfr xorg.conf.d/00-keyboard.conf /etc/X11/xorg.conf.d/
+sudo stow xorg.conf.d -t /etc/X11/xorg.conf.d
