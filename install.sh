@@ -6,8 +6,6 @@ ln -sfr .gtkrc-2.0 $HOME/
 ln -sfr .gitconfig $HOME/
 ln -sfr .gitignore $HOME/
 
-ln -sfr .i3 $HOME/
-
 ln -sfr .Xdefaults $HOME/
 ln -sfr .xinitrc $HOME/
 
@@ -24,6 +22,7 @@ ln -sfr ccache.conf $HOME/
 
 mkdir -p $HOME/.config
 ln -sfr .config/compton.$(hostname).conf $HOME/.config/
+ln -sfr .config/i3 $HOME/.config/
 ln -sfr .config/fontconfig $HOME/.config/
 ln -sfr .config/cmus $HOME/.config/
 ln -sfr .config/nvim $HOME/.config/
