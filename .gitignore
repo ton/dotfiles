@@ -1,4 +1,10 @@
 .project.vim
 tags
-.i3/config
+.config/i3/config
 .netrwhist
+.config/cmus/autosave
+.config/cmus/cache
+.config/cmus/command-history
+.config/cmus/lib.pl
+.config/cmus/search-history
+.config/cmus/playlists/default
