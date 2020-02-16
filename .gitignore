@@ -5,3 +5,5 @@ cmus/.config/cmus/command-history
 cmus/.config/cmus/lib.pl
 cmus/.config/cmus/search-history
 cmus/.config/cmus/playlists/default
+nvim/.config/nvim/.netrwhist
+scripts/.local/bin/st
