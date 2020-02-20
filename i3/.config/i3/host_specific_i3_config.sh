@@ -1,4 +1,4 @@
 #!/bin/sh
-cat $HOME/.i3/config.generic
+cat $HOME/.config/i3/config.generic
 echo
-cat $HOME/.i3/config.`hostname`
+cat $HOME/.config/i3/config.`hostname`
