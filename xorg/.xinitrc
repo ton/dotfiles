@@ -19,7 +19,7 @@ autocutsel -fork && autocutsel -selection PRIMARY -fork &
 compton --xrender-sync --xrender-sync-fence --config ~/.config/compton.`hostname`.conf &
 
 # Generate a host specific i3 configuration.
-$HOME/.i3/host_specific_i3_config.sh > $HOME/.i3/config
+$HOME/.config/i3/host_specific_i3_config.sh > $HOME/.config/i3/config
 
 # Disable the laptop display in case an external monitor is connected.
 if [ -f $HOME/.local/bin/switch-to-monitor.sh ]
