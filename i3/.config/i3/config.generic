@@ -135,14 +135,6 @@ bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
 
-# Switch to a specific tab in case we are in a tabbed container.
-bindsym Mod1+1 exec --no-startup-id i3-switch-tab.py 0
-bindsym Mod1+2 exec --no-startup-id i3-switch-tab.py 1
-bindsym Mod1+3 exec --no-startup-id i3-switch-tab.py 2
-bindsym Mod1+4 exec --no-startup-id i3-switch-tab.py 3
-bindsym Mod1+5 exec --no-startup-id i3-switch-tab.py 4
-bindsym Mod1+6 exec --no-startup-id i3-switch-tab.py 5
-
 # Session shortcuts.
 bindsym $mod+Shift+c exec --no-startup-id $HOME/.i3/host_specific_i3_config.sh > $HOME/.i3/config; reload
 bindsym $mod+Shift+r exec --no-startup-id $HOME/.i3/host_specific_i3_config.sh > $HOME/.i3/config; restart
