@@ -180,11 +180,11 @@ function! AsyncMakeOnExit(job_id, data, event) dict
   " It is possible that the user stopped the make, in which case the build
   " results will not be available.
   if filereadable(self.build_log)
-    " Hide the make output window.
-    call jobstart(['i3-msg', '[class="build_output"] scratchpad show'])
-
     silent exe "cfile " . self.build_log
     silent exe "cw"
+
+    " Hide the make output window.
+    call jobstart(['i3-msg', '[class="build_output"] scratchpad show'])
   endif
 endfunction
 
