@@ -41,14 +41,16 @@ line-color = #f00
 border-size = 0
 border-color = #00000000
 
-padding-left = 0
-padding-right = 0
+padding-left = 1
+padding-right = 1
 
 module-margin-left = 1
 module-margin-right = 1
 
 font-0 = Source Code Pro:pixelsize=12;1
-font-1 = Font Awesome:pixelsize=12;1
+font-1 = Material Design Icons:size=13;1
+font-2 = Font Awesome:pixelsize=12;1
+font-3 = SauceCodePro Nerd Font Mono:pixelsize=20;4
 
 modules-left = i3
 modules-center = xwindow
@@ -67,7 +69,7 @@ inherit = bar/beech
 
 modules-left = i3
 modules-center = xwindow
-modules-right = mic pulseaudio cmus battery0 battery1 date
+modules-right = pulseaudio mic cmus battery0 battery1 date
 
 [module/xwindow]
 type = internal/xwindow
@@ -98,17 +100,15 @@ label-focused-padding = 2
 label-unfocused = %icon%
 label-unfocused-padding = 2
 
-format = <label-state> <label-mode>
-
 fuzzy-match = true
 
-; ws-icon-0 = 1;
-ws-icon-0 = 1;
+ws-icon-0 = 1;
 ws-icon-1 = 2;
-ws-icon-2 = 3;
+ws-icon-2 = 3;󰈹
 ws-icon-3 = 4;
 ws-icon-4 = 5; 
-ws-icon-5 = 6;
+ws-icon-5 = 6;󰅶
+ws-icon-6 = 7;󰒯
 
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
@@ -123,9 +123,7 @@ label-urgent-padding = 2
 [module/cmus]
 type = custom/ipc
 
-format-prefix = " "
 format-underline = #6c9ac5
-format-suffix = " "
 
 hook-0 = $HOME/.local/bin/cmus-status-display
 
@@ -142,8 +140,6 @@ hook-1 = $HOME/.local/bin/polybar-mic.sh toggle
 initial = 1
 
 click-left = polybar-msg -p %pid% hook mic 2
-
-format-suffix = "  "
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -167,16 +163,15 @@ type = internal/date
 interval = 0.5
 
 date =
-date-alt = "  %A %d %B/%V "
+date-alt = "󰃭 %A %d %B/%V "
 
-time = "%H:%M:%S "
-time-alt = "%H:%M:%S "
+time = "󰥔 %H:%M:%S"
+time-alt = "󰥔 %H:%M:%S"
 
-format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #9a4c95
 
-label = %date%  %time%
+label = %date%%time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -188,12 +183,12 @@ label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
 format-muted = <label-muted>
-label-muted = "   ┋────────────────────"
+label-muted = "󰝟 ┋────────────────────"
 label-muted-foreground = #666
 
-ramp-volume-0 = "  "
-ramp-volume-1 = " "
-ramp-volume-2 = 
+ramp-volume-0 = "󰕿"
+ramp-volume-1 = "󰖀"
+ramp-volume-2 = "󰕾"
 
 bar-volume-width = 21
 bar-volume-foreground-0 = #55aa55
@@ -220,34 +215,32 @@ full-at = 95
 
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
-format-charging-prefix = "  "
 
 format-discharging = "<ramp-capacity> <label-discharging>"
 format-discharging-underline = ${self.format-charging-underline}
-format-discharging-prefix = "  "
 
-format-full-prefix = " "
+format-full-prefix = 󰂄
 format-full-prefix-foreground = ${colors.foreground}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+ramp-capacity-0 = 󰁻
+ramp-capacity-1 = 󰁽
+ramp-capacity-2 = 󰁿
+ramp-capacity-3 = 󰂁
+ramp-capacity-4 = 󰁹
 ramp-capacity-foreground = ${colors.foreground}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
+animation-charging-0 = 󰁻
+animation-charging-1 = 󰁽
+animation-charging-2 = 󰁿
+animation-charging-3 = 󰂁
+animation-charging-4 = 󰁹
 animation-charging-framerate = 750
 animation-charging-foreground = ${colors.foreground}
 
 [module/battery1]
 type = internal/battery
-inherite = module/battery0
+inherit = module/battery0
 battery = BAT1
 adapter = AC
 full-at = 94
