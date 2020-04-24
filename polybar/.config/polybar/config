@@ -207,6 +207,8 @@ bar-volume-empty = ─
 bar-volume-empty-font = 5
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
+click-right = pavucontrol &
+
 [module/battery0]
 type = internal/battery
 battery = BAT0
