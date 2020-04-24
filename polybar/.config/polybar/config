@@ -54,7 +54,7 @@ font-3 = SauceCodePro Nerd Font Mono:pixelsize=20;4
 font-4 = Source Code Pro:pixelsize=11;1
 
 modules-left = i3
-modules-center = xwindow
+modules-center = xwindow-beech
 modules-right = pulseaudio cmus date
 
 tray-position = right
@@ -69,13 +69,18 @@ cursor-scroll = ns-resize
 inherit = bar/beech
 
 modules-left = i3
-modules-center = xwindow
+modules-center = xwindow-willow
 modules-right = pulseaudio mic cmus wireless-network battery0 battery1 date
 
-[module/xwindow]
+[module/xwindow-beech]
 type = internal/xwindow
 label = %title:0:100:...%
-label-maxlen = 250
+label-maxlen = 150
+
+[module/xwindow-willow]
+type = internal/xwindow
+label = %title:0:100:...%
+label-maxlen = 90
 
 [module/i3]
 type = internal/i3
