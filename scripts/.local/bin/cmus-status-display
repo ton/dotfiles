@@ -19,8 +19,9 @@ import os
 import subprocess
 import sys
 
-STATUS_ICON_PLAYING = '\uf04b'
-STATUS_ICON_PAUSED = '\uf04c'
+# See: https://cdn.materialdesignicons.com/5.1.45/
+STATUS_ICON_PLAYING = '\U000f040a'
+STATUS_ICON_PAUSED = '\U000f03e4'
 CMUS_STATUS_PIPE = '/tmp/cmus.txt'
 
 def main():
@@ -51,7 +52,7 @@ def main():
                 output = ''
 
             if status_icon:
-                output = '%s  %s' % (status_icon, output)
+                output = '%s %s' % (status_icon, output)
 
         open(CMUS_STATUS_PIPE, 'w+').write(output)
 
