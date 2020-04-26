@@ -70,7 +70,7 @@ inherit = bar/beech
 
 modules-left = i3
 modules-center = xwindow-willow
-modules-right = pulseaudio mic cmus wireless-network battery0 battery1 date
+modules-right = cmus pulseaudio mic wireless-network battery0 battery1 date
 
 [module/xwindow-beech]
 type = internal/xwindow
