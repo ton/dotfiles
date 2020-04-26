@@ -2,6 +2,7 @@
 stow \
     ccache \
     cmus \
+    fehbg \
     fontconfig \
     gdb \
     git \

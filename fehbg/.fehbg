@@ -1,0 +1,2 @@
+pictures=($HOME/pictures/wallpapers/*)
+feh '--bg-scale' --randomize --no-fehbg $pictures
