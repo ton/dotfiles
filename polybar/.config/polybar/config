@@ -297,6 +297,7 @@ format-connected-underline = #2a9599
 ; Available tags:
 ;   <label-disconnected> (default)
 format-disconnected = <label-disconnected>
+format-disconnected-underline = #2a9599
 
 ; Available tags:
 ;   <label-connected> (default)
