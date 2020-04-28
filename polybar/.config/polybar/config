@@ -123,7 +123,7 @@ label-visible-padding = ${self.label-focused-padding}
 
 label-urgent = %icon%
 label-urgent-underline = #bd2c40
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 [module/cmus]
 type = custom/ipc
