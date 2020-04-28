@@ -10,12 +10,13 @@ set $white #eeeeee
 set $red #ee2222
 
 # Set workspace names.
-set $ws1 1:Ⅰ
-set $ws2 2:Ⅱ
-set $ws3 3:Ⅲ
-set $ws4 4:Ⅳ
-set $ws5 5:Ⅴ
-set $ws6 6:Ⅵ
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
 
 ##
 # Auto start configuration
@@ -125,6 +126,7 @@ bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
 bindsym $mod+grave workspace back_and_forth
 
 # Move focused container to a specific workspace.
@@ -134,6 +136,7 @@ bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
 
 # Session shortcuts.
 bindsym $mod+Shift+c exec --no-startup-id $HOME/.i3/host_specific_i3_config.sh > $HOME/.i3/config; reload
