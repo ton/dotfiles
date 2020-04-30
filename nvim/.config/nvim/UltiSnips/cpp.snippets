@@ -22,13 +22,16 @@ snippet fp "Add include directive for frc_profile.h" b
 #include "general/include/frc_profile.h" // Remove!
 endsnippet
 
-snippet cm
-//
-// Copyright (C) 2017-present Fractal Technologies. All rights reserved.
-//
-
-endsnippet
-
 snippet ii
 #include <iostream> // Remove!
+endsnippet
+
+snippet main
+#include <iostream>
+
+int main(int argc, char** argv)
+{
+  $1
+  return 0;
+}
 endsnippet
