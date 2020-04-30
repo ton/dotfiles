@@ -190,6 +190,7 @@ label-volume-foreground = ${root.foreground}
 format-muted = <label-muted>
 label-muted = "󰝟 ┋────────────────────"
 label-muted-foreground = #666
+label-muted-font = 5
 
 ramp-volume-0 = "󰕿"
 ramp-volume-1 = "󰖀"
