@@ -1,6 +1,6 @@
 snippet mf
 all:
-	g++ -o ${1:${VISUAL:name}} $1.cpp
+	g++ -std=c++17 -o ${1:${VISUAL:name}} $1.cpp
 
 clean:
 	rm $1
