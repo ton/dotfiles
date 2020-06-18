@@ -8,7 +8,7 @@ endsnippet
 
 snippet fmf
 all:
-	g++ -g -o ${1:${VISUAL:name}} $1.cpp -DDEBUG -fno-omit-frame-pointer -I/cad/Trolltech/Qt-4.8.5/include -I${FRACTAL_SRC_DIR} -L/usr/local/lib -L/cad/Trolltech/Qt-4.8.5/lib -L${FRACTAL_INST_DIR}/libLinux64 -lfrc_Cfg -lfrc_CfgKernel -lfrc_Expression -lfrc_General -lfrc_GeneralNetwork -lfrc_MessageGeneral -lfrc_MessageLogger -lprofiler -lfrc_SqlMessageDb -std=c++0x -lQtCore -lQtNetwork -lQtGui -lpthread -I/cad/boost/1.60.0/include -L/cad/boost/1.60.0/lib -lboost_system
+	g++ -g -o ${1:${VISUAL:name}} $1.cpp -DDEBUG -fno-omit-frame-pointer -I/cad-builds/centos5/master/gcc/include -I/cad-builds/centos5/master/gcc/lib -I${FRACTAL_SRC_DIR} -L${FRACTAL_INST_DIR}/libLinux64 -lfrc_Cfg -lfrc_CfgKernel -lfrc_Expression -lfrc_General -lfrc_GeneralNetwork -lfrc_MessageGeneral -lfrc_MessageLogger -lprofiler -lfrc_SqlMessageDb -std=c++0x -lQtCore -lQtNetwork -lQtGui -lpthread
 
 clean:
 	rm $1
