@@ -25,9 +25,9 @@ $HOME/.config/i3/host_specific_i3_config.sh > $HOME/.config/i3/config
 if [ -f $HOME/.local/bin/switch-to-monitor.sh ]
 then
     $HOME/.local/bin/switch-to-monitor.sh
-else
-    sh $HOME/.fehbg &
 fi
+
+sh $HOME/.fehbg &
 
 # Lock the screen after five minutes of inactivity, but only in case the
 # currently focused window is not fullscreen.

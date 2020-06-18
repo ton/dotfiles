@@ -11,10 +11,6 @@ xrandr --listactivemonitors | while read -r line; do
         monitor=$(echo "$line" | sed 's/[^+]*+\(\S*\).*$/\1/')
         xrandr -d ${DISPLAY} --output ${monitor} --auto --output ${laptop_display} --off
         logger "Monitor connected, using monitor as primary output."
-
-        # Rescale background image.
-        sh $HOME/.fehbg &
-
         exit 0
     fi
 done
