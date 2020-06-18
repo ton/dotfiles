@@ -70,7 +70,7 @@ inherit = bar/beech
 
 modules-left = i3
 modules-center = xwindow-willow
-modules-right = cmus pulseaudio mic wireless-network battery0 battery1 date
+modules-right = cmus pulseaudio mic wireless-network bluetooth battery0 battery1 date
 
 [module/xwindow-beech]
 type = internal/xwindow
@@ -343,6 +343,17 @@ ramp-signal-5 = 󰤨
 ; animation-packetloss-1-foreground = #000000
 ; Framerate in milliseconds
 ; animation-packetloss-framerate = 500
+
+[module/bluetooth]
+type = custom/script
+exec = $HOME/.local/bin/polybar-bluetooth.sh
+interval = 2
+click-left = exec $HOME/.local/bin/polybar-toggle-bluetooth.sh
+click-right = exec st bluetoothctl
+format-padding = 1
+format-background = #000000
+format-foreground = #ffffff
+format-underline = #2c9ac5
 
 [settings]
 screenchange-reload = true
