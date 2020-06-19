@@ -359,8 +359,8 @@ interval = 2
 click-left = exec $HOME/.local/bin/polybar-toggle-bluetooth.sh
 click-right = exec st bluetoothctl
 format-padding = 1
-format-background = #000000
-format-foreground = #ffffff
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
 format-underline = #2c9ac5
 
 [settings]
