@@ -10,10 +10,10 @@ Plug 'bfredl/nvim-miniyank'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'nacitar/a.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'sickill/vim-pasta'
 Plug 'SirVer/ultisnips'
+Plug 'ton/vim-alternate'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
@@ -276,12 +276,10 @@ nnoremap <leader>s :call Fzf('rg ' . g:rg_args . ' --files', 'sp', g:fzf_window)
 nnoremap <leader>b :Buffers<CR>
 
 " Switch between header and implementation using F4.
-map <F4> :A<CR>
+map <F4> :Alternate<CR>
 
-" Configure the search paths to look for include/source files, and never open a
-" non existing source file.
-let g:alternateSearchPath = 'sfr:../source,sfr:../src,sfr:../include,sfr:../inc,sfr:../itf'
-let g:alternateNoDefaultAlternate = 1
+" Configure the search paths to look for include/source files.
+let g:AlternatePaths = ['../include', '../src', '.', '..']
 
 " Do not let Vim pasta remap default p and P mapping for pasting. We use
 " miniyank for that, and call vim-pasta from miniyank remappings.
