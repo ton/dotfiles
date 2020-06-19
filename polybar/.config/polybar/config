@@ -55,7 +55,7 @@ font-4 = Source Code Pro:pixelsize=11;1
 
 modules-left = i3
 modules-center = xwindow-beech
-modules-right = pulseaudio cmus date
+modules-right = pulseaudio date
 
 tray-position = right
 tray-padding = 2
@@ -70,7 +70,7 @@ inherit = bar/beech
 
 modules-left = i3
 modules-center = xwindow-willow
-modules-right = cmus pulseaudio mic wireless-network bluetooth battery0 battery1 date
+modules-right = mpd pulseaudio mic wireless-network bluetooth battery0 battery1 date
 
 [module/xwindow-beech]
 type = internal/xwindow
@@ -125,16 +125,24 @@ label-urgent = %icon%
 label-urgent-underline = #bd2c40
 label-urgent-padding = 1
 
-[module/cmus]
-type = custom/ipc
+[module/mpd]
+type = internal/mpd
 
-format-underline = #6c9ac5
+; Host where mpd is running (either ip or domain name). Can also be the full
+; path to a unix socket where mpd is running.
+host = 127.0.0.1
+port = 6600
+; password = mysecretpassword
 
-hook-0 = $HOME/.local/bin/cmus-status-display
+; Seconds to sleep between progressbar/song timer sync
+interval = 2
 
-initial = 1
+format-online = <toggle> <label-song>
+icon-play = 󰐊
+icon-pause = 󰏤
 
-click-left = cmus-remote -u
+
+label-song = %title%
 
 [module/mic]
 type = custom/ipc
