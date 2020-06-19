@@ -80,7 +80,7 @@ label-maxlen = 150
 [module/xwindow-willow]
 type = internal/xwindow
 label = %title:0:100:...%
-label-maxlen = 90
+label-maxlen = 50
 
 [module/i3]
 type = internal/i3
