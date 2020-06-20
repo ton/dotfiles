@@ -13,18 +13,19 @@ fi
 
 wpa_supplicant_config=/etc/wpa_supplicant/$1.conf
 pid_file=/var/run/wpa_supplicant.pid
+device_name=$(ip link | grep -oe 'wl[^:]*')
 
-if [ -f $wpa_supplicant_config ];
+if [ -f "$wpa_supplicant_config" ];
 then
     echo "Connecting to $1 wifi profile..."
-    ip link set wlan0 up
-    wpa_supplicant -B -i wlan0 -c $wpa_supplicant_config -P $pid_file
-    dhcpcd wlan0
-elif [ $1 == "down" ]
+    ip link set "$device_name" up
+    wpa_supplicant -B -i "$device_name" -c "$wpa_supplicant_config" -P $pid_file
+    dhcpcd "$device_name"
+elif [ "$1" = "down" ]
 then
     echo "Bringing wlan0 down..."
-    kill $(cat $pid_file)
-    ip link set wlan0 down
+    kill "$(cat $pid_file)"
+    ip link set "$device_name" down
 else
     print_usage
 fi
