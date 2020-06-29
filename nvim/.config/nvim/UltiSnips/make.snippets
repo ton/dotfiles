@@ -8,7 +8,7 @@ endsnippet
 
 snippet fmf
 all:
-	g++ -g -o ${1:${VISUAL:name}} $1.cpp -DDEBUG -std=c++17 -fno-omit-frame-pointer -I/cad-builds/centos5/master/gcc/include -I/cad-builds/centos5/master/gcc/lib -I${FRACTAL_SRC_DIR} -L${FRACTAL_INST_DIR}/libLinux64 -lfrc_Cfg -lfrc_DsHandler -lfrc_DsUtility -lfrc_Expression -lfrc_General -lfrc_GeneralNetwork -lfrc_MessageGeneral -lfrc_MessageLogger -lprofiler -lQtCore -lQtNetwork -lQtGui -lpthread
+	g++ -g -o ${1:${VISUAL:name}} $1.cpp -DDEBUG -std=c++17 -fno-omit-frame-pointer -I/cad-builds/centos6/master/gcc/include -I/cad-builds/centos6/master/gcc/lib -I${FRACTAL_SRC_DIR} -L${FRACTAL_INST_DIR}/libLinux64 -lfrc_Cfg -lfrc_DsHandler -lfrc_DsUtility -lfrc_Expression -lfrc_General -lfrc_GeneralNetwork -lfrc_MessageGeneral -lfrc_MessageLogger -lprofiler -lQtCore -lQtNetwork -lQtGui -lpthread
 
 clean:
 	rm $1
