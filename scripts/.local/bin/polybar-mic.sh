@@ -1,12 +1,15 @@
 #!/bin/sh
 
+# Determine microphone source number.
+source=$(pamixer --list-sources | grep analog-stereo | head -c 1)
+
 # Toggle mute status
 if [ "$1" = "toggle" ]
 then
-    pactl set-source-mute 1 toggle
+    pactl set-source-mute $source toggle
 fi
 
-status=$(pamixer --source 1 --get-mute)
+status=$(pamixer --source $source --get-mute)
 
 # See: https://cdn.materialdesignicons.com/5.1.45/
 if [ "$status" = "true" ];
