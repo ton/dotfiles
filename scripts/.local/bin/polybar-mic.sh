@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Determine microphone source number.
-source=$(pamixer --list-sources | grep analog-stereo | head -c 1)
+source=$(pamixer --list-sources | grep alsa_input | grep analog-stereo | head -c 1)
 
 # Toggle mute status
 if [ "$1" = "toggle" ]
