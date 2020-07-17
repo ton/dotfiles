@@ -10,6 +10,7 @@
 [alias]
 	lg = log --graph --decorate --all
 	lol = log --graph --decorate --all --pretty=oneline --abbrev-commit
+	lgb = log --graph --abbrev-commit --decorate --first-parent
 	unstage = reset HEAD
 	forget = !cd ${GIT_PREFIX:-.} && git reset HEAD -q $* && git checkout $*
 	unmerged = diff --name-only --diff-filter=U
