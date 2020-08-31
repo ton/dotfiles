@@ -34,5 +34,8 @@ sh $HOME/.fehbg &
 xset s 600
 xsidle.sh lock-if-not-fullscreen.sh &
 
+# Set right alt as compose key.
+setxkbmap -option compose:ralt
+
 # Start i3 session.
 exec i3
