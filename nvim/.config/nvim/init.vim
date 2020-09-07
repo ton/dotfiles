@@ -7,9 +7,9 @@ call plug#begin('~/.local/share/nvim/vim-plug')
 
 " List all external plugins managed through Vundle.
 Plug 'bfredl/nvim-miniyank'
-Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'justinmk/vim-sneak'
 Plug 'pangloss/vim-javascript'
 Plug 'sickill/vim-pasta'
 Plug 'SirVer/ultisnips'
@@ -290,25 +290,11 @@ let g:pasta_paste_after_mapping = '<leader>vp'
 map <expr> p miniyank#startput("p",1)
 map <C-p> <Plug>(miniyank-cycle)
 
-" Do not use default EasyMotion mappings.
-let g:EasyMotion_do_mapping = 0
-
-" Show matches using capital letters, allow using lowercase shortcuts.
-let g:EasyMotion_use_upper = 1
-let g:EasyMotion_keys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ;'
-
-" Search case insensitive.
-let g:EasyMotion_smartcase = 1
-
-" Be less chatty.
-let g:EasyMotion_verbose = 0
-
-nmap <leader>f <Plug>(easymotion-s2)
-map <leader>j <Plug>(easymotion-j)
-map <leader>k <Plug>(easymotion-k)
-
-" Keep cursor column with j/k motion.
-let g:EasyMotion_startofline = 0
+" Enable label mode, allows jumping to a match further down in the list
+" sequence much faster.
+let g:sneak#label = 1
+" Enable clever-s; repeat search by pressing 's' again.
+let g:sneak#s_next = 1
 
 " Set path for private snippets used by UltiSnips.
 let g:UltiSnipsSnippetsDir = '~/.config/nvim/UltiSnips'
