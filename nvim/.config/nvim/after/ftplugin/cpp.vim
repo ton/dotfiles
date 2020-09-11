@@ -47,6 +47,9 @@ let b:cpp_override = 1
 " Don't indent templates.
 setlocal indentexpr=CppNoTemplateIndent()
 
+" Fix auto indentation in lambda's.
+setlocal cino=j1,(0,ws,Ws
+
 " Only do this when this is the first time these settings are loaded for the
 " current Vim instance.
 if exists("g:cpp_override")
