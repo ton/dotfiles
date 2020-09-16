@@ -178,5 +178,5 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5 -time 0
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5 -time 0
 bindsym XF86AudioPlay exec --no-startup-id cmus-remote -u
 
-# Toggle play/pause for cmus.
-bindsym $mod+p exec --no-startup-id cmus-remote -u
+# Toggle play/pause for mpd.
+bindsym $mod+p exec --no-startup-id mpc toggle
