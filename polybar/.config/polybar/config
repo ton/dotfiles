@@ -55,7 +55,7 @@ font-4 = Source Code Pro:pixelsize=11;1
 
 modules-left = i3
 modules-center = xwindow-beech
-modules-right = pulseaudio date
+modules-right = mpd pulseaudio wireless-network-beech bluetooth date
 
 tray-position = right
 tray-padding = 2
@@ -281,11 +281,6 @@ interval = 3.0
 ; Default: 0
 ;ping-interval = 3
 
-; @deprecated: Define min width using token specifiers (%downspeed:min% and %upspeed:min%)
-; Minimum output width of upload/download rate
-; Default: 3
-; udspeed-minwidth = 5
-
 ; Accumulate values from all interfaces
 ; when querying for up/downspeed rate
 ; Default: false
@@ -351,6 +346,10 @@ ramp-signal-5 = 󰤨
 ; animation-packetloss-1-foreground = #000000
 ; Framerate in milliseconds
 ; animation-packetloss-framerate = 500
+
+[module/wireless-network-beech]
+inherit = module/wireless-network
+interface = wlp38s0
 
 [module/bluetooth]
 type = custom/script
