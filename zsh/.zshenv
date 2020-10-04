@@ -34,16 +34,15 @@ export CXX="ccache g++"
 if [ -x $HOME_LOCAL/bin/nvim ]
 then
     export EDITOR=$HOME_LOCAL/bin/nvim
-else
-    if [ -x $HOME_LOCAL/bin/vim ]
-    then
-        export EDITOR=$HOME_LOCAL/bin/vim
-    else
-        if [ -x /usr/bin/vim ]
-        then
-            export EDITOR=/usr/bin/vim
-        fi
-    fi
+elif [ -x $HOME_LOCAL/bin/vim ]
+then
+    export EDITOR=$HOME_LOCAL/bin/vim
+elif [ -x /usr/bin/nvim ]
+then
+    export EDITOR=/usr/bin/nvim
+elif [ -x /usr/bin/vim ]
+then
+    export EDITOR=/usr/bin/vim
 fi
 
 # Don't keep a history file for less.
