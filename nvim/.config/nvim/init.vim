@@ -5,7 +5,7 @@
 " The <leader> part in the shortcuts below is configurable and set to '\' in
 " this configuration.
 "
-" <leader>-k : open word under cursor using vim-superman
+" K : open man page for word under cursor in a vertical split if available
 
 "-------------------------------------------------------------------------------
 " Load third-party plugins
@@ -274,8 +274,9 @@ command! -bang -nargs=1 Rg
 " TODO Use Rg command here.
 nmap <leader>g :call fzf#vim#grep('rg -n --column '.g:rg_args.' '.shellescape(expand('<cword>')), 1)<CR>
 
-" Open word under cursor using vim-superman.
-nmap <leader>k :exe 'SuperMan '.expand('<cword>')<CR>
+" Search man pages for word under cursor and open it if available in a
+" vertical split.
+nmap K :Man<CR>
 
 " Set the command to use for retrieving all input for fzf (custom setting). By
 " default, we use rg for this, since rg has nice support for automatically
