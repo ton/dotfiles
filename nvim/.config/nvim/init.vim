@@ -1,4 +1,13 @@
 "-------------------------------------------------------------------------------
+" Shortcuts
+"-------------------------------------------------------------------------------
+
+" The <leader> part in the shortcuts below is configurable and set to '\' in
+" this configuration.
+"
+" <leader>-k : open word under cursor using vim-superman
+
+"-------------------------------------------------------------------------------
 " Load third-party plugins
 "-------------------------------------------------------------------------------
 
@@ -7,6 +16,7 @@ call plug#begin('~/.local/share/nvim/vim-plug')
 
 " List all external plugins managed through Vundle.
 Plug 'bfredl/nvim-miniyank'
+Plug 'jez/vim-superman'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
@@ -263,6 +273,9 @@ command! -bang -nargs=1 Rg
 " Search for word under cursor using rg.
 " TODO Use Rg command here.
 nmap <leader>g :call fzf#vim#grep('rg -n --column '.g:rg_args.' '.shellescape(expand('<cword>')), 1)<CR>
+
+" Open word under cursor using vim-superman.
+nmap <leader>k :exe 'SuperMan '.expand('<cword>')<CR>
 
 " Set the command to use for retrieving all input for fzf (custom setting). By
 " default, we use rg for this, since rg has nice support for automatically
