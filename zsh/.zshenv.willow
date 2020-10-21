@@ -7,6 +7,7 @@ alias init-sandbox=". $fractal_root/bin/init-sandbox.sh $*"
 alias cds="cd $fractal_root/repos/fractal/src"
 alias cdl="cd $fractal_root/repos/fractal/largetests"
 alias cdr="cd $fractal_root/repos/fractal/"
+alias mplayer="mplayer -vo gl"
 
 export TCLLIBPATH="/usr/lib/tclx8.4"
 
