@@ -141,8 +141,8 @@ format-online = <toggle> <label-song>
 icon-play = 󰐊
 icon-pause = 󰏤
 
-
 label-song = %title%
+label-song-maxlen = 50
 
 [module/mic]
 type = custom/ipc
