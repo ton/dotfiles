@@ -75,7 +75,7 @@ modules-right = mpd pulseaudio mic wireless-network bluetooth battery0 battery1 
 [module/xwindow-beech]
 type = internal/xwindow
 label = %title:0:100:...%
-label-maxlen = 150
+label-maxlen = 125
 
 [module/xwindow-willow]
 type = internal/xwindow
