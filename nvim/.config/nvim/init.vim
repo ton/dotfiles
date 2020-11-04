@@ -198,14 +198,6 @@ function! AsyncMakeOnExit(job_id, data, event) dict
   endif
 endfunction
 
-" Stop the active make job in case the user closes the make output window.
-function! AsyncMakeStop(job_id, data, event) dict
-  " Kill the child process of the /bin/sh process, which effectively stops
-  " everything, since /bin/sh will stop as soon as the command it should
-  " execute finishes.
-  call system('pkill -P ' . self.make_pid)
-endfunction
-
 " Starts an asynchronous make.
 function! AsyncMake()
   " Close the error window in Neovim.
@@ -215,16 +207,12 @@ function! AsyncMake()
   let build_log = substitute(system('mktemp'), '\n$', '', '')
 
   " Start the build, and redirect all build output to the given log file.
-  let make_pid = jobpid(jobstart(['sh', '-c',
-      \ &makeprg . ' &> ' . build_log .
+  call jobstart(['sh', '-c',
+      \ 'i3-show-build-output.sh ' . build_log .
+      \ ' && ' . &makeprg . ' &> ' . build_log .
       \ ' && echo -e "\nBuild completed successfully 😊" >> ' . build_log .
       \ ' || echo -e "\nBuild failed 😢" >> ' . build_log],
-      \ {'on_exit': function('AsyncMakeOnExit'), 'build_log': build_log}))
-
-  " Opens a floating terminal window with a tmux session displaying a tail
-  " of the current build output. Closing the window will stop the build, and
-  " clean up the temporary files.
-  call jobstart(['i3-show-build-output.sh', build_log], {'on_exit': function('AsyncMakeStop'), 'make_pid': make_pid})
+      \ {'on_exit': function('AsyncMakeOnExit'), 'build_log': build_log})
 endfunction
 
 " Remap <leader>m to execute an asynchronous make.
