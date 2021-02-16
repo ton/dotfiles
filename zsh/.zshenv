@@ -25,10 +25,6 @@ alias please="sudo !!"
 # Set environment variables.
 export QTDIR=/usr/local/Trolltech/Qt/
 
-# Configure ccache to be used for gcc/g++.
-export CC="ccache gcc"
-export CXX="ccache g++"
-
 # Setup the default editor.
 if [ -x $HOME_LOCAL/bin/nvim ]
 then
