@@ -192,9 +192,6 @@ function! AsyncMakeOnExit(job_id, data, event) dict
   if filereadable(self.build_log)
     silent exe "cfile " . self.build_log
     silent exe "cw"
-
-    " Hide the make output window.
-    call jobstart(['i3-msg', '[class="build_output"] scratchpad show'])
   endif
 endfunction
 
@@ -207,12 +204,9 @@ function! AsyncMake()
   let build_log = substitute(system('mktemp'), '\n$', '', '')
 
   " Start the build, and redirect all build output to the given log file.
-  call jobstart(['sh', '-c',
-      \ 'i3-show-build-output.sh ' . build_log .
-      \ ' && ' . &makeprg . ' &> ' . build_log .
-      \ ' && echo -e "\nBuild completed successfully 😊" >> ' . build_log .
-      \ ' || echo -e "\nBuild failed 😢" >> ' . build_log],
-      \ {'on_exit': function('AsyncMakeOnExit'), 'build_log': build_log})
+  call jobstart(
+  \ ['sh', '-c', ' i3-show-build-output.sh "' . &makeprg . '" ' . build_log],
+  \ {'on_exit': function('AsyncMakeOnExit'), 'build_log': build_log})
 endfunction
 
 " Remap <leader>m to execute an asynchronous make.
