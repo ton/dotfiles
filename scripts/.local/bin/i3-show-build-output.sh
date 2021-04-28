@@ -14,15 +14,16 @@ build_log="$2"
 # scratchpad.
 i3-msg '[class="build_output"] kill' > /dev/null
 
-# Start the build; append output to the build log that indicates the result of
-# the build. Then, automatically hide the scratchpad output window, and let the
-# window stick around for at most an hour before closing it, so that it can be
-# referred back to after the build finishes.
-build_output_cmd="
-    ($build_cmd && echo -e '\nBuild completed successfully 😊' || echo -e '\nBuild failed 😢') 2>&1 | tee $build_log \
-    && i3-msg '[class=\"build_output\"]' scratchpad show &> /dev/null \
-    && sleep 3600"
+# Create the build output file; `tail -f` will be executed prior to the build
+# command.
+touch build_log
 
 # Start a tmux session in a new terminal that shows the tail of the build
-# output window.
-i3-sensible-terminal -c build_output -e tmux -f ~/.tmux.make.conf -L make new-session "$build_output_cmd" &
+# output window, for at most an hour (to be able to bring the build output back
+# after the build finishes).
+i3-sensible-terminal -c build_output -e tmux -f ~/.tmux.make.conf -L make new-session "tail -f $build_log && sleep 3600" &
+
+# Start the build; append output to the build log that indicates the result of
+# the build. Then, automatically hide the scratchpad output window.
+($build_cmd && echo -e '\nBuild completed successfully 😊' || echo -e '\nBuild failed 😢') 2>&1 | tee $build_log \
+    && i3-msg '[class="build_output"]' scratchpad show
