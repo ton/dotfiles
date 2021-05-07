@@ -24,6 +24,10 @@ touch build_log
 # after the build finishes).
 i3-sensible-terminal -c build_output -e tmux -f ~/.tmux.make.conf -L make new-session "trap 'killall $build_cmd' INT; tail -f $build_log && sleep 3600" &
 
+# Wait for the build output window to show, such that hiding the build output
+# later on will surely succeed.
+i3-msg -t subscribe '[ "window" ]' -m | grep -q build_output
+
 # Start the build; append output to the build log that indicates the result of
 # the build. Then, automatically hide the scratchpad output window.
 ($build_cmd_line && echo -e '\nBuild completed successfully 😊' || echo -e '\nBuild failed 😢') 2>&1 | tee "$build_log" \
