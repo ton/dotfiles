@@ -26,3 +26,5 @@ def new_objfile_handler(event):
 
 gdb.events.new_objfile.connect(new_objfile_handler)
 end
+
+set pagination off
