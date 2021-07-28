@@ -4,9 +4,11 @@ fractal_root=$HOME/development/fractal/
 
 alias set-build=". $fractal_root/bin/switch-build.sh $*"
 alias init-sandbox=". $fractal_root/bin/init-sandbox.sh $*"
-alias cds="cd $fractal_root/repos/fractal/src"
+alias cdi="cd $fractal_root/projects/ipdelta/setups/ST_IO_1"
+alias cdt="cd $fractal_root/projects/ipdelta/setups/DEMO/IPDELTA"
 alias cdl="cd $fractal_root/repos/fractal/largetests"
 alias cdr="cd $fractal_root/repos/fractal/"
+alias cds="cd $fractal_root/repos/fractal/src"
 alias mplayer="mplayer -vo gl"
 
 export TCLLIBPATH="/usr/lib/tclx8.4"
