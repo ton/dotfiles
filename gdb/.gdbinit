@@ -1,19 +1,19 @@
 python
 import sys, glob
-sys.path.insert(0, glob.glob('/cad-builds/centos5/master/gcc/share/gcc-*/python')[0])
+sys.path.insert(0, glob.glob('/cad-builds/centos6/master/gcc/share/gcc-*/python')[0])
 from libstdcxx.v6 import register_libstdcxx_printers
 register_libstdcxx_printers(gdb.current_objfile())
 
 def import_libpython_2():
   print('Importing GDB library for Python 2 debugging support...')
   import sys
-  sys.path.insert(0, '/cad-builds/centos5/master/gcc/share/python-debug/')
+  sys.path.insert(0, '/cad-builds/centos6/master/gcc/share/python-debug/')
   import libpython
 
 def import_libpython_3():
   print('Importing GDB library for Python 3 debugging support...')
   import sys
-  sys.path.insert(0, '/cad-builds/centos5/master/gcc/share/python3-debug/')
+  sys.path.insert(0, '/cad-builds/centos6/master/gcc/share/python3-debug/')
   import libpython
 
 def new_objfile_handler(event):
