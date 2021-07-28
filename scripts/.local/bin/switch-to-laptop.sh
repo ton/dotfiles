@@ -1,6 +1,6 @@
 #!/bin/sh
 
-LAPTOP_DISPLAY="eDP1"
+LAPTOP_DISPLAY="eDP-1"
 xrandr -d :0 --output ${LAPTOP_DISPLAY} --auto
 
 # Rescale background image.
