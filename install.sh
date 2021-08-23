@@ -1,6 +1,7 @@
 #!/bin/sh
 stow \
     ccache \
+    dunst \
     fehbg \
     fontconfig \
     gdb \
