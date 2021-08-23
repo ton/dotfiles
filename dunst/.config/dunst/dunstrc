@@ -1,12 +1,12 @@
 [global]
-    font = Roboto 12
+    font = Source Code Pro Semibold 10
 
     # Allow a small subset of html markup:
     #   <b>bold</b>
     #   <i>italic</i>
     #   <s>strikethrough</s>
     #   <u>underline</u>
-    # 
+    #
     # For a complete reference see
     # <http://developer.gnome.org/pango/stable/PangoMarkupFormat.html>.
     # If markup is not allowed, those tags will be stripped out of the
@@ -42,7 +42,7 @@
     # Show age of message if message is older than show_age_threshold
     # seconds.
     # Set to -1 to disable.
-    show_age_threshold = 60
+    show_age_threshold = 5
 
     # Split notifications into multiple lines if they don't fit into
     # geometry.
@@ -144,7 +144,7 @@
     icon_position = left
 
     # Paths to default icons.
-    icon_folders = /usr/share/icons/Faenza-Darker/actions/32:/usr/share/icons/Faenza/status/32/:/usr/share/icons/Faenza/devices/32/
+    icon_folders = /usr/share/icons/Faenza-Darker/actions/32:/usr/share/icons/Faenza/status/32/:/usr/share/icons/Faenza/devices/32/:/usr/share/icons/Faenza/apps/32/
 
 [frame]
     width = 2
