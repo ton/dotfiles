@@ -9,19 +9,20 @@ export HOME_LOCAL=$HOME/.local
 ld_library_path=($HOME_LOCAL/lib $ld_library_path)
 
 # Alias definitions.
-alias grep="grep --color=auto -I"
-alias fgrep="fgrep -I -s"
-alias less="less -R"
-alias ls="ls --color=auto"
-alias vi="nvim"
-alias vim="nvim"
-alias vimdiff="nvim -d"
-alias urxvt="urxvt -tr -sh 15"
+alias colors="(x=\`tput op\` y=\`printf %76s\`;for i in {0..256};do o=00\$i;echo -e \${o:${#o}-3:3} \`tput setaf \$i;tput setab \$i\`\${y// /=}\$x;done)"
 alias ctags_cpp="ctags --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -R *"
 alias dia="dia --integrated $*"
+alias fgrep="fgrep -I -s"
+alias grep="grep --color=auto -I"
+alias less="less -R"
+alias ls="ls --color=auto"
 alias parallel="parallel --env PYTHONPATH --no-notice"
 alias please="sudo !!"
-alias colors="(x=\`tput op\` y=\`printf %76s\`;for i in {0..256};do o=00\$i;echo -e \${o:${#o}-3:3} \`tput setaf \$i;tput setab \$i\`\${y// /=}\$x;done)"
+alias urxvt="urxvt -tr -sh 15"
+alias vimdiff="nvim -d"
+alias vim="nvim"
+alias vi="nvim"
+alias yt-dlp="yt-dlp -f 'bv+ba/b'"
 
 # Set environment variables.
 export QTDIR=/usr/local/Trolltech/Qt/
