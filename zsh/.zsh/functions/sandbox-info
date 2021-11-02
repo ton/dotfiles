@@ -1,4 +1,5 @@
 local sandbox="${SANDBOX_NAME}"
+local sandbox_details="${SANDBOX_DETAILS}"
 local sandbox_virtual_env=false
 
 # In case a virtualenv is active, parse it, and use it for the sandbox
@@ -21,24 +22,7 @@ then
         sandbox_name_color="12"
     fi
 
-    local sandbox_prompt=$(printf "%%F{%s}%s" "$sandbox_name_color" "$sandbox")
-
-    if [ ! -z "$SANDBOX_BRANCH" ]
-    then
-        local current_branch=`git-branch.sh`
-        if [[ ! -z "$current_branch" && `pwd` != $SANDBOX_ROOT && $SANDBOX_BRANCH != $current_branch ]]
-        then
-            local branch_color="196"
-        else
-            local branch_color="245"
-        fi
-
-        sandbox_prompt=$(printf "%s%%F{255} %%b\uf020 %%B%%F{%s}%s" "$sandbox_prompt" "$branch_color" "$SANDBOX_BRANCH")
-    fi
-
-    # Print the build type.
-    build_type=$(readlink $HOME/development/fractal/repos/fractal/src/build | awk -F '.' '{ print $2 }')
-    sandbox_prompt=$(printf "%s%%b|%%B%%F{208}%s" "$sandbox_prompt" "$build_type")
+    local sandbox_prompt=$(printf "%%F{%s}%s%%b%%F{15}|%%B%%F{208}%s" "$sandbox_name_color" "$sandbox" "$sandbox_details")
 
     if [ ${sandbox_virtual_env} = true ]
     then
