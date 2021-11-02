@@ -1,4 +1,6 @@
-export PROMPT='%(?.%F{2}.%F{1})$(date +%H:%M:%S)%F{243}|%F{255}%n@%F{243}%B%m%F{255}:%F{12}%~%b%F{255}$(git-branch " \ue625 %%B%%F{245}%s%%F{255}%%b")$ '
+branch_icon=$(printf '\Uf062c')
+
+export PROMPT='%(?.%F{2}.%F{1})$(date +%H:%M:%S)%F{243}|%F{255}%n@%F{243}%B%m%F{255}:%F{12}%~%b%F{255}$(git-branch "%%B $branch_icon %%F{245}%s%%F{255}%%b")$ '
 
 export CCACHE_MAXSIZE=12G
 
