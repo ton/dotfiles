@@ -1,22 +1,8 @@
 #!/bin/sh
-stow \
-    ccache \
-    dunst \
-    fehbg \
-    fontconfig \
-    gdb \
-    git \
-    gtk-2.0 \
-    gtk-3.0 \
-    i3 \
-    mime \
-    mpd \
-    nvim \
-    polybar \
-    scripts \
-    shell \
-    tmux \
-    xorg \
-    zsh
 
-sudo stow xorg.conf.d -t /etc/X11/xorg.conf.d
+mkdir -p "$HOME/.local/bin" "$HOME/.local/share" "$HOME/.local/repos"
+
+./clone-non-aur-tools.sh
+./setup-aur.sh
+./install-packages.sh
+./stow-dotfiles.sh

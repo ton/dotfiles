@@ -1,0 +1,3 @@
+dmenu2
+polybar
+pulseaudio-ctl

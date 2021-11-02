@@ -3,5 +3,12 @@ mpd/.config/mpd/database
 mpd/.config/mpd/sticker.sql
 mpd/.config/mpd/pid
 mpd/.config/mpd/state
-nvim/.config/nvim/.netrwhist
+nvim/.local/share/nvim/.netrwhist
+nvim/.local/share/nvim/backup
+nvim/.local/share/nvim/share
+nvim/.local/share/nvim/shada
+nvim/.local/share/nvim/swap
+nvim/.local/share/nvim/undo
+nvim/.local/share/nvim/vim-plug
 scripts/.local/bin/st
+scripts/.local/bin/xeventbind
