@@ -21,6 +21,7 @@ alias ctags_cpp="ctags --c++-kinds=+p --fields=+iaS --extra=+q --language-force=
 alias dia="dia --integrated $*"
 alias parallel="parallel --env PYTHONPATH --no-notice"
 alias please="sudo !!"
+alias colors="(x=\`tput op\` y=\`printf %76s\`;for i in {0..256};do o=00\$i;echo -e \${o:${#o}-3:3} \`tput setaf \$i;tput setab \$i\`\${y// /=}\$x;done)"
 
 # Set environment variables.
 export QTDIR=/usr/local/Trolltech/Qt/
