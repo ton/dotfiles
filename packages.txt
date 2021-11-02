@@ -25,6 +25,7 @@ shellcheck
 slock
 strace
 sxiv
+time
 tmux
 ttf-font-awesome
 ttf-liberation
