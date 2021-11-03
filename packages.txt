@@ -4,6 +4,7 @@ autocutsel
 base-devel
 devhelp
 devtools
+dunst
 firefox
 fortune-mod
 fzf

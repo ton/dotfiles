@@ -1,3 +1,4 @@
+cppreference-devhelp
 dmenu2
 polybar
 pulseaudio-ctl
