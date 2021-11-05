@@ -17,6 +17,8 @@ stow \
     scripts \
     shell \
     tmux \
+    wallpapers \
+    xdg \
     xorg \
     zsh
 
