@@ -9,7 +9,7 @@
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
-  "keyMappings": "map <c-b> scrollFullPageUp\nmap <c-f> scrollFullPageDown",
+  "keyMappings": "map <c-b> scrollFullPageUp\nmap <c-f> scrollFullPageDown\nmap <a-p> previousTab\nmap <a-n> nextTab",
   "linkHintCharacters": "sadfjklewcmpgh",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "about:newtab",
