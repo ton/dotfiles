@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Retrieve all staged files (colored) from 'git status'.
+fzf_input=$(git -c color.status=always status -s | grep --color=none -E "[^ ]  [^ ]+$")
+fzf_preview='git diff --staged --color $(echo {} | sed s/...//)'
+
+if files=$(echo "$fzf_input" | fzf --ansi --reverse --marker='*' -0 -m --preview "$fzf_preview" | sed s/...//); then
+    git restore --staged ${files}
+    git st
+else
+    echo "Nothing to unstage..."
+fi
