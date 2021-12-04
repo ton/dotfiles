@@ -42,6 +42,9 @@ then
     export EDITOR=/usr/bin/vim
 fi
 
+# Hard disk space is cheap.
+export CCACHE_MAXSIZE=12G
+
 # Don't keep a history file for less.
 export LESSHISTFILE=/dev/null
 
