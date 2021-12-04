@@ -1,6 +1,4 @@
-branch_icon=$(printf '\Uf062c')
-
-export PROMPT='%(?.%F{2}.%F{1})$(date +%H:%M:%S)%F{243}|%F{255}%n@%F{154}%B%m%F{255}:%F{12}%~%b%F{255}$(git-branch "%%B $branch_icon %%F{245}%s%%F{255}%%b")$ '
+host_color=154
 
 alias mplayer="mplayer -vo gl"
 

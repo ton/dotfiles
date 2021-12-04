@@ -65,3 +65,17 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # In case a machine local configuration must be set, do so here.
 test -f $HOME/.zshenv.$(hostname) && source $HOME/.zshenv.$(hostname)
+
+# In case no host color is set, set some default.
+host_color=${host_color:=154}
+
+maybe_git_branch() {
+    local branch=$(git branch --show-current)
+    if [[ -n $branch ]]
+    then
+        printf "$1" "$branch"
+    fi
+}
+
+branch_icon="$(printf '\Uf062c')"
+export PROMPT="%(?.%F{2}.%F{1})$(date +%H:%M:%S)%F{243}|%F{255}%n@%F{$host_color}%B%m%F{255}:%F{12}%~%b%F{255}$(maybe_git_branch "$branch_icon %%F{245}%s%%F{255}%%b")$ "

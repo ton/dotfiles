@@ -1,5 +1,0 @@
-local branch="`git-branch.sh`"
-if [[ -n $branch ]]
-then
-    printf "${1}" "$branch"
-fi
