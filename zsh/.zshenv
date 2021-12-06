@@ -24,9 +24,6 @@ alias vim="nvim"
 alias vi="nvim"
 alias yt-dlp="yt-dlp -f 'bv+ba/b'"
 
-# Set environment variables.
-export QTDIR=/usr/local/Trolltech/Qt/
-
 # Setup the default editor.
 if [ -x $HOME_LOCAL/bin/nvim ]
 then
