@@ -3,7 +3,7 @@
 	status = auto
 [user]
 	name = Ton van den Heuvel
-	email = tonvandenheuvel@gmail.com
+	email = git@tonvandenheuvel.com
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore
