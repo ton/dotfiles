@@ -369,8 +369,8 @@ au FileType xml setlocal syntax=off
 
 " Set Python 2 and 3 applications manually to the one provided by the system
 " to prevent issues when running Neovim in a sandbox.
-let g:python_host_prog = '/usr/bin/python2.7'
-let g:python3_host_prog = '/usr/bin/python3.9'
+let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/bin/python3'
 
 " Always start editing a file in case a swap file exists.
 augroup SimultaneousEdits
