@@ -20,6 +20,7 @@ Plug 'jez/vim-superman'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
+Plug 'Olical/conjure'
 Plug 'pangloss/vim-javascript'
 Plug 'sickill/vim-pasta'
 Plug 'SirVer/ultisnips'
@@ -70,6 +71,10 @@ set showcmd                          " display incomplete commands
 set splitright                       " open vertical splits on the right side
 set mouse=a                          " allow for mouse scrolling in tmux
 set wildmenu                         " add command-line completion menu
+
+" Set leader defaults.
+let mapleader = "\\"
+let maplocalleader = "\\"
 
 " Enable Doxygen syntax highlighting.
 let g:load_doxygen_syntax=1
