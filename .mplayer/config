@@ -1,3 +1,0 @@
-# Write your default config options here!
-vo=vdpau,xv,
-vc=ffh264vdpau,ffmpeg12vdpau,ffvc1vdpau,

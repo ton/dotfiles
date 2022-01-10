@@ -12,6 +12,7 @@ stow \
     i3 \
     mime \
     mpd \
+    mplayer \
     nvim \
     polybar \
     scripts \
