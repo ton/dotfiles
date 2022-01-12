@@ -22,7 +22,11 @@ then
         sandbox_name_color="12"
     fi
 
-    local sandbox_prompt=$(printf "%%F{%s}%s%%b%%F{15}|%%B%%F{208}%s" "$sandbox_name_color" "$sandbox" "$sandbox_details")
+    local sandbox_prompt=$(printf "%%F{%s}%s%%b%%F{15}" "$sandbox_name_color" "$sandbox")
+    if [ ! -z $sandbox_details ]
+    then
+        sandbox_prompt+=$(printf "|%%B%%F{208}%s" "$sandbox_details")
+    fi
 
     if [ ${sandbox_virtual_env} = true ]
     then
