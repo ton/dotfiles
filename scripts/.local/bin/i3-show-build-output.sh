@@ -17,7 +17,7 @@ i3-msg '[class="build_output"] kill' > /dev/null
 
 # Create the build output file; `tail -f` will be executed prior to the build
 # command.
-touch build_log
+touch "$build_log"
 
 # Start a tmux session in a new terminal that shows the tail of the build
 # output window, for at most an hour (to be able to bring the build output back
