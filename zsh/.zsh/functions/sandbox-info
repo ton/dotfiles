@@ -1,6 +1,12 @@
 local sandbox="${SANDBOX_NAME}"
-local sandbox_details="${SANDBOX_DETAILS}"
 local sandbox_virtual_env=false
+local sandbox_details="${SANDBOX_DETAILS}"
+
+# In case a function `sandbox_details_fn` exists, use it to set the sandbox
+# details variable.
+if typeset -f sandbox_details_fn > /dev/null; then
+    sandbox_details=$(sandbox_details_fn)
+fi
 
 # In case a virtualenv is active, parse it, and use it for the sandbox
 # settings.
