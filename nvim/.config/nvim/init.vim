@@ -327,11 +327,11 @@ set include=^\\s*#\\s*include\ \\(<boost/\\)\\@!
 "-------------------------------------------------------------------------------
 
 " Configures autocompletion through nvim-cmp.
-luafile ~/.config/nvim/lua/lsp.lua
+" luafile ~/.config/nvim/lua/lsp.lua
 
 " Custom auto completion; trigger a completion request when typing characters
 " at the end of some keyword.
-autocmd TextChangedI,TextChangedP *.c,*.h call s:autocomplete()
+" autocmd TextChangedI,TextChangedP *.c,*.h call s:autocomplete()
 function! s:autocomplete() abort
 lua <<EOF
   -- Only autocomplete in case completion was requested manually.
