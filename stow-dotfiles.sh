@@ -13,6 +13,7 @@ stow \
     mime \
     mpd \
     mplayer \
+    ncmpcpp \
     nvim \
     polybar \
     scripts \
