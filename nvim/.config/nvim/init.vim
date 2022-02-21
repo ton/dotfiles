@@ -30,6 +30,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/nvim-cmp'
+
 call plug#end()
 
 "-------------------------------------------------------------------------------
@@ -317,6 +321,35 @@ set completeopt=menuone
 
 " Do not scan Boost include files.
 set include=^\\s*#\\s*include\ \\(<boost/\\)\\@!
+
+"-------------------------------------------------------------------------------
+" LSP related settings (in Lua since Neovim hates Vimscript)
+"-------------------------------------------------------------------------------
+
+" Configures autocompletion through nvim-cmp.
+luafile ~/.config/nvim/lua/lsp.lua
+
+" Custom auto completion; trigger a completion request when typing characters
+" at the end of some keyword.
+autocmd TextChangedI,TextChangedP *.c,*.h call s:autocomplete()
+function! s:autocomplete() abort
+lua <<EOF
+  -- Only autocomplete in case completion was requested manually.
+  local cmp = require('cmp')
+  if not cmp.visible() then
+      return
+  end
+
+  local line = vim.api.nvim_get_current_line()
+  local cursor = vim.api.nvim_win_get_cursor(0)[2]
+
+  local before_cursor = string.sub(line, 1, cursor)
+  local after_cursor = string.sub(line, cursor + 1, -1)
+  if string.match(before_cursor, '[%w_]+$') and string.match(after_cursor, '%s*$') then
+      cmp.complete()
+  end
+EOF
+endfunction
 
 "-------------------------------------------------------------------------------
 " File type specific settings
