@@ -368,7 +368,7 @@ interface = wlp38s0
 [module/bluetooth]
 type = custom/script
 exec = $HOME/.local/bin/polybar-bluetooth.sh
-interval = 2
+interval = 3
 click-left = exec $HOME/.local/bin/polybar-toggle-bluetooth.sh
 click-right = exec blueman-manager &
 format-padding = 1
