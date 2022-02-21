@@ -54,8 +54,10 @@ export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist non
 # Make sure locally installed terminfo files are found.
 export TERMINFO="$HOME_LOCAL/share/terminfo"
 
-# Use st as the default terminal.
+# Use st as the default terminal, ensure COLORTERM is set to 24bit to enable
+# true color support in notcurses for example.
 export TERMINAL=st
+export COLORTERM=24bit
 
 # Disable virtualenv prompt by default (we handle it ourselves).
 export VIRTUAL_ENV_DISABLE_PROMPT=1
