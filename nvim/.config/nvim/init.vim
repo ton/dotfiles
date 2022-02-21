@@ -14,7 +14,7 @@
 "" Specify a directory for plugins
 call plug#begin('~/.local/share/nvim/vim-plug')
 
-" List all external plugins managed through Vundle.
+" List all external plugins managed through vim-plug.
 Plug 'bfredl/nvim-miniyank'
 Plug 'jez/vim-superman'
 Plug 'junegunn/fzf'
