@@ -7,9 +7,11 @@ if [ $# -lt 2 ]; then
     exit 1
 fi
 
-build_cmd_line="$1"
-build_cmd=$(echo "$build_cmd_line" | head -n 1 | cut -d " " -f1)
+build_cmd="$1"
 build_log="$2"
+
+# Determine the process group ID of this script.
+pgid=$(ps -o pgid= $$)
 
 # Close all other build output windows that might still linger in the
 # scratchpad.
@@ -22,7 +24,7 @@ touch "$build_log"
 # Start a tmux session in a new terminal that shows the tail of the build
 # output window, for at most an hour (to be able to bring the build output back
 # after the build finishes).
-i3-sensible-terminal -c build_output -e tmux -f ~/.tmux.make.conf -L make new-session "trap 'killall $build_cmd' INT; tail -f $build_log && sleep 3600" &
+i3-sensible-terminal -c build_output -e tmux -f ~/.tmux.make.conf -L make new-session "trap 'kill -s TERM -$pgid' INT; tail -f $build_log && sleep 3600" &
 
 # Wait for the build output window to show, such that hiding the build output
 # later on will surely succeed.
@@ -30,5 +32,5 @@ i3-msg -t subscribe '[ "window" ]' -m | grep -q build_output
 
 # Start the build; append output to the build log that indicates the result of
 # the build. Then, automatically hide the scratchpad output window.
-($build_cmd_line && echo -e '\nBuild completed successfully 😊' || echo -e '\nBuild failed 😢') 2>&1 | tee "$build_log" \
+{ $build_cmd && printf '\nBuild completed successfully 😊' || printf '\nBuild failed 😢'; } 2>&1 | tee "$build_log" \
     && i3-msg '[class="build_output"]' scratchpad show
