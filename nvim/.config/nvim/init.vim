@@ -215,7 +215,7 @@ function! AsyncMake()
 
   " Start the build, and redirect all build output to the given log file.
   call jobstart(
-  \ ['sh', '-c', ' i3-show-build-output.sh "' . &makeprg . '" ' . build_log],
+  \ ['i3-show-build-output.sh', &makeprg, build_log],
   \ {'on_exit': function('AsyncMakeOnExit'), 'build_log': build_log})
 endfunction
 
