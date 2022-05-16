@@ -372,6 +372,12 @@ au BufEnter *.pro setlocal syntax=pro
 au BufEnter *.ui setlocal tabstop=1
 au BufEnter *.ui setlocal shiftwidth=1
 
+" Treat SWIG files as C++ files, good enough.
+au BufEnter *.i setlocal filetype=cpp
+
+" Treat Scons files as Python files.
+au BufEnter SConscript setlocal filetype=python
+
 " Set tab stop to 1 for CMake files.
 au BufEnter CMakeLists.txt setlocal tabstop=2
 au BufEnter CMakeLists.txt setlocal shiftwidth=2
