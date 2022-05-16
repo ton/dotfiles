@@ -80,23 +80,6 @@ set wildmenu                         " add command-line completion menu
 let mapleader = "\\"
 let maplocalleader = "\\"
 
-" Enable Doxygen syntax highlighting.
-let g:load_doxygen_syntax=1
-let g:doxygen_javadoc_autobrief=0
-
-" Use custom colors for Doxygen syntax highlighting.
-highlight link doxygenBrief Comment
-highlight link doxygenSpecialOneLineDesc Comment
-highlight link doxygenSpecialTypeOneLineDesc Comment
-highlight link doxygenArgumentWord doxygenParamName
-highlight link doxygenCodeWord doxygenParamName
-highlight doxygenStart guifg=#494949
-highlight doxygenStartL guifg=#494949
-highlight doxygenBOther guifg=#494949
-highlight doxygenSmallSpecial guifg=#494949
-highlight doxygenSpecial guifg=#494949
-highlight doxygenParam guifg=#494949
-
 " Custom cursor line number background color.
 hi CursorLineNr ctermfg=11 ctermbg=0
 

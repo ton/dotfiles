@@ -8,6 +8,23 @@ setlocal textwidth=80
 setlocal formatoptions+=croqnj
 setlocal spell spelllang=en_us
 
+" Enable Doxygen syntax highlighting.
+let b:load_doxygen_syntax=1
+let b:doxygen_javadoc_autobrief=0
+
+" Use custom colors for Doxygen syntax highlighting.
+highlight link doxygenBrief Comment
+highlight link doxygenSpecialOneLineDesc Comment
+highlight link doxygenSpecialTypeOneLineDesc Comment
+highlight link doxygenArgumentWord doxygenParamName
+highlight link doxygenCodeWord doxygenParamName
+highlight doxygenStart guifg=#494949
+highlight doxygenStartL guifg=#494949
+highlight doxygenBOther guifg=#494949
+highlight doxygenSmallSpecial guifg=#494949
+highlight doxygenSpecial guifg=#494949
+highlight doxygenParam guifg=#494949
+
 " Only do this when not done yet for this buffer.
 if exists("b:c_cpp_override")
   finish
