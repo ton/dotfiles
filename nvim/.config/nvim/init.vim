@@ -346,7 +346,7 @@ function! StripTrailingWhitespace()
 endfunction
 
 " Strip trailing white spaces in source code.
-au BufWritePre .vimrc,*.js,*.cpp,*.hpp,*.php,*.h,*.c,*.tcl :call StripTrailingWhitespace()
+au BufWritePre .vimrc,*.js,*.cpp,*.hpp,*.php,*.h,*.c,*.tcl,*.java :call StripTrailingWhitespace()
 
 " Syntax highlighting for Qt qmake project files.
 au BufEnter *.pro setlocal syntax=pro
