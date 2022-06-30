@@ -1,7 +1,6 @@
 #!/bin/sh
 
 AUR_DB="$HOME/.local/share/aur"
-
 mkdir -p "$AUR_DB"
 
 sed "s|AUR_DB|$AUR_DB|g" aur.conf | sudo tee /etc/aur.conf
