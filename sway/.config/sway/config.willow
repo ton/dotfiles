@@ -1,0 +1,4 @@
+# Willow as a background image.
+output "*" {
+    background ~/pictures/wallpaper fill
+}
