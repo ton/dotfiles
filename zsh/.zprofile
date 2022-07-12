@@ -1,6 +1,6 @@
 # Unfortunately, we need to set PATH both in .zprofile and .zshrc under Arch,
 # since the system wide zsh configuration resets PATH.
-path=($HOME/local/bin $HOME/.local/bin $path)
+path=($HOME/.local/bin $path)
 
 fortune -a
 echo
