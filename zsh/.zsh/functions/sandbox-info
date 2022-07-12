@@ -19,14 +19,7 @@ fi
 # In case a sandbox is set, output sandbox information.
 if [ ! -z $sandbox ]
 then
-    # Use a different color for the sandbox name depending on whether we are in
-    # a virtualenv or a C++ sandbox.
-    if [ ${sandbox_virtual_env} = true ]
-    then
-        sandbox_name_color="208"
-    else
-        sandbox_name_color="12"
-    fi
+    sandbox_name_color="12"
 
     local sandbox_prompt=$(printf "%%F{%s}%s%%b%%F{15}" "$sandbox_name_color" "$sandbox")
     if [ ! -z $sandbox_details ]
@@ -34,10 +27,5 @@ then
         sandbox_prompt+=$(printf "|%%B%%F{208}%s" "$sandbox_details")
     fi
 
-    if [ ${sandbox_virtual_env} = true ]
-    then
-        printf "%%B(%s%%F{255})" "$sandbox_prompt"
-    else
-        printf "%%B[%s%%F{255}]" "$sandbox_prompt"
-    fi
+    printf "%%B[%s%%F{255}]" "$sandbox_prompt"
 fi
