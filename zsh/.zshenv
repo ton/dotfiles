@@ -77,5 +77,11 @@ maybe_git_branch() {
     fi
 }
 
-branch_icon="$(printf '\Uf062c')"
-export PROMPT='%(?.%F{2}.%F{1})$(date +%H:%M:%S)%F{243}|%F{255}%n@%F{$host_color}%B%m%F{255}:%F{12}%~%b%F{255}$(maybe_git_branch "$branch_icon %%F{245}%s%%F{255}%%b")$ '
+if [ -z "${DISPLAY}" ]; then
+    branch_icon="|"
+else
+    branch_icon="$(printf '\Uf062c ')"
+fi
+branch_color=245
+
+export PROMPT='%(?.%F{2}.%F{1})$(date +%H:%M:%S)%F{243}|%F{255}%n@%F{$host_color}%B%m%F{255}:%F{12}%~%b%F{255}$(maybe_git_branch "$branch_icon%%F{${branch_color}}%s%%F{255}%%b")$ '
