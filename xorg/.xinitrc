@@ -30,6 +30,7 @@ if [ -f $HOME/.local/bin/switch-to-monitor.sh ]; then
     $HOME/.local/bin/switch-to-monitor.sh
 fi
 
+# Set a wallpaper.
 $HOME/.local/bin/update-wallpaper.sh
 
 # Lock the screen after five minutes of inactivity, but only in case the
