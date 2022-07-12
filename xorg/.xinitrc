@@ -17,11 +17,6 @@ fi
 # Start autocutsel allowing seamless copy/pasting between Vim and the terminal.
 autocutsel -fork && autocutsel -selection PRIMARY -fork &
 
-# Start compton for compositor effects.
-if [ -x "$(command -v compton)" ]; then
-    compton --xrender-sync --xrender-sync-fence --config ~/.config/compton.`hostname`.conf &
-fi
-
 # Generate a host specific i3 configuration.
 $HOME/.config/i3/host_specific_i3_config.sh > $HOME/.config/i3/config
 
