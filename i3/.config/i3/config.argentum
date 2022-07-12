@@ -1,39 +1,19 @@
-# Show bar only on the right monitor.
-bar {
-    status_command i3blocks
-    font pango:Cantarell,Font Awesome 12
-    position top
+# Assign workspaces to monitors. First two workspaces should only go to the
+# left monitor.
+workspace 1 output DP-0
+workspace 2 output DP-0
+workspace 3 output DP-4
+workspace 4 output DP-4
+workspace 5 output DP-4
+workspace 6 output DP-6
 
-    strip_workspace_numbers yes
+# Start a terminal.
+bindsym $mod+c exec --no-startup-id i3-smart-split.py "i3-sensible-terminal tmux"
 
-    output DP-2
-    tray_output DP-2
+# Mapping in case no multimedia keys are available.
+# bindsym $mod+m exec --no-startup-id pamixer -t
+# bindsym $mod+Up exec --no-startup-id pamixer -i 5
+# bindsym $mod+Down exec --no-startup-id pamixer -d 5
 
-    colors {
-        background $black
-        statusline $white
-
-        focused_workspace  $black $black $lgreen
-        active_workspace   $black $black $lgreen
-        inactive_workspace $black $black $dgreen
-        urgent_workspace   $black $black $red
-    }
-}
-
-# Define the workspace displayed on the left monitor.
-set $ws0 global
-bindsym $mod+1 workspace $ws1
-
-# Make sure to output all workspace on a single monitor. Vim is used by default
-# on a separate monitor.
-workspace $ws0 output DP-0
-workspace $ws1 output DP-2
-workspace $ws2 output DP-2
-workspace $ws3 output DP-2
-workspace $ws4 output DP-2
-workspace $ws5 output DP-2
-workspace $ws6 output DP-2
-
-# Move Java applications to the third workspace by default.
-assign [class = "SWT"] $ws3
-for_window [class = "SWT"] focus
+assign [class = "FlexGeometry Editor"] $ws3
+for_window [class = "FlexGeometry Editor"] focus, layout stacking
