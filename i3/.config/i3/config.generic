@@ -39,7 +39,7 @@ exec --no-startup-id polybar $(hostname)
 # Automatically move windows with the build_output role to the scratchpad.
 for_window [class = "build_output"] move scratchpad, scratchpad show
 
-# Move Evince to the fourt workspace by default.
+# Move Zathura to the fourth workspace by default.
 assign [class = "Zathura"] $ws4
 for_window [class = "Zathura"] focus
 
