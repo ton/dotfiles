@@ -1,3 +1,6 @@
+# Start blueman-applet; required for using blueman-manager.
+exec --no-startup-id $HOME/.local/bin/run-blueman-applet.sh
+
 # Start a terminal.
 bindsym $mod+c exec --no-startup-id i3-smart-split.py "i3-sensible-terminal tmux"
 
