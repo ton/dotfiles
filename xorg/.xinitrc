@@ -40,5 +40,8 @@ xsidle.sh lock-if-not-fullscreen.sh &
 # Set right alt as compose key.
 setxkbmap -option compose:ralt
 
+# Remap caps lock as control key.
+setxkbmap -option caps:ctrl_modifier
+
 # Start i3 session.
 exec i3
