@@ -75,6 +75,7 @@ set showcmd                          " display incomplete commands
 set splitright                       " open vertical splits on the right side
 set mouse=a                          " allow for mouse scrolling in tmux
 set wildmenu                         " add command-line completion menu
+set inccommand=
 
 " Set leader defaults.
 let mapleader = "\\"
