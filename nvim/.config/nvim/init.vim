@@ -362,7 +362,7 @@ au BufEnter *.i setlocal filetype=cpp
 " Treat Scons files as Python files.
 au BufEnter SConscript setlocal filetype=python
 
-" Set tab stop to 1 for CMake files.
+" Set tab stop to 2 for CMake files.
 au BufEnter CMakeLists.txt setlocal tabstop=2
 au BufEnter CMakeLists.txt setlocal shiftwidth=2
 
