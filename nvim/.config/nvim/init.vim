@@ -366,6 +366,10 @@ au BufEnter SConscript setlocal filetype=python
 au BufEnter CMakeLists.txt setlocal tabstop=2
 au BufEnter CMakeLists.txt setlocal shiftwidth=2
 
+" Set tab stop to 2 for Lua files.
+au BufEnter lua setlocal tabstop=2
+au BufEnter lua setlocal shiftwidth=2
+
 " Set tab stop to 4 for Vimscript files.
 au BufEnter *.vim setlocal tabstop=4
 au BufEnter *.vim setlocal shiftwidth=4
