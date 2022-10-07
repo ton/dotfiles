@@ -39,5 +39,8 @@ setxkbmap -option compose:ralt
 # Remap caps lock as control key.
 setxkbmap -option caps:ctrl_modifier
 
+# Merge in X11 settings.
+xrdb -merge $HOME/.Xresources
+
 # Start i3 session.
 exec i3

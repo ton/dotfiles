@@ -81,7 +81,7 @@ set $mod Mod4
 bindsym $mod+q kill
 
 # Start dmenu (a program launcher).
-bindsym $mod+r exec --no-startup-id dmenu_run -fn "Source Code Pro-18" -y 500 -w 1000 -x 460
+bindsym $mod+r exec --no-startup-id dmenu_run -fn "Source Code Pro-18" -y 900 -w 1800 -x 1020
 
 # Change focus.
 bindsym $mod+h focus left
