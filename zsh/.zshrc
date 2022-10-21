@@ -12,7 +12,7 @@ setopt rmstarsilent
 export HISTSIZE=50000
 export HISTFILE=$HOME/.history
 export SAVEHIST=50000
-setopt IncAppendHistory HistIgnoreAllDups
+setopt IncAppendHistory HistIgnoreAllDups HistIgnoreSpace
 
 # Enable advanced command line completion.
 autoload -U compinit && compinit
