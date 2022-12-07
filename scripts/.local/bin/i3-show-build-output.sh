@@ -24,7 +24,7 @@ touch "$build_log"
 # Start a tmux session in a new terminal that shows the tail of the build
 # output window, for at most an hour (to be able to bring the build output back
 # after the build finishes).
-i3-sensible-terminal -c build_output -e tmux -f ~/.tmux.make.conf -L make new-session "trap 'kill -s TERM -$pgid' INT; tail -f $build_log && sleep 3600" &
+i3-sensible-terminal -c build_output -e tmux -f ~/.tmux.make.conf -L make new-session "i3-tail-build-output.sh $build_log $pgid" &
 
 # Wait for the build output window to show, such that hiding the build output
 # later on will surely succeed.
