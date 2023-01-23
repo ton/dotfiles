@@ -1,24 +1,25 @@
 #!/bin/sh
 
-exit_with_usage() {
+print_usage() {
   cat <<USAGE
 Usage: profile.sh [--pdf <path to PDF viewer] <command to execute>"
 
 Profile the given command, and shows the PDF profile result using the given PDF
 viewer.
 
-Note; code has to be built with profiling enabled as follows, from the src/
-directory.
+Note; code has to be built with profiling support (-fno-omit-frame-pointer),
+and needs to have been linked against Google's CPU profiler (-lprofiler).
 USAGE
-  exit 1
 }
 
 if [ $# -lt 1 ]; then
-  exit_with_usage
+  print_usage
+  exit 1
 fi
 
 if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
-  exit_with_usage
+  print_usage
+  exit 0
 fi
 
 if [ "$1" = "--pdf" ]; then
@@ -37,7 +38,7 @@ if [ ! -x "$pdf_viewer" ]; then
     fi
   done
   if [ ! -x "$pdf_viewer" ]; then
-    echo "No valid pdf reader found, specify one on the command line."
+    >&2 echo "No valid pdf reader found, specify one on the command line."
     exit 1
   fi
 fi
