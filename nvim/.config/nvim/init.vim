@@ -381,9 +381,11 @@ au BufEnter *.php,*.html,*.css,*.js setlocal noexpandtab
 au FileType gitcommit setlocal textwidth=72
 au FileType gitcommit setlocal spell spelllang=en_us
 
-" Set text width for Changelogs, and do not expand tabs.
+" Set text width for Changelogs, do not expand tabs, and enable spell
+" checking.
 au BufEnter Changelog setlocal textwidth=80
 au BufEnter Changelog setlocal expandtab
+au BufEnter Changelog setlocal spell spelllang=en_us
 
 " Set text width for reStructured text.
 au BufEnter *.rst setlocal textwidth=80
