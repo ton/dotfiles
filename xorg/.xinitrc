@@ -28,6 +28,9 @@ fi
 # Set a wallpaper.
 $HOME/.local/bin/update-wallpaper.sh
 
+# Merge in X11 settings.
+[[ -f $HOME/.Xresources ]] && xrdb -merge -I$HOME $HOME/.Xresources
+
 # Lock the screen after five minutes of inactivity, but only in case the
 # currently focused window is not fullscreen.
 xset s 600
@@ -39,8 +42,6 @@ setxkbmap -option compose:ralt
 # Remap caps lock as control key.
 setxkbmap -option caps:ctrl_modifier
 
-# Merge in X11 settings.
-xrdb -merge $HOME/.Xresources
 
 # Start i3 session.
 exec i3
