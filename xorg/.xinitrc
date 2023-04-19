@@ -28,7 +28,7 @@ $HOME/.local/bin/update-wallpaper.sh
 # Lock the screen after five minutes of inactivity, but only in case the
 # currently focused window is not fullscreen.
 xset s 600
-xsidle.sh lock-if-not-fullscreen.sh &
+$HOME/.local/bin/xsidle.sh $HOME/.local/bin/lock-if-not-fullscreen.sh &
 
 # Set right alt as compose key.
 setxkbmap -option compose:ralt
