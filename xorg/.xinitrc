@@ -3,12 +3,6 @@
 # Set the correct GTK theme name (mainly for Qt based applications).
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
-# Disable PC speaker.
-xset -b
-
-# Set keyboard repeat rate.
-xset r rate 175 60
-
 # Start Redshift.
 if [ -f /usr/bin/redshift ]; then
     /usr/bin/redshift -l 51.431371:5.464261 -t 5500:2800 &
@@ -41,6 +35,12 @@ setxkbmap -option compose:ralt
 
 # Remap caps lock as control key.
 setxkbmap -option caps:ctrl_modifier
+
+# Set keyboard repeat rate.
+xset r rate 175 60
+
+# Disable PC speaker.
+xset -b
 
 
 # Start i3 session.
