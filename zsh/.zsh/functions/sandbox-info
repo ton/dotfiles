@@ -1,12 +1,5 @@
 local sandbox="${SANDBOX_NAME}"
 local sandbox_virtual_env=false
-local sandbox_details="${SANDBOX_DETAILS}"
-
-# In case a function `sandbox_details_fn` exists, use it to set the sandbox
-# details variable.
-if typeset -f sandbox_details_fn > /dev/null; then
-    sandbox_details=$(sandbox_details_fn)
-fi
 
 # In case a virtualenv is active, parse it, and use it for the sandbox
 # settings.
@@ -22,9 +15,14 @@ then
     sandbox_name_color="12"
 
     local sandbox_prompt=$(printf "%%F{%s}%s%%b%%F{15}" "$sandbox_name_color" "$sandbox")
-    if [ ! -z $sandbox_details ]
-    then
+
+    # In case a function `sandbox_details_fn` exists, use it to set the sandbox
+    # details variable.
+    if typeset -f sandbox_details_fn > /dev/null; then
+        sandbox_details=$(sandbox_details_fn)
         sandbox_prompt+=$(printf "|%%B%%F{208}%s" "$sandbox_details")
+    else
+        sandbox_prompt+=$(printf "|%%B%%F{208}%s%%b%%F{15}|%%F{${branch_color}}%s%%B" "${SANDBOX_BUILD_TYPE}" "${SANDBOX_PROJECT_NAME}")
     fi
 
     printf "%%B[%s%%F{255}]" "$sandbox_prompt"
