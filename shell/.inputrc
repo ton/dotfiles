@@ -1,11 +1,1 @@
-# Make sure that Alt-. still cycles through command arguments in vi-mode.
-"\e.":yank-last-arg
-
-# No bells.
-set bell-style off
-
-# Use vi editing mode by default.
-set editing-mode vi
-
-# Let Control-Backspace delete the last word.
-"\C-h": backward-kill-word
+set bell-style none

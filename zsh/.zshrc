@@ -74,3 +74,6 @@ test -f $HOME/.zshrc.local && source $HOME/.zshrc.local
 
 # Disable shell reserved time word, use time provided by Linux.
 disable -r time
+
+# Source fzf keybindings.
+source /usr/share/fzf/key-bindings.zsh
