@@ -52,6 +52,9 @@ prof_output=/tmp/profile-$$.prof
 pprof_output=/tmp/profile-$$.pdf
 
 CPUPROFILE=$prof_output $binary "$@" && echo "Profile generated for '$binary' at: $prof_output..."
-pprof "$binary" "$prof_output" --pdf > "$pprof_output" && echo "Generated PDF with profile results at: $pprof_output..."
 
-LD_LIBRARY_PATH=/lib:/usr/lib:/lib64:/usr/lib64 exec "$pdf_viewer" "$pprof_output" &
+if [ $? -eq 0 ];
+then
+  pprof "$binary" "$prof_output" --pdf > "$pprof_output" && echo "Generated PDF with profile results at: $pprof_output..."
+  LD_LIBRARY_PATH=/lib:/usr/lib:/lib64:/usr/lib64 exec "$pdf_viewer" "$pprof_output" &
+fi
