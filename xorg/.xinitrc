@@ -50,6 +50,5 @@ xset r rate 175 60
 # Disable PC speaker.
 xset -b
 
-
 # Start i3 session.
 exec i3
