@@ -63,6 +63,10 @@ export COLORTERM=24bit
 # Disable virtualenv prompt by default (we handle it ourselves).
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
+# Configuration for `pass`.
+export PASSWORD_STORE_X_SELECTION=primary
+export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+
 # In case a machine local configuration must be set, do so here.
 test -f $HOME/.zshenv.$(hostname) && source $HOME/.zshenv.$(hostname)
 
