@@ -1,5 +1,3 @@
 host_color=154
 
-alias mplayer="mplayer -vo gl"
-
 export TCLLIBPATH="/usr/lib/tclx8.4"
