@@ -1,5 +1,5 @@
 #!/bin/sh
-entries="firefox st calculator.sh"
+entries="firefox st calculator.sh poweroff"
 
 export FZF_DEFAULT_OPTS="--reverse --no-info --prompt='$ ' --margin=1,2 --height=4 --no-scrollbar"
 
