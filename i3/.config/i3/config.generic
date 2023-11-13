@@ -45,6 +45,7 @@ for_window [class = "Zathura"] focus
 
 # Floating applications.
 for_window [class="Qalculate-gtk"] floating enable
+for_window [class="Floating"] floating enable
 
 # Disable focus follows mouse.
 focus_follows_mouse no
@@ -83,8 +84,8 @@ bindsym $mod+q kill
 # Start a terminal.
 bindsym $mod+Return exec --no-startup-id i3-smart-split.py i3-sensible-terminal
 
-# Start dmenu (a program launcher).
-bindsym $mod+r exec --no-startup-id dmenu_run -fn "Source Code Pro-18" -y 900 -w 1800 -x 1020
+# Start custom program launcher (using fzf).
+bindsym $mod+r exec --no-startup-id launcher.sh
 
 # Change focus.
 bindsym $mod+h focus left
