@@ -84,6 +84,9 @@ bindsym $mod+q kill
 # Start a terminal.
 bindsym $mod+Return exec --no-startup-id i3-smart-split.py i3-sensible-terminal
 
+# Start a calculator.
+bindsym $mod+c exec --no-startup-id calculator.sh
+
 # Start custom program launcher (using fzf).
 bindsym $mod+r exec --no-startup-id launcher.sh
 
