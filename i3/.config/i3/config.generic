@@ -80,6 +80,9 @@ set $mod Mod4
 # Kill focused window.
 bindsym $mod+q kill
 
+# Start a terminal.
+bindsym $mod+Return exec --no-startup-id i3-smart-split.py i3-sensible-terminal
+
 # Start dmenu (a program launcher).
 bindsym $mod+r exec --no-startup-id dmenu_run -fn "Source Code Pro-18" -y 900 -w 1800 -x 1020
 
