@@ -61,7 +61,7 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 16x42
+    offset = 19x48
 
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
@@ -69,10 +69,11 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 2
+    frame_width = 0
 
     # Defines color of the frame around the notification window.
-    frame_color = "#d7f463"
+    # frame_color = "#d7f463"
+    frame_color = "#ffffff"
 
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing windowmanager is
@@ -82,7 +83,7 @@
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
     # Set to 0 to disable.
-    idle_threshold = 0
+    idle_threshold = 30
 
     # Which monitor should the notifications be displayed on.
     monitor = 0
@@ -98,7 +99,7 @@
     # 
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = mouse
+    follow = none
 
     # Should a notification popped up from history be sticky or timeout
     # as if it would normally do.
@@ -175,17 +176,17 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#222222"
-    foreground = "#888888"
+    background = "#723a82"
+    foreground = "#aaaaaa"
     timeout = 10
 
 [urgency_normal]
-    background = "#6e7457"
+    background = "#923a82"
     foreground = "#ffffff"
-    timeout = 10
+    timeout = 1800
 
 [urgency_critical]
-    background = "#900000"
+    background = "#f23a82"
     foreground = "#ffffff"
     timeout = 0
 
