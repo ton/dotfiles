@@ -1,1 +1,2 @@
+XDG_DOCUMENTS_DIR="$HOME/documents"
 XDG_PICTURES_DIR="$HOME/pictures"

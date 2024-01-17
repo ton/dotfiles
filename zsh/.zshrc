@@ -76,4 +76,4 @@ test -f $HOME/.zshrc.local && source $HOME/.zshrc.local
 disable -r time
 
 # Source fzf keybindings.
-source /usr/share/fzf/key-bindings.zsh
+source $HOME/.local/share/fzf/key-bindings.zsh

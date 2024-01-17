@@ -24,7 +24,7 @@ set $ws7 7
 
 # Disable DPMS functionality when an application that is not Vim goes
 # fullscreen.
-exec_always --no-startup-id i3-disable-standby-fs.py VIM
+# exec_always --no-startup-id i3-disable-standby-fs.py VIM
 
 # Start a notification daemon.
 exec --no-startup-id dunst

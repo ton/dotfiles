@@ -22,11 +22,6 @@ autocutsel -fork && autocutsel -selection PRIMARY -fork &
 # Generate a host specific i3 configuration.
 $HOME/.config/i3/host_specific_i3_config.sh > $HOME/.config/i3/config
 
-# Disable the laptop display in case an external monitor is connected.
-if [ -f $HOME/.local/bin/switch-to-monitor.sh ]; then
-    $HOME/.local/bin/switch-to-monitor.sh
-fi
-
 # Set a wallpaper.
 $HOME/.local/bin/update-wallpaper.sh
 
@@ -50,5 +45,25 @@ xset r rate 175 60
 # Disable PC speaker.
 xset -b
 
+CITRIX_BIN_DIR=/opt/Citrix/VDA/bin
+ 
+# Start clipboard virtual channel.
+if [ -x $CITRIX_BIN_DIR/ctxclipboard ]
+then
+    $CITRIX_BIN_DIR/ctxclipboard &
+fi
+ 
+# Start laptop mount.
+if [ -x $CITRIX_BIN_DIR/ctxcdmmount ]
+then
+    $CITRIX_BIN_DIR/ctxcdmmount
+fi
+ 
+# Start audio virtual channel.
+if [ -x $CITRIX_BIN_DIR/ctxaudio -a -x /usr/bin/pulseaudio ]
+then
+    $CITRIX_BIN_DIR/ctxaudio &
+fi
+
 # Start i3 session.
-exec i3
+exec i3 -V &>> "$HOME/.local/share/log/i3.log"
