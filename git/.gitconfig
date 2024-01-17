@@ -33,3 +33,5 @@
 	statusHints = false
 [rebase]
 	autostash = true
+[include]
+	path = ~/.gitconfig.local
