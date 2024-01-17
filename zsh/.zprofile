@@ -9,3 +9,8 @@ if [[ -z $DISPLAY && $(tty) = /dev/tty1 ]];
 then
     exec startx | tee $HOME/.local/share/xorg/startx.log
 fi
+
+if [ -f $HOME/.zprofile.local ];
+then
+    source $HOME/.zprofile.local
+fi
