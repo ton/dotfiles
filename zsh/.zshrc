@@ -20,8 +20,7 @@ autoload -U compinit && compinit
 # Enable command line calculator.
 autoload -U zcalc
 
-# Load function to show the active git branch in the prompt.
-autoload -U git-branch
+# Load custom function to show sandbox information in the prompt.
 autoload -U sandbox-info
 setopt PromptSubst
 
