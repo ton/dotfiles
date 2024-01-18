@@ -73,7 +73,7 @@ test -f $HOME/.zshenv.$(hostname) && source $HOME/.zshenv.$(hostname)
 host_color=${host_color:=154}
 
 maybe_git_branch() {
-    local branch=$(/usr/bin/git branch --show-current 2>/dev/null)
+    local branch=$(git branch --show-current 2>/dev/null)
     if [ "x$branch" != "x" ]
     then
         printf "$1" "$branch"
