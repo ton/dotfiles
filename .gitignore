@@ -3,6 +3,7 @@ mpd/.config/mpd/database
 mpd/.config/mpd/sticker.sql
 mpd/.config/mpd/pid
 mpd/.config/mpd/state
+nvim/.config/nvim/lazy-lock.json
 nvim/.local/share/nvim/.netrwhist
 nvim/.local/share/nvim/backup
 nvim/.local/share/nvim/share
