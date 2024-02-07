@@ -31,6 +31,8 @@ i3-sensible-terminal -c build_output -e tmux -f ~/.tmux.make.conf -L make new-se
 i3-msg -t subscribe '[ "window" ]' -m | grep -q build_output
 
 # Start the build; append output to the build log that indicates the result of
-# the build. Then, automatically hide the scratchpad output window.
-{ $build_cmd && printf '\nBuild completed successfully 😊' || printf '\nBuild failed 😢'; } 2>&1 | tee "$build_log" \
-    && i3-msg '[class="build_output"]' scratchpad show
+# the build. Then in case the build is successful automatically hide the
+# scratchpad output window and decolorize the output for display in Neovim.
+{ unbuffer $build_cmd && printf '\nBuild completed successfully 😊' || printf '\nBuild failed 😢'; } 2>&1 > "$build_log" \
+    && i3-msg '[class="build_output"]' scratchpad show \
+    && sed -i $'s/\033[[][^A-Za-z]*[A-Za-z]//g' "$build_log"
