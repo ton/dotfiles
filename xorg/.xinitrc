@@ -68,10 +68,17 @@ then
     fi
 fi
 
-# Start i3 session.
+# Start i3 session, keep a log with crude log rotation.
 i3_log_dir="$HOME/.local/share/log"
 if [ ! -d "$i3_log_dir" ];
 then
     mkdir "$i3_log_dir"
 fi
-exec i3 -V &>> "$i3_log_dir/i3.log"
+
+i3_log="$i3_log_dir/i3.log"
+if [ -f "$i3_log" ];
+then
+    mv "$i3_log" "$i3_log.1"
+fi
+
+exec i3 -V > "$i3_log" 2>&1
