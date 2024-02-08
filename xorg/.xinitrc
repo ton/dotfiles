@@ -69,4 +69,9 @@ then
 fi
 
 # Start i3 session.
-exec i3 -V &>> "$HOME/.local/share/log/i3.log"
+i3_log_dir="$HOME/.local/share/log"
+if [ ! -d "$i3_log_dir" ];
+then
+    mkdir "$i3_log_dir"
+fi
+exec i3 -V &>> "$i3_log_dir/i3.log"
