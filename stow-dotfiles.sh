@@ -1,7 +1,6 @@
 #!/bin/sh
 
 stow \
-    ccache \
     dunst \
     fontconfig \
     fonts \
