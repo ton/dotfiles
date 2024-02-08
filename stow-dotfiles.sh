@@ -4,6 +4,7 @@ stow \
     dunst \
     fontconfig \
     fonts \
+    fzf \
     gdb \
     git \
     gnupg \
