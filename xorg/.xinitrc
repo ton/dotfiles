@@ -20,18 +20,18 @@ fi
 autocutsel -fork && autocutsel -selection PRIMARY -fork &
 
 # Generate a host specific i3 configuration.
-$HOME/.config/i3/host_specific_i3_config.sh > $HOME/.config/i3/config
+"$HOME"/.config/i3/host_specific_i3_config.sh > "$HOME"/.config/i3/config
 
 # Set a wallpaper.
-$HOME/.local/bin/update-wallpaper.sh
+"$HOME"/.local/bin/update-wallpaper.sh
 
 # Merge in X11 settings.
-[[ -f $HOME/.Xresources ]] && xrdb -merge -I$HOME $HOME/.Xresources
+test -f "$HOME"/.Xresources && xrdb -merge -I"$HOME" "$HOME"/.Xresources
 
 # Lock the screen after five minutes of inactivity, but only in case the
 # currently focused window is not fullscreen.
 xset s 600
-$HOME/.local/bin/xsidle.sh $HOME/.local/bin/lock-if-not-fullscreen.sh &
+"$HOME"/.local/bin/xsidle.sh "$HOME"/.local/bin/lock-if-not-fullscreen.sh &
 
 # Set right alt as compose key.
 setxkbmap -option compose:ralt
@@ -62,7 +62,7 @@ then
     fi
 
     # Start audio virtual channel.
-    if [ -x $citrix_bin_dir/ctxaudio -a -x /usr/bin/pulseaudio ]
+    if [ -x $citrix_bin_dir/ctxaudio ] && [ -x /usr/bin/pulseaudio ]
     then
         $citrix_bin_dir/ctxaudio &
     fi
