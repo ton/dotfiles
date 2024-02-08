@@ -45,24 +45,27 @@ xset r rate 175 60
 # Disable PC speaker.
 xset -b
 
-CITRIX_BIN_DIR=/opt/Citrix/VDA/bin
- 
-# Start clipboard virtual channel.
-if [ -x $CITRIX_BIN_DIR/ctxclipboard ]
+# Start Citrix daemons in case we are running in a VDI.
+citrix_bin_dir=/opt/Citrix/VDA/bin
+if [ -d "$citrix_bin_dir" ];
 then
-    $CITRIX_BIN_DIR/ctxclipboard &
-fi
- 
-# Start laptop mount.
-if [ -x $CITRIX_BIN_DIR/ctxcdmmount ]
-then
-    $CITRIX_BIN_DIR/ctxcdmmount
-fi
- 
-# Start audio virtual channel.
-if [ -x $CITRIX_BIN_DIR/ctxaudio -a -x /usr/bin/pulseaudio ]
-then
-    $CITRIX_BIN_DIR/ctxaudio &
+    # Start clipboard virtual channel.
+    if [ -x $citrix_bin_dir/ctxclipboard ]
+    then
+        $citrix_bin_dir/ctxclipboard &
+    fi
+
+    # Start laptop mount.
+    if [ -x $citrix_bin_dir/ctxcdmmount ]
+    then
+        $citrix_bin_dir/ctxcdmmount
+    fi
+
+    # Start audio virtual channel.
+    if [ -x $citrix_bin_dir/ctxaudio -a -x /usr/bin/pulseaudio ]
+    then
+        $citrix_bin_dir/ctxaudio &
+    fi
 fi
 
 # Start i3 session.
