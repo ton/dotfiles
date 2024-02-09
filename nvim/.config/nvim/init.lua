@@ -222,7 +222,7 @@ function async_make()
   local build_log = vim.fn.substitute(vim.fn.system('mktemp'), '\n$', '', '')
 
   -- Start the build, and redirect all build output to the given log file.
-  vim.loop.spawn('i3-show-build-output.sh', { args = { vim.o.makeprg, build_log } },
+  vim.loop.spawn('i3-show-build-output.sh', { args = { vim.o.makeprg, build_log }, detached = true },
     function(code, signal)
       vim.schedule(function()
         if vim.fn.filereadable(build_log) then
