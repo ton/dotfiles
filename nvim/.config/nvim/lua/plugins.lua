@@ -62,6 +62,9 @@ return {
       { '<leader>g', [[:call fzf#vim#grep('rg -n --column ' .g:rg_args . ' ' . shellescape(expand('<cword>')), 1)<CR>]], mode = 'n' },
     },
     cmd = 'Rg',
+    init = function()
+      vim.g.rg_args = ''
+    end,
     dependencies = { 'junegunn/fzf.vim' },
   },
   {
@@ -94,7 +97,7 @@ return {
   {
     'ton/vim-alternate',
     keys = { { '<F4>', ':Alternate<CR>', 'Toggle alternate' } },
-    config = function()
+    init = function()
       vim.g.AlternatePaths = {'../include', '../src', '.', '..'}
     end,
   },
