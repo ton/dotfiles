@@ -33,6 +33,10 @@ i3-msg -t subscribe '[ "window" ]' -m | grep -q build_output
 # Start the build; append output to the build log that indicates the result of
 # the build. Then in case the build is successful automatically hide the
 # scratchpad output window and decolorize the output for display in Neovim.
-{ unbuffer $build_cmd && printf '\nBuild completed successfully 😊' || printf '\nBuild failed 😢'; } 2>&1 > "$build_log" \
-    && i3-msg '[class="build_output"]' scratchpad show \
-    && sed -i $'s/\033[[][^A-Za-z]*[A-Za-z]//g' "$build_log"
+{ unbuffer "$build_cmd" && printf '\nBuild completed successfully 😊' || printf '\nBuild failed 😢'; } > "$build_log" 2>&1
+
+# Hide the build output window.
+i3-msg '[class="build_output"]' scratchpad show
+
+# Remove ANSI escape sequences from the build output.
+sed -i 's/\x1b\[[0-9;]*[a-zA-Z]//g' "$build_log"
