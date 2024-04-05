@@ -49,7 +49,7 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 # Use Neovim as a pager.
 export AUR_PAGER="nvim"
-export MANPAGER="/usr/bin/nvim +Man!"
+export MANPAGER="nvim +Man!"
 
 # Make sure locally installed terminfo files are found.
 export TERMINFO="$HOME_LOCAL/share/terminfo"
