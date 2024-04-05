@@ -226,7 +226,7 @@ function async_make()
     function(code, signal)
       vim.schedule(function()
         if vim.fn.filereadable(build_log) then
-          vim.cmd('cfile '.. build_log)
+          vim.cmd('cfile ' .. build_log)
           vim.cmd('cw')
         end
       end)
