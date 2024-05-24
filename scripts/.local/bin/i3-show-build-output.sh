@@ -10,6 +10,14 @@ fi
 build_cmd="$1"
 build_log="$2"
 
+# Remove ANSI escape sequences from the build output.
+decolorize()
+{
+    sed -i 's/\x1b\[[0-9;]*[a-zA-Z]//g' "$build_log"
+}
+
+trap decolorize EXIT INT TERM
+
 # Determine the process group ID of this script.
 pgid=$(ps -o pgid= $$)
 
@@ -37,6 +45,3 @@ i3-msg -t subscribe '[ "window" ]' -m | grep -q build_output
 
 # Hide the build output window.
 i3-msg '[class="build_output"]' scratchpad show
-
-# Remove ANSI escape sequences from the build output.
-sed -i 's/\x1b\[[0-9;]*[a-zA-Z]//g' "$build_log"
