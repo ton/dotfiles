@@ -69,6 +69,8 @@ return {
   },
   {
     'lbrayner/vim-rzip',
+    lazy = true,
+    ft = '*.fgp,*.rgc,*.fnl,*.fgr',
     config = function()
       vim.g.rzipPlugin_extra_ext = '*.fgp,*.rgc,*.fnl,*.fgr'
     end,
