@@ -64,7 +64,7 @@ vim.o.clipboard = 'unnamedplus'             -- use the system clipboard by defau
 vim.o.history = 50                          -- keep 50 lines of command line history
 
 vim.g.mapleader = '\\'
-vim.g.maplocalleader = '\\'
+vim.g.maplocalleader = ';'
 
 ---------------------------------------------------------------------------------
 -- Initialize Lazy.nvim
