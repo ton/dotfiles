@@ -68,9 +68,6 @@ return {
     dependencies = { 'junegunn/fzf.vim' },
   },
   {
-    'ggandor/lightspeed.nvim',
-  },
-  {
     'lbrayner/vim-rzip',
     config = function()
       vim.g.rzipPlugin_extra_ext = '*.fgp,*.rgc,*.fnl,*.fgr'
