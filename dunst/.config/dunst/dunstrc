@@ -9,9 +9,6 @@
     #
     # For a complete reference see
     # <http://developer.gnome.org/pango/stable/PangoMarkupFormat.html>.
-    # If markup is not allowed, those tags will be stripped out of the
-    # message.
-    allow_markup = yes
 
     # The format of the message.  Possible variables are:
     #   %a  appname
@@ -32,12 +29,6 @@
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
     alignment = left
-
-    # The frequency with wich text that is longer than the notification
-    # window allows bounces back and forth.
-    # This option conflicts with "word_wrap".
-    # Set to 0 to disable.
-    bounce_freq = 0
 
     # Show age of message if message is older than show_age_threshold
     # seconds.
@@ -135,11 +126,6 @@
     #  * anything else will be interpreted as a X color.
     separator_color = frame
 
-    # Print a notification on startup.
-    # This is mainly for error detection, since dbus (re-)starts dunst
-    # automatically after a crash.
-    startup_notification = false
-
     # dmenu path.
     dmenu = /usr/bin/dmenu -p dunst:
 
@@ -148,11 +134,6 @@
 
     # Align icons left/right/off
     icon_position = left
-
-    # Paths to default icons.
-    icon_folders = /usr/share/icons/Faenza-Darker/actions/32:/usr/share/icons/Faenza/status/32/:/usr/share/icons/Faenza/devices/32/:/usr/share/icons/Faenza/apps/32/
-
-[shortcuts]
 
     # Shortcuts are specified as [modifier+][modifier+]...key
     # Available modifiers are "ctrl", "mod1" (the alt-key), "mod2",
