@@ -60,6 +60,7 @@ window#waybar.solo {
 #clock,
 #battery,
 #temperature,
+#bluetooth,
 #network,
 #pulseaudio,
 #tray,
@@ -121,12 +122,20 @@ label:focus {
     border-bottom: 2px solid #90b1b1;
 }
 
-#network {
+#bluetooth {
     border-bottom: 2px solid #2980b9;
 }
 
+#bluetooth.off {
+    color: #888888;
+}
+
+#network {
+    border-bottom: 2px solid #b98029;
+}
+
 #network.disconnected {
-    border-bottom: 2px solid #f53c3c;
+    border-bottom: 2px solid #3c3cf5;
 }
 
 #pulseaudio {
