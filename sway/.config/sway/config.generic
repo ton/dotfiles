@@ -22,6 +22,13 @@ set $ws7 7
 bar swaybar_command waybar
 
 ##
+# Auto start configuration
+##
+
+# Start a notification daemon.
+exec --no-startup-id dunst
+
+##
 # Cosmetic settings
 ##
 
