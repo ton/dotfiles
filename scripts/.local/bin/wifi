@@ -21,6 +21,12 @@ then
     ip link set "$device_name" up
     wpa_supplicant -B -i "$device_name" -c "$wpa_supplicant_config" -P $pid_file
     dhcpcd "$device_name"
+elif [ "$1" != "down" ];
+then
+    echo "Connecting to $1 directly..."
+    ip link set "$device_name" up
+    iw dev "$device_name" connect "$1"
+    dhcpcd "$device_name"
 elif [ "$1" = "down" ]
 then
     echo "Bringing wlan0 down..."
