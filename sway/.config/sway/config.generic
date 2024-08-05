@@ -124,6 +124,7 @@ bindsym $mod+Up exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym $mod+Down exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym $mod+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym $mod+p exec playerctl play-pause
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # Laptop display brightness.
 bindsym XF86MonBrightnessDown exec dunst-brightness.sh down
