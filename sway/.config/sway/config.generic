@@ -46,6 +46,9 @@ client.focused $lgreen $lgreen $black $lgreen
 client.focused_inactive $lgreen $dgreen $black $dgreen
 client.unfocused $dgreen $black $dgreen $black
 
+# Floating applications.
+for_window [app_id = "Floating"] floating enable
+
 ##
 # Keyboard bindings
 ##
@@ -126,9 +129,8 @@ bindsym $mod+p exec playerctl play-pause
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
 
-# Show tofi.
-set $menu tofi-run | xargs swaymsg exec --
-bindsym $mod+r exec $menu
+# Start custom program launcher (using fzf).
+bindsym $mod+r exec --no-startup-id launcher.sh
 
 # Keyboard repeat rate.
 input type:keyboard {
