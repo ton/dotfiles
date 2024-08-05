@@ -11,8 +11,6 @@ vim.o.softtabstop = -1
 vim.o.wrap = true                           -- wrap overlong lines
 
 vim.o.cino = 'g0'                           -- do not indent public/protected/private
-vim.o.nojoinspaces = true                   -- do not insert two spaces after a '.',
-                                            -- '?', and '!' with the join command
 
 --------------------------------------------------------------------------------
 -- UI settings
@@ -20,13 +18,10 @@ vim.o.nojoinspaces = true                   -- do not insert two spaces after a 
 
 vim.cmd.colorscheme('wombat')               -- nice colorscheme
 
-vim.o.t_so = '[7m'                        -- set escape codes for standout mode
-vim.o.t_ZH = '[3m'                        -- set escape codes for italics mode
 vim.o.termguicolors = true                  -- enable 24-bit colors
 
 vim.o.backspace = 'indent,eol,start'        -- allow backspacing over everything in
                                             -- insert mode
-vim.o.nofoldenable = true                   -- disable code folding by default
 vim.o.number = true                         -- always show line numbers
 vim.o.numberwidth = 5                       -- we are good for up to 99999 lines
 vim.o.splitright = true                     -- open vertical splits on the right side
@@ -67,8 +62,6 @@ vim.o.backupdir = vim.fn.stdpath('state') .. '/backup'
 vim.o.undofile = true                       -- enable persistent undo
 vim.o.clipboard = 'unnamedplus'             -- use the system clipboard by default
 vim.o.history = 50                          -- keep 50 lines of command line history
-vim.o.nostartofline = true                  -- do not change the X position of the
-                                            -- cursor when paging up and down
 
 vim.g.mapleader = '\\'
 vim.g.maplocalleader = '\\'
