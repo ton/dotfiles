@@ -7,7 +7,15 @@ echo
 
 if [[ -z $DISPLAY && $(tty) = /dev/tty1 ]];
 then
-    exec startx | tee $HOME/.local/share/xorg/startx.log
+    # In case Sway is available, default to Sway, otherwise start X11.
+    if command -v sway; then
+        # Generate a host specific Sway configuration.
+        $HOME/.config/sway/host_specific_config.sh > $HOME/.config/sway/config
+
+        exec sway
+    else
+        exec startx | tee $HOME/.local/share/xorg/startx.log
+    fi
 fi
 
 if [ -f $HOME/.zprofile.local ];
