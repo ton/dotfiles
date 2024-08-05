@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "temperature", "network", "bluetooth", "battery", "battery#bat1", "tray", "clock"],
+    "modules-right": ["mpd", "idle_inhibitor", "pulseaudio#output", "pulseaudio#input", "temperature", "network", "bluetooth", "battery", "battery#bat1", "tray", "clock"],
 
     // Modules configuration
     "sway/workspaces": {
@@ -129,14 +129,10 @@
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "on-click": "waybar-toggle-bluetooth.sh"
     },
-    "pulseaudio": {
+    "pulseaudio#output": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}  {volume}%  {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "  {format_source}",
-        "format-source": "  {volume}%",
-        "format-source-muted": "",
+        "format": "{icon}  {volume}%",
+        "format-muted": " ",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -147,6 +143,14 @@
             "default": ["", "", ""]
         },
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol"
+    },
+    "pulseaudio#input": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{format_source}",
+        "format-source": "  {volume}%",
+        "format-source-muted": "",
+        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
         "on-click-right": "pavucontrol"
     },
 }
