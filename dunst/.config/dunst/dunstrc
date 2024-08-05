@@ -52,7 +52,7 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 19x48
+    offset = 19x19
 
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
@@ -60,11 +60,13 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 0
+    frame_width = 2
+
+    # Corner rounding to distinguish dunst windows from application windows.
+    corner_radius = 10
 
     # Defines color of the frame around the notification window.
-    # frame_color = "#d7f463"
-    frame_color = "#ffffff"
+    frame_color = "#d7f463"
 
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing windowmanager is
@@ -171,6 +173,12 @@
     foreground = "#ffffff"
     timeout = 0
 
+[brightness display]
+    background = "#222222"
+    stack_tag = brightness
+    highlight = "#eeeeee"
+    alignment = center
+    format = "<span size="xx-large">%s</span>\n%b"
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.

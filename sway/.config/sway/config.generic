@@ -126,8 +126,8 @@ bindsym $mod+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym $mod+p exec playerctl play-pause
 
 # Laptop display brightness.
-bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
-bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
+bindsym XF86MonBrightnessDown exec dunst-brightness.sh down
+bindsym XF86MonBrightnessUp exec dunst-brightness.sh up
 
 # Start custom program launcher (using fzf).
 bindsym $mod+r exec --no-startup-id launcher.sh
