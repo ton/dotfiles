@@ -128,10 +128,12 @@ bindsym $mod+Shift+r exec --no-startup-id $HOME/.config/sway/host_specific_confi
 bindsym $mod+Shift+Escape exit
 
 # Media related key bindings.
-bindsym $mod+Up exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym $mod+Down exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym $mod+Down exec dunst-volume.sh down
+bindsym $mod+Up exec dunst-volume.sh up
 bindsym $mod+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym $mod+p exec playerctl play-pause
+bindsym XF86AudioLowerVolume exec dunst-volume.sh down
+bindsym XF86AudioRaiseVolume exec dunst-volume.sh up
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 

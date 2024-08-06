@@ -173,9 +173,9 @@
     foreground = "#ffffff"
     timeout = 0
 
-[brightness display]
+[brightness/volume display]
     background = "#222222"
-    stack_tag = brightness
+    stack_tag = progress
     highlight = "#eeeeee"
     alignment = center
     format = "<span size="xx-large">%s</span>\n%b"

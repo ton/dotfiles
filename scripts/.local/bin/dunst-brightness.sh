@@ -16,4 +16,4 @@ icon_code_point=$((first_brightness_icon_code_point + offset - 1))
 
 printf -v icon "\U$(printf %x $icon_code_point)"
 
-notify-send -t 1600 -h string:x-dunst-stack-tag:brightness -u normal -h int:value:"$brightness" "${icon} ${brightness}%"
+notify-send -t 1600 -h string:x-dunst-stack-tag:progress -u normal -h int:value:"$brightness" "${icon} ${brightness}%"
