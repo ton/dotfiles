@@ -81,7 +81,11 @@ return {
   },
   {
     'Olical/conjure',
-    enabled = false,
+    ft = { 'scheme', 'scheme.guile' },
+    lazy = true,
+    config = function()
+      vim.g['conjure#filetype#scheme'] = 'conjure.client.guile.socket'
+    end,
   },
   {
     'pangloss/vim-javascript',
