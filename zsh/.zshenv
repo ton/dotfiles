@@ -14,6 +14,7 @@ alias ctags_cpp="ctags --c++-kinds=+p --fields=+iaS --extra=+q --language-force=
 alias dia="dia --integrated $*"
 alias fgrep="fgrep -I -s"
 alias grep="grep --color=auto -I"
+alias info="info --vi-keys"
 alias less="less -R"
 alias ls="ls --color=auto"
 alias parallel="parallel --env PYTHONPATH --no-notice"
