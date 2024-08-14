@@ -186,6 +186,9 @@ vim.api.nvim_create_autocmd('BufEnter', { pattern = {'*.vim'}, command = 'setloc
 -- Do not expand tabs for web related source code.
 vim.api.nvim_create_autocmd('BufEnter', { pattern = {'*.php', '*.html', '*.css', '*.js'}, command = 'setlocal noexpandtab' })
 
+-- Do not expand tabs in Git configuration files.
+vim.api.nvim_create_autocmd('FileType', { pattern = {'gitconfig'}, command = 'setlocal noexpandtab' })
+
 -- Set text width for Git commit messages and enable spell checking.
 vim.api.nvim_create_autocmd('FileType', { pattern = {'gitcommit'}, command = 'setlocal textwidth=72 | setlocal spell spelllang=en_us' })
 
