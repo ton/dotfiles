@@ -193,7 +193,7 @@ vim.api.nvim_create_autocmd('FileType', { pattern = {'gitconfig'}, command = 'se
 vim.api.nvim_create_autocmd('FileType', { pattern = {'gitcommit'}, command = 'setlocal textwidth=72 | setlocal spell spelllang=en_us' })
 
 -- Set text width for change logs and enable spell checking.
-vim.api.nvim_create_autocmd('BufEnter', { pattern = {'Changelog'}, command = 'setlocal textwidth=80 | setlocal spell spelllang=en_us' })
+vim.api.nvim_create_autocmd('BufEnter', { pattern = {'Changelog'}, command = 'setlocal textwidth=80 | setlocal expandtab | setlocal spell spelllang=en_us' })
 
 -- Set text width for reStructured text.
 vim.api.nvim_create_autocmd('BufEnter', { pattern = {'*.rst'}, command = 'setlocal textwidth=80' })
