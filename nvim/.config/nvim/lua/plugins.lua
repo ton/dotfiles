@@ -53,9 +53,9 @@ return {
     'junegunn/fzf',
     keys = {
       -- fuzzy search the current project directory and open in the current buffer
-      { '<leader>e', [[:call fzf#run({'source': 'rg ' . g:rg_args . ' --files', 'sink': 'e', 'right': '30%'})<CR>]], mode = 'n' },
+      { '<leader>e', [[:call fzf#run({'source': 'rg ' . g:rg_args . ' --files', 'sink': 'e', 'right': '40%'})<CR>]], mode = 'n' },
       -- fuzzy search the current project directory and open in a new vertical split
-      { '<leader>s', [[:call fzf#run({'source': 'rg ' . g:rg_args . ' --files', 'sink': 'vs', 'right': '30%'})<CR>]], mode = 'n' },
+      { '<leader>s', [[:call fzf#run({'source': 'rg ' . g:rg_args . ' --files', 'sink': 'vs', 'right': '40%'})<CR>]], mode = 'n' },
       -- fuzzy search open buffers
       { '<leader>b', [[:Buf<CR>]], mode = 'n' },
       -- search for word under cursor using Rg
