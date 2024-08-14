@@ -37,3 +37,6 @@
 	autostash = true
 [include]
 	path = ~/.gitconfig.local
+[credential]
+	helper = cache
+	helper = !type pass-git-helper >/dev/null && pass-git-helper $@

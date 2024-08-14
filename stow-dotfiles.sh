@@ -17,6 +17,7 @@ stow \
     mplayer \
     ncmpcpp \
     nvim \
+    pass-git-helper \
     polybar \
     scripts \
     shell \
