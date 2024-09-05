@@ -178,7 +178,7 @@ vim.api.nvim_create_autocmd('BufEnter', { pattern = '*.i', command = 'setlocal f
 vim.api.nvim_create_autocmd('BufEnter', { pattern = 'SConscript', command = 'setlocal filetype=python' })
 
 -- Set tab stop to 2 for CMake and Lua files.
-vim.api.nvim_create_autocmd('BufEnter', { pattern = {'CMakeLists.txt', '*.lua'}, command = 'setlocal tabstop=2' })
+vim.api.nvim_create_autocmd('BufEnter', { pattern = {'CMakeLists.txt', '*.cmake', '*.lua'}, command = 'setlocal tabstop=2' })
 
 --" Set tab stop to 4 for Vimscript files.
 vim.api.nvim_create_autocmd('BufEnter', { pattern = {'*.vim'}, command = 'setlocal tabstop=4' })
