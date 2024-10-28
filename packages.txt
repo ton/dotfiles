@@ -32,7 +32,6 @@ tmux
 ttf-font-awesome
 ttf-liberation
 unzip
-vifm
 xclip
 xorg-server
 xorg-xset
