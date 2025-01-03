@@ -81,4 +81,4 @@ then
     mv "$i3_log" "$i3_log.1"
 fi
 
-exec i3 -V > "$i3_log" 2>&1
+exec dbus-launch --exit-with-session i3 -V > "$i3_log" 2>&1
