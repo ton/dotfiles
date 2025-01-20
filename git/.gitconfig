@@ -40,3 +40,5 @@
 [credential]
 	helper = cache
 	helper = !type pass-git-helper >/dev/null && pass-git-helper $@
+[submodule]
+	recurse = true
