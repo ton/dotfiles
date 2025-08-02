@@ -28,6 +28,9 @@ bar swaybar_command waybar
 # Start a notification daemon.
 exec --no-startup-id dunst
 
+# Automatically sync clipboards.
+exec --no-startup-id wl-paste -p -w 'wl-copy'
+
 # Ensure dunst can be started trough systemd.
 exec --no-startup-id systemctl --user import-environment WAYLAND_DISPLAY
 
