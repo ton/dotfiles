@@ -1,6 +1,6 @@
 #!/bin/bash
 
-password_files=$(find .password-store/ -name '*.gpg' -printf "%P\n" | sed -e 's/\.gpg$//')
+password_files=$(find ~/.password-store/ -name '*.gpg' -printf "%P\n" | sed -e 's/\.gpg$//')
 
 password=$(printf '%s\n' "${password_files[@]}" | fzfmenu.sh -t '' -f "Source Code Pro:size=24:weight:medium")
 
