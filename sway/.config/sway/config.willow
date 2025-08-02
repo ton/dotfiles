@@ -2,3 +2,8 @@
 output "*" {
     background ~/pictures/wallpaper fill
 }
+
+# Configure trackpad sensitivity.
+input "type:touchpad" {
+    pointer_accel 0.40
+}
