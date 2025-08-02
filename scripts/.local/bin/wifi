@@ -13,7 +13,7 @@ fi
 
 wpa_supplicant_config=/etc/wpa_supplicant/$1.conf
 pid_file=/var/run/wpa_supplicant.pid
-device_name=$(ip link | grep -oe 'wl[^:]*')
+device_name=$(ip link | grep -oe 'wlp[^:]*')
 
 if [ -f "$wpa_supplicant_config" ];
 then
