@@ -52,6 +52,9 @@ client.focused $lgreen $lgreen $black $lgreen
 client.focused_inactive $lgreen $dgreen $black $dgreen
 client.unfocused $dgreen $black $dgreen $black
 
+# Automatically move windows with the build_output role to the scratchpad.
+for_window [class = "build_output"] move scratchpad, scratchpad show
+
 # Floating applications.
 for_window [app_id = "Floating"] floating enable
 
