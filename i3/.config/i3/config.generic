@@ -146,8 +146,8 @@ bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 
 # Session shortcuts.
-bindsym $mod+Shift+c exec --no-startup-id $HOME/.i3/host_specific_i3_config.sh > $HOME/.i3/config; reload
-bindsym $mod+Shift+r exec --no-startup-id $HOME/.i3/host_specific_i3_config.sh > $HOME/.i3/config; restart
+bindsym $mod+Shift+c exec --no-startup-id $HOME/.config/i3/host_specific_i3_config.sh > $HOME/.config/i3/config; reload
+bindsym $mod+Shift+r exec --no-startup-id $HOME/.config/i3/host_specific_i3_config.sh > $HOME/.config/i3/config; restart
 bindsym $mod+Shift+Escape exit
 
 # Resize shortcuts.
