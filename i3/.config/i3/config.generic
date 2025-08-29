@@ -47,6 +47,9 @@ for_window [class = "Zathura"] focus
 for_window [class="Qalculate-gtk"] floating enable
 for_window [class="Floating"] floating enable
 
+# Ensure file dialogs are centered with a sensible size.
+for_window [window_role="GtkFileChooserDialog"] resize set 1600 1200, move position center
+
 # Disable focus follows mouse.
 focus_follows_mouse no
 
