@@ -20,6 +20,8 @@
 	out = log @{u}..
 	ds = diff --staged
 	co = checkout
+[fetch]
+	tags = true
 [push]
 	default = simple
 [status]
