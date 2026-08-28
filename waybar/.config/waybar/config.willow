@@ -1,0 +1,316 @@
+[
+    {
+        "id": "willow",
+        "layer": "top",
+        "position": "top",
+        "height": 35,
+        "spacing": 3,
+        "fixed-center": true,
+
+        // Choose the order of the modules
+        "modules-left": ["sway/workspaces", "sway/mode"],
+        "modules-center": ["sway/window"],
+        "modules-right": ["mpd", "idle_inhibitor", "pulseaudio#output", "pulseaudio#input", "temperature", "network", "bluetooth", "battery", "battery#bat1", "tray", "clock"],
+
+        // Modules configuration
+        "sway/workspaces": {
+            "disable-scroll": true,
+            "all-outputs": true,
+            "format": "{icon}",
+            "format-icons": {
+                "1": "",
+                "2": "󰆍",
+                "3": "󰈹",
+                "4": "󰄚",
+                "5": "󰽰",
+                "6": "󰅶",
+                "urgent": "",
+                "default": ""
+            },
+            "persistent-workspaces": {
+                "1": [],
+                "2": [],
+                "3": [],
+                "4": [],
+                "5": [],
+                "6": []
+            }
+        },
+
+        "sway/mode": {
+            "format": "<span style=\"italic\">{}</span>"
+        },
+
+        "mpd": {
+            "format": "{stateIcon}  {title}  ",
+            "format-disconnected": "Disconnected ",
+            "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+            "unknown-tag": "N/A",
+            "interval": 2,
+            "consume-icons": {
+                "on": " "
+            },
+            "random-icons": {
+                "off": "<span color=\"#f53c3c\"></span> ",
+                "on": " "
+            },
+            "repeat-icons": {
+                "on": " "
+            },
+            "single-icons": {
+                "on": "1 "
+            },
+            "state-icons": {
+                "paused": "",
+                "playing": ""
+            },
+            "tooltip-format": "MPD (connected)",
+            "tooltip-format-disconnected": "MPD (disconnected)"
+        },
+        "idle_inhibitor": {
+            "format": "{icon}",
+            "format-icons": {
+                "activated": "",
+                "deactivated": ""
+            }
+        },
+        "tray": {
+            // "icon-size": 21,
+            "spacing": 10
+        },
+        "clock": {
+            // "timezone": "America/New_York",
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "format": "󰥔  {:%H:%M}",
+            "format-alt": "󰃭 {:%A %d %B/%V}"
+        },
+        "temperature": {
+            // "thermal-zone": 2,
+            // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+            "critical-threshold": 80,
+            // "format-critical": "{icon} {temperatureC}°C",
+            "format": "{icon}  {temperatureC}°C",
+            "format-icons": ["", "", ""]
+        },
+        "battery": {
+            "bat": "BAT0",
+            "states": {
+                "good": 95,
+                "warning": 30,
+                "critical": 15
+            },
+            "format": "{capacity}% {icon}",
+            "format-charging": " {capacity}%",
+            "format-plugged": " {capacity}%",
+            "format-alt": "{time} {icon}",
+            "format-full": " {capacity}%",
+            "format-icons": ["", "", "", "", ""]
+        },
+        "battery#bat1": {
+            "bat": "BAT1",
+            "format": "{capacity}% {icon}",
+            "format-charging": " {capacity}%",
+            "format-plugged": " {capacity}%",
+            "format-alt": "{time} {icon}",
+            "format-full": " {capacity}%",
+            "format-icons": ["", "", "", "", ""]
+        },
+        "network": {
+            // "interface": "wlp2*", // (Optional) To force the use of this interface
+            "format-wifi": "   {essid} ({signalStrength}%)",
+            "format-ethernet": "{ipaddr}/{cidr} ",
+            "tooltip-format": "{ifname} via {gwaddr} ",
+            "format-linked": "{ifname} (No IP) ",
+            "format-disconnected": "Disconnected ⚠",
+            "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        },
+        "bluetooth": {
+            "format": "",
+            "tooltip-format": "{controller_alias}\t{controller_address}",
+            "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+            "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+            "on-click": "waybar-toggle-bluetooth.sh"
+        },
+        "pulseaudio#output": {
+            // "scroll-step": 1, // %, can be a float
+            "format": "{icon}  {volume}%",
+            "format-muted": " ",
+            "format-icons": {
+                "headphone": "",
+                "hands-free": "",
+                "headset": "",
+                "phone": "",
+                "portable": "",
+                "car": "",
+                "default": ["", "", ""]
+            },
+            "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+            "on-click-right": "pavucontrol"
+        },
+        "pulseaudio#input": {
+            // "scroll-step": 1, // %, can be a float
+            "format": "{format_source}",
+            "format-source": "  {volume}%",
+            "format-source-muted": "",
+            "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+            "on-click-right": "pavucontrol"
+        }
+    },
+    {
+        "id": "beech",
+        "layer": "top",
+        "position": "top",
+        "height": 35,
+        "spacing": 3,
+        "fixed-center": true,
+
+        // Choose the order of the modules
+        "modules-left": ["sway/workspaces", "sway/mode"],
+        "modules-center": ["sway/window"],
+        "modules-right": ["mpd", "idle_inhibitor", "pulseaudio#output", "pulseaudio#input", "temperature", "network", "bluetooth", "battery", "battery#bat1", "tray", "clock"],
+
+        // Modules configuration
+        "sway/workspaces": {
+            "disable-scroll": true,
+            "all-outputs": true,
+            "format": "{icon}",
+            "format-icons": {
+                "1": "",
+                "2": "󰆍",
+                "3": "󰈹",
+                "4": "󰄚",
+                "5": "󰽰",
+                "6": "󰅶",
+                "urgent": "",
+                "default": ""
+            },
+            "persistent-workspaces": {
+                "1": [],
+                "2": [],
+                "3": [],
+                "4": [],
+                "5": [],
+                "6": []
+            }
+        },
+
+        "sway/mode": {
+            "format": "<span style=\"italic\">{}</span>"
+        },
+
+        "mpd": {
+            "format": "{stateIcon}  {title}  ",
+            "format-disconnected": "Disconnected ",
+            "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+            "unknown-tag": "N/A",
+            "interval": 2,
+            "consume-icons": {
+                "on": " "
+            },
+            "random-icons": {
+                "off": "<span color=\"#f53c3c\"></span> ",
+                "on": " "
+            },
+            "repeat-icons": {
+                "on": " "
+            },
+            "single-icons": {
+                "on": "1 "
+            },
+            "state-icons": {
+                "paused": "",
+                "playing": ""
+            },
+            "tooltip-format": "MPD (connected)",
+            "tooltip-format-disconnected": "MPD (disconnected)"
+        },
+        "idle_inhibitor": {
+            "format": "{icon}",
+            "format-icons": {
+                "activated": "",
+                "deactivated": ""
+            }
+        },
+        "tray": {
+            // "icon-size": 21,
+            "spacing": 10
+        },
+        "clock": {
+            // "timezone": "America/New_York",
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "format": "󰥔  {:%H:%M}",
+            "format-alt": "󰃭 {:%A %d %B/%V}"
+        },
+        "temperature": {
+            // "thermal-zone": 2,
+            // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+            "critical-threshold": 80,
+            // "format-critical": "{icon} {temperatureC}°C",
+            "format": "{icon}  {temperatureC}°C",
+            "format-icons": ["", "", ""]
+        },
+        "battery": {
+            "bat": "BAT0",
+            "states": {
+                "good": 95,
+                "warning": 30,
+                "critical": 15
+            },
+            "format": "{capacity}% {icon}",
+            "format-charging": " {capacity}%",
+            "format-plugged": " {capacity}%",
+            "format-alt": "{time} {icon}",
+            "format-full": " {capacity}%",
+            "format-icons": ["", "", "", "", ""]
+        },
+        "battery#bat1": {
+            "bat": "BAT1",
+            "format": "{capacity}% {icon}",
+            "format-charging": " {capacity}%",
+            "format-plugged": " {capacity}%",
+            "format-alt": "{time} {icon}",
+            "format-full": " {capacity}%",
+            "format-icons": ["", "", "", "", ""]
+        },
+        "network": {
+            // "interface": "wlp2*", // (Optional) To force the use of this interface
+            "format-wifi": "   {essid} ({signalStrength}%)",
+            "format-ethernet": "{ipaddr}/{cidr} ",
+            "tooltip-format": "{ifname} via {gwaddr} ",
+            "format-linked": "{ifname} (No IP) ",
+            "format-disconnected": "Disconnected ⚠",
+            "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        },
+        "bluetooth": {
+            "format": "",
+            "tooltip-format": "{controller_alias}\t{controller_address}",
+            "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+            "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+            "on-click": "waybar-toggle-bluetooth.sh"
+        },
+        "pulseaudio#output": {
+            // "scroll-step": 1, // %, can be a float
+            "format": "{icon}  {volume}%",
+            "format-muted": " ",
+            "format-icons": {
+                "headphone": "",
+                "hands-free": "",
+                "headset": "",
+                "phone": "",
+                "portable": "",
+                "car": "",
+                "default": ["", "", ""]
+            },
+            "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+            "on-click-right": "pavucontrol"
+        },
+        "pulseaudio#input": {
+            // "scroll-step": 1, // %, can be a float
+            "format": "{format_source}",
+            "format-source": "  {volume}%",
+            "format-source-muted": "",
+            "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+            "on-click-right": "pavucontrol"
+        }
+    },
+]

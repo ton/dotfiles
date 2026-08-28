@@ -21,8 +21,10 @@ stow \
     polybar \
     scripts \
     shell \
+    sway \
     tmux \
     wallpapers \
+    waybar \
     xdg \
     xorg \
     zsh

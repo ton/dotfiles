@@ -34,7 +34,7 @@ window#waybar.solo {
     /* Avoid rounded borders under each workspace name */
     border: none;
     border-radius: 0;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */

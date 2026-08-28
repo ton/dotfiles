@@ -1,0 +1,8 @@
+output "*" {
+    background ~/pictures/wallpaper fill
+    scale 1.5
+}
+
+input "*" {
+    xkb_options "ctrl:nocaps"
+}

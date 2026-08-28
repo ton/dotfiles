@@ -12,7 +12,10 @@ then
         # Generate a host specific Sway configuration.
         $HOME/.config/sway/host_specific_config.sh > $HOME/.config/sway/config
 
-        exec sway
+        # Generate a host specific Waybar configuration.
+        $HOME/.config/waybar/host_specific_config.sh > $HOME/.config/waybar/config
+
+        exec sway --unsupported-gpu
     else
         exec startx | tee $HOME/.local/share/xorg/startx.log
     fi
