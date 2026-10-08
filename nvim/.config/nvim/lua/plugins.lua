@@ -100,9 +100,6 @@ return {
   {
     'ton/vim-alternate',
     keys = { { '<F4>', ':Alternate<CR>', 'Toggle alternate' } },
-    init = function()
-      vim.g.AlternatePaths = {'../include', '../src', '.', '..'}
-    end,
   },
   {
     'tpope/vim-commentary',
